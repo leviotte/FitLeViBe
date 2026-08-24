@@ -65,7 +65,7 @@ export const photos = {
     alt: "Krachttraining in open lucht",
   },
   vitality: {
-    src: "https://images.unsplash.com/photo-1483721310020-01952a5e78ca?auto=format&fit=crop&w=1400&q=80",
+    src: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=80",
     alt: "Rustig bewegen in de natuur",
   },
 } as const;
