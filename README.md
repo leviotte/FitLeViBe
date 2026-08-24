@@ -30,7 +30,8 @@ FitCheck (`submitFitCheckAction` on `/` and `/fitcheck` only — never `/start`)
 | Variable | Required | Role |
 | --- | --- | --- |
 | `RESEND_API_KEY` | Yes, for mail to send | Add this on Vercel. Without it the form shows a clear error instead of fake success. |
-| `RESEND_FROM` | No | Defaults to `Fit met Levi <noreply@fitlevibe.com>`. If that domain is not verified, the mailer retries `Fit met Levi <onboarding@resend.dev>`. |
+
+From-address is hardcoded: `Fit met Levi <noreply@myfiletracker.com>` (the verified Resend domain). Do not send from `fitlevibe.com` until that domain is verified in Resend.
 
 The one.com Website Builder contact form is not used. Do not put secrets in the repo.
 

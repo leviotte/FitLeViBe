@@ -9,10 +9,14 @@ export type FitCheckRecord = {
   createdAt: string;
 };
 
+/** Levi's lead inbox. */
 export const FITCHECK_TO = site.email;
 
-const OWNED_FROM = "Fit met Levi <noreply@fitlevibe.com>";
-const RESEND_ONBOARDING_FROM = "Fit met Levi <onboarding@resend.dev>";
+/**
+ * Verified Resend sending domain is myfiletracker.com.
+ * Do not send from fitlevibe.com until that domain is verified.
+ */
+export const FITCHECK_FROM = "Fit met Levi <noreply@myfiletracker.com>";
 
 export type FitCheckMailResult =
   | { ok: true }
@@ -51,28 +55,6 @@ export function buildFitCheckEmail(record: FitCheckRecord): {
   };
 }
 
-function fromAddress(): string {
-  return process.env.RESEND_FROM?.trim() || OWNED_FROM;
-}
-
-async function sendOnce(
-  resend: Resend,
-  from: string,
-  record: FitCheckRecord,
-  idempotencyKey: string,
-) {
-  const { subject, text } = buildFitCheckEmail(record);
-  return resend.emails.send(
-    {
-      from,
-      to: FITCHECK_TO,
-      subject,
-      text,
-    },
-    { idempotencyKey },
-  );
-}
-
 export async function sendFitCheckEmail(
   record: FitCheckRecord,
 ): Promise<FitCheckMailResult> {
@@ -85,24 +67,26 @@ export async function sendFitCheckEmail(
   }
 
   const resend = new Resend(apiKey);
-  const preferred = fromAddress();
-  const keyBase = `fitcheck/${record.phone}/${record.createdAt}`.slice(0, 240);
+  const { subject, text } = buildFitCheckEmail(record);
+  const idempotencyKey = `fitcheck/${record.phone}/${record.createdAt}`.slice(
+    0,
+    256,
+  );
 
-  const first = await sendOnce(resend, preferred, record, keyBase);
-  if (!first.error) return { ok: true };
+  const { error } = await resend.emails.send(
+    {
+      from: FITCHECK_FROM,
+      to: FITCHECK_TO,
+      subject,
+      text,
+    },
+    { idempotencyKey },
+  );
 
-  console.error("FitCheck Resend error:", first.error);
-
-  if (preferred !== RESEND_ONBOARDING_FROM) {
-    const retry = await sendOnce(
-      resend,
-      RESEND_ONBOARDING_FROM,
-      record,
-      `${keyBase}/onboarding`.slice(0, 256),
-    );
-    if (!retry.error) return { ok: true };
-    console.error("FitCheck Resend onboarding-from error:", retry.error);
+  if (error) {
+    console.error("FitCheck Resend error:", error);
+    return { ok: false, reason: "send_failed" };
   }
 
-  return { ok: false, reason: "send_failed" };
+  return { ok: true };
 }
