@@ -2,7 +2,7 @@ export const site = {
   publicName: "Fit met Levi",
   personName: "Levi Otte",
   legalHandle: "FitLeViBe",
-  url: "https://fitlevibe.com",
+  url: "https://www.fitlevibe.com",
   address: {
     street: "Zavelstraat 19",
     postalCode: "1760",

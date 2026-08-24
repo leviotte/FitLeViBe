@@ -38,14 +38,17 @@ export async function JsonLd() {
 
   const origin = site.url;
   const url = await currentPageUrl();
+  const isDutch = locale === "nl" || !isAppLocale(locale);
 
-  const graph: Record<string, unknown>[] = [
-    {
+  const graph: Record<string, unknown>[] = [];
+
+  if (isDutch) {
+    graph.push({
       "@type": "LocalBusiness",
       "@id": `${origin}/#business`,
       name: site.publicName,
       alternateName: [site.legalHandle, site.personName],
-      description,
+      description: nl.Meta.site.defaultDescription,
       url: origin,
       telephone: site.phoneE164,
       image: `${origin}/opengraph-image`,
@@ -71,7 +74,10 @@ export async function JsonLd() {
         bestRating: "5",
         reviewCount: String(site.googleReviewCount),
       },
-    },
+    });
+  }
+
+  graph.push(
     {
       "@type": "Person",
       "@id": `${origin}/#person`,
@@ -81,7 +87,7 @@ export async function JsonLd() {
       telephone: site.phoneE164,
       address,
       sameAs: [site.social.instagram, site.social.facebook, site.social.linkedin],
-      worksFor: { "@id": `${origin}/#business` },
+      worksFor: { "@id": `${origin}/#organization` },
     },
     {
       "@type": "Organization",
@@ -113,7 +119,7 @@ export async function JsonLd() {
       isPartOf: { "@id": `${origin}/#website` },
       about: { "@id": `${origin}/#person` },
     },
-  ];
+  );
 
   return (
     <script

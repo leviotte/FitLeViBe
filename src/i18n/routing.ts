@@ -5,14 +5,11 @@ export const routing = defineRouting({
   defaultLocale: "nl",
   localePrefix: "as-needed",
   /**
-   * Proxy enables detection for humans only. Crawlers always see Dutch at `/`
-   * and keep explicit `/fr` `/en` `/es`.
+   * `/` is always Dutch. Explicit `/fr` `/en` `/es` are respected.
+   * No Accept-Language or cookie redirects — humans and crawlers alike.
    */
-  localeDetection: true,
-  localeCookie: {
-    name: "NEXT_LOCALE",
-    maxAge: 60 * 60 * 24 * 365,
-  },
+  localeDetection: false,
+  localeCookie: false,
   /** We emit hreflang ourselves (nl-BE + x-default = Dutch sibling). */
   alternateLinks: false,
   pathnames: {

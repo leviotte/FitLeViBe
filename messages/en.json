@@ -1,11 +1,11 @@
 {
   "Meta": {
     "site": {
-      "defaultTitle": "Fit met Levi · Levi Otte, coach in Roosdaal",
+      "defaultTitle": "Fit met Levi · Levi Otte, personal coach in Roosdaal, Belgium",
       "defaultDescription": "Fit met Levi — Levi Otte, personal coach in Roosdaal, Belgium. Healthier living at your pace, since 2015."
     },
     "home": {
-      "title": "Fit met Levi · Levi Otte, coach in Roosdaal",
+      "title": "Fit met Levi · Levi Otte, personal coach in Roosdaal, Belgium",
       "description": "Levi Otte, personal coach in Roosdaal, Belgium. FitCheck, coaching, and a clear place to begin. No medical advice, no income claims."
     },
     "start": {
@@ -25,14 +25,14 @@
       "description": "Levi Otte has been a personal coach in Roosdaal, Belgium, since 2015. 20% training, 80% nutrition, 100% mindset. Independent Herbalife member."
     },
     "privacy": {
-      "title": "Privacy",
+      "title": "Privacy notice",
       "description": "How Fit met Levi uses FitCheck data: name, mobile, and goal, so we can get in touch."
     },
     "notFound": {
       "title": "Page not found",
       "description": "That link does not exist (anymore) on Fit met Levi."
     },
-    "ogAlt": "Fit met Levi · Levi Otte, personal coach in Roosdaal",
+    "ogAlt": "Fit met Levi · Levi Otte, personal coach in Roosdaal, Belgium",
     "keywords": ["Fit met Levi", "Levi Otte", "personal coach Roosdaal", "FitCheck", "FitLeViBe", "coaching Belgium"]
   },
   "Nav": {

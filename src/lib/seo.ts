@@ -36,23 +36,29 @@ export function localeMetadata({
   pathname,
   title,
   description,
+  absoluteTitle = false,
 }: {
   locale: AppLocale;
   pathname: AppPathname;
   title: string;
   description: string;
+  /** Full document title; skip the layout `%s · Fit met Levi` template. */
+  absoluteTitle?: boolean;
 }): Metadata {
   const canonical = absoluteUrl(locale, pathname);
+  const documentTitle = absoluteTitle
+    ? title
+    : `${title} · ${site.publicName}`;
 
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: {
       canonical,
       languages: languageAlternates(pathname),
     },
     openGraph: {
-      title,
+      title: documentTitle,
       description,
       url: canonical,
       locale: ogLocaleOf(locale),
@@ -63,7 +69,7 @@ export function localeMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: documentTitle,
       description,
     },
   };

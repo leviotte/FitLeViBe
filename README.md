@@ -3,6 +3,7 @@
 Public site for **Levi Otte**, persoonlijk coach in Roosdaal, België.
 
 - Visible name: **Fit met Levi**
+- Canonical host: `https://www.fitlevibe.com` (apex 308s to www)
 - Legal / social / domain handle: FitLeViBe (`fitlevibe.com`, Instagram & Facebook `@FitLeViBe`)
 - Levi is an independent Herbalife member. This is not herbalife.com.
 

@@ -1,6 +1,6 @@
 import { hasLocale } from "next-intl";
 import { htmlLangOf, isAppLocale } from "@/i18n/locales";
-import { getPathname } from "@/i18n/navigation";
+import { publicPath } from "@/lib/paths";
 import { pagePathnames, routing, type AppPathname } from "@/i18n/routing";
 import { site } from "@/lib/site";
 import en from "../../../../messages/en.json";
@@ -11,7 +11,7 @@ import nl from "../../../../messages/nl.json";
 const catalogs = { nl, fr, en, es } as const;
 
 function url(locale: (typeof routing.locales)[number], href: AppPathname) {
-  return `${site.url}${getPathname({ locale, href })}`;
+  return `${site.url}${publicPath(locale, href)}`;
 }
 
 export async function GET(
