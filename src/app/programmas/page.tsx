@@ -53,7 +53,7 @@ export default function ProgrammasPage() {
                 <p className="mt-4 text-base leading-7 text-muted">{goal.body}</p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
                   <Link
-                    href={`${goal.href}#fitcheck`}
+                    href={`${goal.href}`}
                     className="inline-flex min-h-12 items-center justify-center rounded-full bg-green px-6 text-sm font-semibold text-white hover:bg-green-dark"
                   >
                     Gratis FitCheck
