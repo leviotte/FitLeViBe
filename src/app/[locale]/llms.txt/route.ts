@@ -1,7 +1,7 @@
 import { hasLocale } from "next-intl";
 import { htmlLangOf, isAppLocale } from "@/i18n/locales";
-import { publicPath } from "@/lib/paths";
-import { pagePathnames, routing, type AppPathname } from "@/i18n/routing";
+import { pagePathnames, routing } from "@/i18n/routing";
+import { absoluteUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
 import en from "../../../../messages/en.json";
 import es from "../../../../messages/es.json";
@@ -9,10 +9,6 @@ import fr from "../../../../messages/fr.json";
 import nl from "../../../../messages/nl.json";
 
 const catalogs = { nl, fr, en, es } as const;
-
-function url(locale: (typeof routing.locales)[number], href: AppPathname) {
-  return `${site.url}${publicPath(locale, href)}`;
-}
 
 export async function GET(
   _request: Request,
@@ -36,13 +32,13 @@ export async function GET(
     copy.Common.disclosureFooter,
     ``,
     `## Locales`,
-    `- Dutch (nl-BE, default): ${url("nl", "/")}`,
-    `- French: ${url("fr", "/")}`,
-    `- English: ${url("en", "/")}`,
-    `- Spanish: ${url("es", "/")}`,
+    `- Dutch (nl-BE, default): ${absoluteUrl("nl", "/")}`,
+    `- French: ${absoluteUrl("fr", "/")}`,
+    `- English: ${absoluteUrl("en", "/")}`,
+    `- Spanish: ${absoluteUrl("es", "/")}`,
     ``,
     `## Pages (${lang})`,
-    ...pagePathnames.map((href) => `- ${url(locale, href)}`),
+    ...pagePathnames.map((href) => `- ${absoluteUrl(locale, href)}`),
     ``,
     `## Contact`,
     `- Telegram (only): ${site.social.telegram}`,

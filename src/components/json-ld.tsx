@@ -2,31 +2,67 @@ import { headers } from "next/headers";
 import { getLocale, getTranslations } from "next-intl/server";
 import nl from "../../messages/nl.json";
 import { htmlLangOf, isAppLocale } from "@/i18n/locales";
+import { routing, type AppPathname } from "@/i18n/routing";
+import { internalPathnameFromPublic, publicPath } from "@/lib/paths";
+import { documentTitle, PAGE_META } from "@/lib/seo";
 import { formatAddress, site } from "@/lib/site";
 
 type FaqItem = { q: string; a: string };
 
-async function currentPageUrl() {
+function normalizePublicPath(pathname: string) {
+  if (pathname.length > 1 && pathname.endsWith("/")) {
+    return pathname.slice(0, -1);
+  }
+  return pathname || "/";
+}
+
+async function publicPathname() {
   const headerList = await headers();
   const forwarded = headerList.get("x-public-url");
   if (forwarded) {
     try {
-      const parsed = new URL(forwarded);
-      return `${site.url}${parsed.pathname === "/" ? "" : parsed.pathname}`;
+      return normalizePublicPath(new URL(forwarded).pathname);
     } catch {
       /* fall through */
     }
   }
-  const path = headerList.get("x-public-pathname") ?? "/";
-  return `${site.url}${path === "/" ? "" : path}`;
+  return normalizePublicPath(headerList.get("x-public-pathname") ?? "/");
+}
+
+async function currentPageUrl() {
+  const path = await publicPathname();
+  return path === "/" ? site.url : `${site.url}${path}`;
+}
+
+function isDutchHome(locale: string, pathname: string) {
+  return (locale === "nl" || !isAppLocale(locale)) && pathname === "/";
+}
+
+function pageMatchesInternal(
+  locale: string,
+  pathname: string,
+  internal: AppPathname,
+) {
+  const appLocale = isAppLocale(locale) ? locale : routing.defaultLocale;
+  return normalizePublicPath(pathname) === publicPath(appLocale, internal);
 }
 
 export async function JsonLd() {
   const locale = await getLocale();
   const lang = isAppLocale(locale) ? htmlLangOf(locale) : "nl-BE";
   const t = await getTranslations();
+  const metaT = await getTranslations("Meta");
   const jobTitle = t("Common.jobTitle");
-  const description = t("Meta.site.defaultDescription");
+  const pathname = await publicPathname();
+  const internal = internalPathnameFromPublic(pathname);
+  const knownPage = pageMatchesInternal(locale, pathname, internal);
+  const meta = knownPage ? PAGE_META[internal] : null;
+  const pageName = meta
+    ? documentTitle(metaT(meta.titleKey), meta.absoluteTitle)
+    : documentTitle(metaT("notFound.title"));
+  const description = meta
+    ? metaT(meta.descriptionKey)
+    : metaT("notFound.description");
 
   const address = {
     "@type": "PostalAddress",
@@ -38,11 +74,10 @@ export async function JsonLd() {
 
   const origin = site.url;
   const url = await currentPageUrl();
-  const isDutch = locale === "nl" || !isAppLocale(locale);
 
   const graph: Record<string, unknown>[] = [];
 
-  if (isDutch) {
+  if (isDutchHome(locale, pathname)) {
     graph.push({
       "@type": "LocalBusiness",
       "@id": `${origin}/#business`,
@@ -113,7 +148,7 @@ export async function JsonLd() {
       "@type": "WebPage",
       "@id": `${url}#webpage`,
       url,
-      name: t("Meta.site.defaultTitle"),
+      name: pageName,
       description,
       inLanguage: lang,
       isPartOf: { "@id": `${origin}/#website` },
