@@ -53,10 +53,10 @@ export default function ProgrammasPage() {
                 <p className="mt-4 text-base leading-7 text-muted">{goal.body}</p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
                   <Link
-                    href={goal.href}
+                    href={`${goal.href}#fitcheck`}
                     className="inline-flex min-h-12 items-center justify-center rounded-full bg-green px-6 text-sm font-semibold text-white hover:bg-green-dark"
                   >
-                    FitCheck voor dit doel
+                    Gratis FitCheck
                   </Link>
                   <EnrollButton variant="secondary" className="text-sm" />
                 </div>

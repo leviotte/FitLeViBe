@@ -87,21 +87,21 @@ export const goals: Record<
     title: "Gewichtsverlies & -beheersing",
     short: "Rustiger eten, duidelijker bewegen, zonder crash.",
     body: "Samen kijken we naar gewoontes die je volhoudt. Geen beloofde kilo’s, geen crashdieet: een plan rond voeding, beweging en mindset dat bij jouw leven in Roosdaal — of online — past.",
-    href: "/fitcheck?doel=gewichtsverlies",
+    href: "/fitcheck?doel=gewichtsverlies#fitcheck",
   },
   spiermassa: {
     id: "spiermassa",
     title: "Spiermassa",
     short: "Sterker worden, met voeding die meewerkt.",
     body: "Spieropbouw vraagt consistentie, niet eindeloos in de gym staan. Je krijgt een haalbaar schema en voedingsrichting, afgestemd op jouw ritme.",
-    href: "/fitcheck?doel=spiermassa",
+    href: "/fitcheck?doel=spiermassa#fitcheck",
   },
   vitaliteit: {
     id: "vitaliteit",
     title: "Vitaliteit",
     short: "Meer energie in gewone dagen.",
     body: "Beter slapen, steviger staan, minder pieken en dalen. Vitaliteit is geen trucje: het is ritme, voeding en een hoofd dat meewerkt.",
-    href: "/fitcheck?doel=vitaliteit",
+    href: "/fitcheck?doel=vitaliteit#fitcheck",
   },
 };
 

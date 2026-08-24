@@ -73,11 +73,20 @@ export function FitCheckForm({ defaultGoal }: FitCheckFormProps) {
 
         <fieldset>
           <legend className="text-sm font-medium text-indigo">Wat is jouw doel?</legend>
+          {defaultGoal ? (
+            <p className="mt-2 text-sm text-green">
+              Voorkeuze: {goalList.find((goal) => goal.id === defaultGoal)?.title}.
+            </p>
+          ) : null}
           <div className="mt-3 grid gap-2">
             {goalList.map((goal) => (
               <label
                 key={goal.id}
-                className="flex cursor-pointer items-start gap-3 rounded-2xl border border-indigo/10 bg-cream/60 px-4 py-3 has-[:checked]:border-green has-[:checked]:bg-green/5"
+                className={`flex cursor-pointer items-start gap-3 rounded-2xl border px-4 py-3 has-[:checked]:border-green has-[:checked]:bg-green/5 ${
+                  defaultGoal === goal.id
+                    ? "border-green bg-green/5"
+                    : "border-indigo/10 bg-cream/60"
+                }`}
               >
                 <input
                   type="radio"

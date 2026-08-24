@@ -18,7 +18,7 @@ export function FitCheckSection({ defaultGoal }: { defaultGoal?: GoalId }) {
           </p>
         </div>
         <div className="lg:col-span-7">
-          <FitCheckForm defaultGoal={defaultGoal} />
+          <FitCheckForm key={defaultGoal ?? "open"} defaultGoal={defaultGoal} />
         </div>
       </div>
     </section>
