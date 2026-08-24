@@ -23,15 +23,16 @@ pnpm build
 
 ## Environment
 
-Copy `.env.example` to `.env.local`. Nothing is required for the UI.
+Copy `.env.example` to `.env.local`.
 
-FitCheck is a server action (`submitFitCheckAction`):
+FitCheck (`submitFitCheckAction` on `/` and `/fitcheck` only — never `/start`) emails each lead to **fitlevibe@icloud.com** via [Resend](https://resend.com).
 
-1. If `RESEND_API_KEY`, `RESEND_FROM`, and `FITCHECK_TO_EMAIL` are set, a notification email is sent.
-2. Else if Firebase Admin env vars are set, the row is written to the `fitchecks` collection.
-3. Else the UI still shows success and the server logs an error so production never dies on a missing key.
+| Variable | Required | Role |
+| --- | --- | --- |
+| `RESEND_API_KEY` | Yes, for mail to send | Add this on Vercel. Without it the form shows a clear error instead of fake success. |
+| `RESEND_FROM` | No | Defaults to `Fit met Levi <noreply@fitlevibe.com>`. If that domain is not verified, the mailer retries `Fit met Levi <onboarding@resend.dev>`. |
 
-Do not put secrets in the repo.
+The one.com Website Builder contact form is not used. Do not put secrets in the repo.
 
 ## Pages
 

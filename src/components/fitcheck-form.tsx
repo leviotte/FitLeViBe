@@ -131,7 +131,9 @@ export function FitCheckForm({ defaultGoal }: FitCheckFormProps) {
         </div>
 
         {state.status === "error" && state.message ? (
-          <p className="text-sm text-red-700">{state.message}</p>
+          <p className="rounded-2xl bg-red-50 px-4 py-3 text-sm leading-6 text-red-800">
+            {state.message}
+          </p>
         ) : null}
 
         <button

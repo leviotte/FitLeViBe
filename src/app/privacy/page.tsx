@@ -25,9 +25,9 @@ export default function PrivacyPage() {
           gerechtvaardigd belang om te antwoorden).
         </p>
         <p>
-          Gegevens gaan niet naar een openbare nieuwsbrief. Ze worden per e-mail
-          of in een afgeschermde store bewaard zolang het gesprek loopt, daarna
-          gewist of beperkt tot wat boekhouding of geschil vereist.
+          Gegevens gaan niet naar een openbare nieuwsbrief. FitCheck-aanvragen
+          worden per e-mail bezorgd op fitlevibe@icloud.com, zolang het gesprek
+          loopt, daarna gewist of beperkt tot wat boekhouding of geschil vereist.
         </p>
         <p>
           Je hebt recht op inzage, verbetering, wissing en klacht bij de

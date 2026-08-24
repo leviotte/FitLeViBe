@@ -1,10 +1,10 @@
 "use server";
 
 import { headers } from "next/headers";
-import { persistFitCheck } from "@/lib/persist-fitcheck";
+import { sendFitCheckEmail } from "@/lib/persist-fitcheck";
 import { tooManyRequests } from "@/lib/rate-limit";
 import { normalizeBeMobile } from "@/lib/phone";
-import { type GoalId, goals } from "@/lib/site";
+import { type GoalId, goals, site } from "@/lib/site";
 
 export type FitCheckState = {
   status: "idle" | "success" | "error";
@@ -79,15 +79,30 @@ export async function submitFitCheckAction(
   }
 
   try {
-    await persistFitCheck({
+    const result = await sendFitCheckEmail({
       name,
       phone: phone!,
       goal: goalRaw as GoalId,
       message: messageRaw || undefined,
       createdAt: new Date().toISOString(),
     });
+
+    if (!result.ok) {
+      const phoneHint = site.phoneDisplay;
+      return {
+        status: "error",
+        message:
+          result.reason === "not_configured"
+            ? `Dit formulier kan nu geen e-mail sturen. Bel me op ${phoneHint}.`
+            : `Verzenden lukte niet. Probeer opnieuw of bel me op ${phoneHint}.`,
+      };
+    }
   } catch (error) {
-    console.error("FitCheck persist failed:", error);
+    console.error("FitCheck send failed:", error);
+    return {
+      status: "error",
+      message: `Verzenden lukte niet. Probeer opnieuw of bel me op ${site.phoneDisplay}.`,
+    };
   }
 
   return { status: "success" };

@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  serverExternalPackages: ["firebase-admin", "resend"],
+  serverExternalPackages: ["resend"],
 };
 
 export default nextConfig;

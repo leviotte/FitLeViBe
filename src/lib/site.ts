@@ -17,7 +17,7 @@ export const site = {
   },
   phoneDisplay: "+32 475 34 44 02",
   phoneE164: "+32475344402",
-  email: undefined as string | undefined,
+  email: "fitlevibe@icloud.com",
   foundedYear: 2015,
   googleRating: "5/5",
   googleReviewCount: 11,
