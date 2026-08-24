@@ -5,7 +5,7 @@ import { type GoalId, goals } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta(
   "Gratis FitCheck",
-  "Vraag een gratis FitCheck aan bij Levi Otte. Naam, gsm en doel. Levi neemt contact op.",
+  "Vraag een FitCheck aan bij Levi Otte. Naam, gsm en doel. Ik neem contact op.",
   "/fitcheck",
 );
 

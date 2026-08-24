@@ -1,7 +1,6 @@
 "use client";
 
 import { useActionState } from "react";
-import { EnrollDisclosure } from "@/components/enroll";
 import {
   submitFitCheckAction,
   type FitCheckState,
@@ -27,11 +26,11 @@ export function FitCheckForm({ defaultGoal }: FitCheckFormProps) {
           Ontvangen
         </p>
         <h2 className="font-display mt-3 text-3xl text-indigo">
-          Levi neemt contact op.
+          Ik neem contact op.
         </h2>
         <p className="mx-auto mt-4 max-w-md text-base leading-7 text-muted">
-          Bedankt. Ik bekijk je doel en bel of bericht je op het nummer dat je
-          achterliet. Geen automatische inschrijving, geen medisch advies.
+          Bedankt. Ik bekijk wat je schreef en bel of bericht je op het nummer
+          dat je achterliet.
         </p>
       </div>
     );
@@ -140,16 +139,15 @@ export function FitCheckForm({ defaultGoal }: FitCheckFormProps) {
           disabled={pending}
           className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-green px-6 text-base font-semibold text-white transition hover:bg-green-dark disabled:opacity-70"
         >
-          {pending ? "Even geduld…" : "Vraag je gratis FitCheck"}
+          {pending ? "Even geduld…" : "Stuur mijn FitCheck"}
         </button>
         <p className="text-sm leading-6 text-muted">
-          Levi neemt contact op. Geen nieuwsbrief, geen medisch advies.{" "}
+          Ik neem contact op. Geen nieuwsbrief, geen medisch advies.{" "}
           <a href="/privacy" className="underline decoration-indigo/30 underline-offset-4">
             Privacy
           </a>
           .
         </p>
-        <EnrollDisclosure />
       </div>
     </form>
   );

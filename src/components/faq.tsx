@@ -3,11 +3,11 @@ import { faqs } from "@/lib/site";
 export function Faq() {
   return (
     <section className="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-24" id="faq">
-      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-green">
+      <p className="text-sm font-medium tracking-wide text-green">
         Vragen
       </p>
       <h2 className="font-display mt-3 text-4xl leading-tight text-indigo sm:text-5xl">
-        Kort en duidelijk.
+        Kort en eerlijk.
       </h2>
       <div className="mt-10 divide-y divide-indigo/10 border-y border-indigo/10">
         {faqs.map((item) => (

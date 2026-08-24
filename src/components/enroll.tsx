@@ -1,21 +1,41 @@
+import Link from "next/link";
 import { site } from "@/lib/site";
 
-type EnrollButtonProps = {
+type ButtonWidth = {
   children?: React.ReactNode;
   className?: string;
-  id?: string;
-  variant?: "primary" | "secondary" | "onDark";
   fullWidth?: boolean;
 };
 
-const variants = {
-  primary:
-    "inline-flex min-h-12 items-center justify-center rounded-full bg-green px-6 text-center text-base font-semibold text-white shadow-[0_8px_24px_rgba(30,145,83,0.22)] transition hover:bg-green-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green",
-  secondary:
-    "inline-flex min-h-12 items-center justify-center rounded-full border border-indigo/15 bg-white px-6 text-center text-base font-semibold text-indigo transition hover:bg-sand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo",
-  onDark:
-    "inline-flex min-h-12 items-center justify-center rounded-full bg-green px-6 text-center text-base font-semibold text-white transition hover:bg-green-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green",
+const widths = {
+  auto: "w-full sm:w-auto",
+  full: "w-full",
 };
+
+const primary =
+  "inline-flex min-h-12 items-center justify-center rounded-full bg-green px-7 text-center text-base font-semibold text-white shadow-[0_8px_24px_rgba(30,145,83,0.18)] transition hover:bg-green-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green";
+
+const secondary =
+  "inline-flex min-h-12 items-center justify-center rounded-full border border-indigo/15 bg-white px-7 text-center text-base font-semibold text-indigo transition hover:bg-sand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo";
+
+const onDark =
+  "inline-flex min-h-12 items-center justify-center rounded-full bg-green px-7 text-center text-base font-semibold text-white transition hover:bg-green-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green";
+
+type EnrollButtonProps = ButtonWidth & {
+  id?: string;
+  variant?: "primary" | "secondary" | "onDark";
+};
+
+export function StartButton({ children, className, fullWidth }: ButtonWidth) {
+  const width = fullWidth ? widths.full : widths.auto;
+  const classes = className ? `${primary} ${width} ${className}` : `${primary} ${width}`;
+
+  return (
+    <Link href="/start" className={classes}>
+      {children ?? "Starten"}
+    </Link>
+  );
+}
 
 export function EnrollButton({
   children,
@@ -24,28 +44,25 @@ export function EnrollButton({
   variant = "primary",
   fullWidth,
 }: EnrollButtonProps) {
-  const width = fullWidth ? "w-full" : "w-full sm:w-auto";
-  const classes = className
-    ? `${variants[variant]} ${width} ${className}`
-    : `${variants[variant]} ${width}`;
+  const look = variant === "secondary" ? secondary : variant === "onDark" ? onDark : primary;
+  const width = fullWidth ? widths.full : widths.auto;
+  const classes = className ? `${look} ${width} ${className}` : `${look} ${width}`;
 
   return (
     <a id={id} href={site.enrollUrl} className={classes}>
-      {children ?? "Starten / inschrijven"}
+      {children ?? "Inschrijven"}
     </a>
   );
 }
 
-export function TelegramButton({ className }: { className?: string }) {
+export function TelegramButton({ className, fullWidth }: ButtonWidth) {
+  const width = fullWidth ? widths.full : widths.auto;
   return (
     <a
       href={site.social.telegram}
       target="_blank"
       rel="noopener"
-      className={
-        className ??
-        "inline-flex min-h-12 w-full items-center justify-center rounded-full border border-indigo/20 bg-white/70 px-6 text-center text-base font-semibold text-indigo transition hover:border-indigo/40 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo sm:w-auto"
-      }
+      className={className ?? `${secondary} ${width}`}
     >
       Telegram community
     </a>

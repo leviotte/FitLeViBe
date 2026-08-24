@@ -7,7 +7,7 @@ export const site = {
   url: "https://fitlevibe.com",
   tagline: "20% training, 80% voeding, 100% mindset.",
   description:
-    "Fit met Levi: persoonlijke begeleiding door Levi Otte in Roosdaal. Gepersonaliseerde programma's, gratis FitCheck, coaching sinds 2015.",
+    "Fit met Levi — Levi Otte, persoonlijk coach in Roosdaal. Gezonder leven op jouw ritme, sinds 2015.",
   address: {
     street: "Zavelstraat 19",
     postalCode: "1760",
@@ -45,20 +45,20 @@ export const disclosure = {
 
 export const photos = {
   hero: {
-    src: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=1800&q=80",
-    alt: "Mensen die buiten traplopen in warm daglicht",
+    src: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1800&q=80",
+    alt: "Rustige stretching in warm daglicht",
   },
   about: {
-    src: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80",
-    alt: "Rustige stretching in een lichte trainingsruimte",
+    src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
+    alt: "Buiten bewegen in de ochtendzon",
   },
   nutrition: {
     src: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1400&q=80",
     alt: "Verse groenten en een eenvoudige, kleurrijke maaltijd",
   },
   weight: {
-    src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
-    alt: "Buiten bewegen in de ochtendzon",
+    src: "https://images.unsplash.com/photo-1447452001602-7090c7ab2db3?auto=format&fit=crop&w=1400&q=80",
+    alt: "Rustige beweging in een lichte ruimte",
   },
   muscle: {
     src: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1400&q=80",
@@ -85,22 +85,22 @@ export const goals: Record<
   gewichtsverlies: {
     id: "gewichtsverlies",
     title: "Gewichtsverlies & -beheersing",
-    short: "Rustiger eten, duidelijker bewegen, zonder crash.",
-    body: "Samen kijken we naar gewoontes die je volhoudt. Geen beloofde kilo’s, geen crashdieet: een plan rond voeding, beweging en mindset dat bij jouw leven in Roosdaal — of online — past.",
+    short: "Rustiger eten, duidelijker bewegen.",
+    body: "Je hoeft niet te crashen. We kijken naar eten en bewegen dat je volhoudt — zonder beloofde kilo’s.",
     href: "/fitcheck?doel=gewichtsverlies#fitcheck",
   },
   spiermassa: {
     id: "spiermassa",
     title: "Spiermassa",
-    short: "Sterker worden, met voeding die meewerkt.",
-    body: "Spieropbouw vraagt consistentie, niet eindeloos in de gym staan. Je krijgt een haalbaar schema en voedingsrichting, afgestemd op jouw ritme.",
+    short: "Sterker worden, op jouw ritme.",
+    body: "Sterker worden mag rustig. Je krijgt een haalbaar ritme, geen eindeloze gymdagen.",
     href: "/fitcheck?doel=spiermassa#fitcheck",
   },
   vitaliteit: {
     id: "vitaliteit",
     title: "Vitaliteit",
     short: "Meer energie in gewone dagen.",
-    body: "Beter slapen, steviger staan, minder pieken en dalen. Vitaliteit is geen trucje: het is ritme, voeding en een hoofd dat meewerkt.",
+    body: "Meer energie in gewone dagen: slaap, voeding, een hoofd dat meewerkt. Geen trucje.",
     href: "/fitcheck?doel=vitaliteit#fitcheck",
   },
 };
@@ -110,7 +110,7 @@ export const goalList = Object.values(goals);
 export const faqs = [
   {
     q: "Wat is een FitCheck?",
-    a: "Een FitCheck is een kort, vrijblijvend eerste gesprek. Je laat je naam, gsm en doel achter. Levi neemt contact op en we kijken samen of begeleiding zinvol is. Het is lifestyle coaching, geen medisch onderzoek.",
+    a: "Een kort, vrijblijvend gesprek. Je laat je naam, gsm en doel achter. Ik neem contact op, en we kijken of begeleiding zinvol is. Lifestyle coaching, geen medisch onderzoek.",
   },
   {
     q: "Wat kost de FitCheck?",

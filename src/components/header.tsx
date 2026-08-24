@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { EnrollButton } from "@/components/enroll";
+import { StartButton } from "@/components/enroll";
 import { site } from "@/lib/site";
 
 const links = [
@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-indigo/10 bg-cream/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
         <Link
           href="/"
           className="font-display text-xl tracking-tight text-indigo sm:text-[1.35rem]"
@@ -24,7 +24,7 @@ export function Header() {
           {site.publicName}
         </Link>
 
-        <nav className="hidden items-center gap-7 text-sm font-medium text-indigo/80 md:flex">
+        <nav className="hidden items-center gap-8 text-sm font-medium text-indigo/80 md:flex">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -34,10 +34,7 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link href="/start" className="transition hover:text-indigo">
-            Starten
-          </Link>
-          <EnrollButton className="min-h-11 px-5 text-sm" />
+          <StartButton className="min-h-11 px-5 text-sm shadow-none" />
         </nav>
 
         <button
@@ -72,19 +69,8 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/start"
-              className="rounded-xl px-3 py-3 hover:bg-sand"
-              onClick={() => setOpen(false)}
-            >
-              Starten
-            </Link>
-            <div className="pt-2">
-              <EnrollButton />
-              <p className="mt-3 px-1 text-sm leading-5 text-muted">
-                Onafhankelijk Herbalife-lid. Dit is geen officiële
-                Herbalife-website.
-              </p>
+            <div className="pt-2" onClick={() => setOpen(false)}>
+              <StartButton fullWidth />
             </div>
           </nav>
         </div>

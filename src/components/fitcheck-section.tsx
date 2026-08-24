@@ -6,15 +6,15 @@ export function FitCheckSection({ defaultGoal }: { defaultGoal?: GoalId }) {
     <section className="bg-cream" id="fitcheck">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-12">
         <div className="lg:col-span-5">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-green">
-            Gratis FitCheck
+          <p className="text-sm font-medium tracking-wide text-green">
+            FitCheck
           </p>
           <h2 className="font-display mt-3 text-4xl leading-tight text-indigo sm:text-5xl">
-            Vertel waar je naartoe wilt.
+            Vertel me waar je naartoe wilt.
           </h2>
           <p className="mt-5 max-w-md text-lg leading-8 text-muted">
-            Voornaam en naam, gsm, en je doel. Ik neem contact op. Geen
-            automatische inschrijving, geen medisch advies.
+            Liever eerst een gesprek? Laat je naam, gsm en doel achter. Ik neem
+            contact op.
           </p>
         </div>
         <div className="lg:col-span-7">

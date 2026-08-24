@@ -30,6 +30,7 @@ body {
   background: var(--cream);
   color: var(--indigo);
   font-family: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.011em;
 }
 
 .font-display {

@@ -7,14 +7,14 @@ export function Footer() {
 
   return (
     <footer className="border-t border-indigo/10 bg-indigo text-cream">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-12">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-12">
         <div className="md:col-span-5">
           <p className="font-display text-3xl text-cream">{site.publicName}</p>
-          <p className="mt-3 max-w-sm text-sm leading-6 text-cream/75">
-            {site.personName}, {site.jobTitle.toLowerCase()} in {site.address.city}.{" "}
-            {site.tagline} Making you healthier and happier.
+          <p className="mt-4 max-w-sm text-sm leading-7 text-cream/75">
+            {site.personName}, {site.jobTitle.toLowerCase()} in {site.address.city}.
+            Ik help je gezonder leven op een ritme dat bij jou past.
           </p>
-          <p className="mt-6 text-xs tracking-wide text-cream/55">
+          <p className="mt-8 text-xs tracking-wide text-cream/55">
             {site.legalHandle} · {site.personName}
           </p>
         </div>
@@ -65,18 +65,18 @@ export function Footer() {
           </p>
           <ul className="mt-3 space-y-2 text-sm text-cream/80">
             <li>
+              <Link href="/start" className="hover:text-white">
+                Starten
+              </Link>
+            </li>
+            <li>
               <Link href="/programmas" className="hover:text-white">
                 Programma&apos;s
               </Link>
             </li>
             <li>
               <Link href="/fitcheck" className="hover:text-white">
-                Gratis FitCheck
-              </Link>
-            </li>
-            <li>
-              <Link href="/start" className="hover:text-white">
-                Starten
+                FitCheck
               </Link>
             </li>
             <li>
@@ -90,8 +90,8 @@ export function Footer() {
               </Link>
             </li>
           </ul>
-          <div className="mt-6 flex flex-col gap-3">
-            <EnrollButton variant="onDark" />
+          <div className="mt-8 flex flex-col gap-3">
+            <EnrollButton variant="onDark">Inschrijven</EnrollButton>
             <TelegramButton className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-cream/25 bg-transparent px-6 text-center text-sm font-semibold text-cream transition hover:bg-white/10 sm:w-auto" />
             <EnrollDisclosure className="text-xs leading-5 text-cream/55" />
           </div>
