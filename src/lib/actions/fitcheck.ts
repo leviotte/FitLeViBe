@@ -1,10 +1,13 @@
 "use server";
 
+import { getTranslations } from "next-intl/server";
 import { headers } from "next/headers";
+import { isAppLocale } from "@/i18n/locales";
+import { routing } from "@/i18n/routing";
 import { sendFitCheckEmail } from "@/lib/persist-fitcheck";
 import { tooManyRequests } from "@/lib/rate-limit";
 import { normalizeBeMobile } from "@/lib/phone";
-import { type GoalId, goals, site } from "@/lib/site";
+import { isGoalId, site, type GoalId } from "@/lib/site";
 
 export type FitCheckState = {
   status: "idle" | "success" | "error";
@@ -17,12 +20,6 @@ export type FitCheckState = {
   };
 };
 
-const GOAL_IDS = Object.keys(goals) as GoalId[];
-
-function isGoal(value: string): value is GoalId {
-  return (GOAL_IDS as string[]).includes(value);
-}
-
 function clientKey(headerList: Headers): string {
   const forwarded = headerList.get("x-forwarded-for");
   if (forwarded) return forwarded.split(",")[0]?.trim() || "unknown";
@@ -33,6 +30,12 @@ export async function submitFitCheckAction(
   _prev: FitCheckState,
   formData: FormData,
 ): Promise<FitCheckState> {
+  const requestedLocale = String(formData.get("locale") ?? "").trim();
+  const locale = isAppLocale(requestedLocale)
+    ? requestedLocale
+    : routing.defaultLocale;
+  const t = await getTranslations({ locale, namespace: "FitCheck.errors" });
+
   const honeypot = String(formData.get("website") ?? "").trim();
   if (honeypot) {
     return { status: "success" };
@@ -42,7 +45,7 @@ export async function submitFitCheckAction(
   if (tooManyRequests(clientKey(headerList))) {
     return {
       status: "error",
-      message: "Even geduld. Probeer over een paar minuten opnieuw.",
+      message: t("rateLimit"),
     };
   }
 
@@ -54,26 +57,26 @@ export async function submitFitCheckAction(
   const fieldErrors: NonNullable<FitCheckState["fieldErrors"]> = {};
 
   if (name.length < 2 || name.length > 80) {
-    fieldErrors.name = "Vul je voor- en achternaam in.";
+    fieldErrors.name = t("name");
   }
 
   const phone = normalizeBeMobile(phoneRaw);
   if (!phone) {
-    fieldErrors.phone = "Vul een Belgisch gsm-nummer in, bijvoorbeeld 0475 34 44 02.";
+    fieldErrors.phone = t("phone");
   }
 
-  if (!isGoal(goalRaw)) {
-    fieldErrors.goal = "Kies een doel.";
+  if (!isGoalId(goalRaw)) {
+    fieldErrors.goal = t("goal");
   }
 
   if (messageRaw.length > 600) {
-    fieldErrors.message = "Houd je bericht onder 600 tekens.";
+    fieldErrors.message = t("message");
   }
 
   if (Object.keys(fieldErrors).length > 0) {
     return {
       status: "error",
-      message: "Controleer even de velden hieronder.",
+      message: t("fields"),
       fieldErrors,
     };
   }
@@ -84,6 +87,7 @@ export async function submitFitCheckAction(
       phone: phone!,
       goal: goalRaw as GoalId,
       message: messageRaw || undefined,
+      locale,
       createdAt: new Date().toISOString(),
     });
 
@@ -93,15 +97,15 @@ export async function submitFitCheckAction(
         status: "error",
         message:
           result.reason === "not_configured"
-            ? `Dit formulier kan nu geen e-mail sturen. Bel me op ${phoneHint}.`
-            : `Verzenden lukte niet. Probeer opnieuw of bel me op ${phoneHint}.`,
+            ? t("notConfigured", { phone: phoneHint })
+            : t("sendFailed", { phone: phoneHint }),
       };
     }
   } catch (error) {
     console.error("FitCheck send failed:", error);
     return {
       status: "error",
-      message: `Verzenden lukte niet. Probeer opnieuw of bel me op ${site.phoneDisplay}.`,
+      message: t("sendFailed", { phone: site.phoneDisplay }),
     };
   }
 

@@ -1,22 +1,25 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { StartButton } from "@/components/enroll";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import { Link } from "@/i18n/navigation";
 import { site } from "@/lib/site";
-
-const links = [
-  { href: "/programmas", label: "Programma's" },
-  { href: "/over", label: "Over Levi" },
-  { href: "/fitcheck", label: "FitCheck" },
-] as const;
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const t = useTranslations("Nav");
+
+  const links = [
+    { href: "/programmas" as const, label: t("programs") },
+    { href: "/over" as const, label: t("about") },
+    { href: "/fitcheck" as const, label: t("fitcheck") },
+  ];
 
   return (
     <header className="sticky top-0 z-40 border-b border-indigo/10 bg-cream/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-3.5 sm:px-8">
         <Link
           href="/"
           className="font-display text-xl tracking-tight text-indigo sm:text-[1.35rem]"
@@ -34,23 +37,27 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <LanguageSwitcher />
           <StartButton className="min-h-11 px-5 text-sm shadow-none" />
         </nav>
 
-        <button
-          type="button"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-indigo/15 bg-white/70 text-indigo md:hidden"
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          onClick={() => setOpen((value) => !value)}
-        >
-          <span className="sr-only">{open ? "Menu sluiten" : "Menu openen"}</span>
-          <span aria-hidden className="flex flex-col gap-1.5">
-            <span className="block h-px w-5 bg-indigo" />
-            <span className="block h-px w-5 bg-indigo" />
-            <span className="block h-px w-3 bg-indigo" />
-          </span>
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageSwitcher />
+          <button
+            type="button"
+            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-indigo/15 bg-white/70 text-indigo"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen((value) => !value)}
+          >
+            <span className="sr-only">{open ? t("closeMenu") : t("openMenu")}</span>
+            <span aria-hidden className="flex flex-col gap-1.5">
+              <span className="block h-px w-5 bg-indigo" />
+              <span className="block h-px w-5 bg-indigo" />
+              <span className="block h-px w-3 bg-indigo" />
+            </span>
+          </button>
+        </div>
       </div>
 
       {open ? (

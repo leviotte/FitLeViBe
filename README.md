@@ -6,6 +6,19 @@ Public site for **Levi Otte**, persoonlijk coach in Roosdaal, België.
 - Legal / social / domain handle: FitLeViBe (`fitlevibe.com`, Instagram & Facebook `@FitLeViBe`)
 - Levi is an independent Herbalife member. This is not herbalife.com.
 
+## Locales
+
+Dutch (nl-BE) is the default at `/`. Language editions:
+
+| Locale | Path |
+| --- | --- |
+| Dutch (Belgium) | `/` |
+| French | `/fr` |
+| English | `/en` |
+| Spanish | `/es` |
+
+Copy lives in `messages/{nl,fr,en,es}.json`. The public name **Fit met Levi** is unchanged in every language.
+
 ## Run locally
 
 ```bash
@@ -25,7 +38,7 @@ pnpm build
 
 Copy `.env.example` to `.env.local`.
 
-FitCheck (`submitFitCheckAction` on `/` and `/fitcheck` only — never `/start`) emails each lead to **fitlevibe@icloud.com** via [Resend](https://resend.com).
+FitCheck (`submitFitCheckAction` on `/` and `/fitcheck`, including `/fr` `/en` `/es` equivalents — never `/start`) emails each lead to **fitlevibe@icloud.com** via [Resend](https://resend.com).
 
 | Variable | Required | Role |
 | --- | --- | --- |
@@ -37,13 +50,15 @@ The one.com Website Builder contact form is not used. Do not put secrets in the 
 
 ## Pages
 
-| Path | Role |
+| Path (Dutch / others) | Role |
 | --- | --- |
-| `/` | Homepage |
-| `/programmas` | Three programs → FitCheck with goal prefilled |
-| `/fitcheck` | Dedicated FitCheck form |
-| `/start` | Enroll + Telegram community |
-| `/over` | About Levi |
-| `/privacy` | Short privacy note |
+| `/`, `/fr`, `/en`, `/es` | Homepage |
+| `/programmas`, `/fr/programmes`, `/en/programs`, `/es/programas` | Three programs → FitCheck with goal prefilled |
+| `/fitcheck` (same segment in every locale) | Dedicated FitCheck form |
+| `/start` (same segment in every locale) | Enroll + Telegram community |
+| `/over`, `/fr/a-propos`, `/en/about`, `/es/sobre` | About Levi |
+| `/privacy`, `/fr/confidentialite`, `/en/privacy`, `/es/privacidad` | Short privacy note |
+
+The enroll URL on `/start` is exact (query `locale=nl-BE` is not rewritten per page language). Telegram is only https://t.me/fitlevibe.
 
 Production branch: `main`.
