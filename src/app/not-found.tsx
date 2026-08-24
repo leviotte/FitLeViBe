@@ -1,16 +1,33 @@
 import Link from "next/link";
 
-export default function NotFound() {
+export default function RootNotFound() {
   return (
-    <div className="mx-auto max-w-xl px-5 py-24 text-center">
-      <h1 className="font-display text-4xl text-indigo">Pagina niet gevonden</h1>
-      <p className="mt-4 text-muted">Die link bestaat niet (meer) op Fit met Levi.</p>
-      <Link
-        href="/"
-        className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-green px-6 font-semibold text-white"
-      >
-        Terug naar home
-      </Link>
-    </div>
+    <html lang="nl-BE">
+      <body style={{ fontFamily: "system-ui, sans-serif", background: "#F6F1E8", color: "#444566" }}>
+        <div style={{ maxWidth: 36 * 16, margin: "6rem auto", padding: "0 1.25rem", textAlign: "center" }}>
+          <h1 style={{ fontSize: "2rem" }}>Pagina niet gevonden</h1>
+          <p style={{ marginTop: "1rem", color: "#5E5D72" }}>
+            Die link bestaat niet (meer) op Fit met Levi.
+          </p>
+          <p style={{ marginTop: "2rem" }}>
+            <Link href="/" style={{ color: "#1E9153", fontWeight: 600 }}>
+              Terug naar home
+            </Link>
+            {" · "}
+            <Link href="/fr" style={{ color: "#1E9153", fontWeight: 600 }}>
+              Accueil
+            </Link>
+            {" · "}
+            <Link href="/en" style={{ color: "#1E9153", fontWeight: 600 }}>
+              Home
+            </Link>
+            {" · "}
+            <Link href="/es" style={{ color: "#1E9153", fontWeight: 600 }}>
+              Inicio
+            </Link>
+          </p>
+        </div>
+      </body>
+    </html>
   );
 }

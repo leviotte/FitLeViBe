@@ -1,11 +1,13 @@
 "use client";
 
 import { useActionState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import {
   submitFitCheckAction,
   type FitCheckState,
 } from "@/lib/actions/fitcheck";
-import { goalList, type GoalId } from "@/lib/site";
+import { Link } from "@/i18n/navigation";
+import { GOAL_IDS, type GoalId } from "@/lib/site";
 
 const initial: FitCheckState = { status: "idle" };
 
@@ -18,19 +20,19 @@ type FitCheckFormProps = {
 
 export function FitCheckForm({ defaultGoal }: FitCheckFormProps) {
   const [state, action, pending] = useActionState(submitFitCheckAction, initial);
+  const t = useTranslations("FitCheck");
+  const goals = useTranslations("Goals");
+  const locale = useLocale();
 
   if (state.status === "success") {
     return (
       <div className="rounded-3xl border border-green/20 bg-white px-6 py-10 text-center sm:px-10">
         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-green">
-          Ontvangen
+          {t("successKicker")}
         </p>
-        <h2 className="font-display mt-3 text-3xl text-indigo">
-          Ik neem contact op.
-        </h2>
+        <h2 className="font-display mt-3 text-3xl text-indigo">{t("successTitle")}</h2>
         <p className="mx-auto mt-4 max-w-md text-base leading-7 text-muted">
-          Bedankt. Ik bekijk wat je schreef en bel of bericht je op het nummer
-          dat je achterliet.
+          {t("successBody")}
         </p>
       </div>
     );
@@ -38,15 +40,16 @@ export function FitCheckForm({ defaultGoal }: FitCheckFormProps) {
 
   return (
     <form action={action} className="rounded-3xl border border-indigo/10 bg-white p-5 sm:p-8">
+      <input type="hidden" name="locale" value={locale} />
       <div className="grid gap-5">
         <label className="block">
-          <span className="text-sm font-medium text-indigo">Voornaam &amp; naam</span>
+          <span className="text-sm font-medium text-indigo">{t("name")}</span>
           <input
             required
             name="name"
             autoComplete="name"
             maxLength={80}
-            placeholder="Zoals je aangesproken wilt worden"
+            placeholder={t("namePlaceholder")}
             className={fieldClass}
           />
           {state.fieldErrors?.name ? (
@@ -55,14 +58,14 @@ export function FitCheckForm({ defaultGoal }: FitCheckFormProps) {
         </label>
 
         <label className="block">
-          <span className="text-sm font-medium text-indigo">GSM-nummer</span>
+          <span className="text-sm font-medium text-indigo">{t("phone")}</span>
           <input
             required
             name="phone"
             type="tel"
             inputMode="tel"
             autoComplete="tel"
-            placeholder="0475 12 34 56"
+            placeholder={t("phonePlaceholder")}
             className={fieldClass}
           />
           {state.fieldErrors?.phone ? (
@@ -71,18 +74,18 @@ export function FitCheckForm({ defaultGoal }: FitCheckFormProps) {
         </label>
 
         <fieldset>
-          <legend className="text-sm font-medium text-indigo">Wat is jouw doel?</legend>
+          <legend className="text-sm font-medium text-indigo">{t("goalLegend")}</legend>
           {defaultGoal ? (
             <p className="mt-2 text-sm text-green">
-              Voorkeuze: {goalList.find((goal) => goal.id === defaultGoal)?.title}.
+              {t("goalPrefill", { goal: goals(`${defaultGoal}.title`) })}
             </p>
           ) : null}
           <div className="mt-3 grid gap-2">
-            {goalList.map((goal) => (
+            {GOAL_IDS.map((id) => (
               <label
-                key={goal.id}
+                key={id}
                 className={`flex cursor-pointer items-start gap-3 rounded-2xl border px-4 py-3 has-[:checked]:border-green has-[:checked]:bg-green/5 ${
-                  defaultGoal === goal.id
+                  defaultGoal === id
                     ? "border-green bg-green/5"
                     : "border-indigo/10 bg-cream/60"
                 }`}
@@ -90,14 +93,16 @@ export function FitCheckForm({ defaultGoal }: FitCheckFormProps) {
                 <input
                   type="radio"
                   name="goal"
-                  value={goal.id}
-                  defaultChecked={defaultGoal === goal.id}
+                  value={id}
+                  defaultChecked={defaultGoal === id}
                   className="mt-1 accent-green"
                   required
                 />
                 <span>
-                  <span className="block font-medium text-indigo">{goal.title}</span>
-                  <span className="block text-sm text-muted">{goal.short}</span>
+                  <span className="block font-medium text-indigo">
+                    {goals(`${id}.title`)}
+                  </span>
+                  <span className="block text-sm text-muted">{goals(`${id}.short`)}</span>
                 </span>
               </label>
             ))}
@@ -109,13 +114,14 @@ export function FitCheckForm({ defaultGoal }: FitCheckFormProps) {
 
         <label className="block">
           <span className="text-sm font-medium text-indigo">
-            Bericht <span className="font-normal text-muted">(optioneel)</span>
+            {t("message")}{" "}
+            <span className="font-normal text-muted">{t("optional")}</span>
           </span>
           <textarea
             name="message"
             rows={4}
             maxLength={600}
-            placeholder="Wat speelt er nu? Ritme, gezin, werk, blessure…"
+            placeholder={t("messagePlaceholder")}
             className={`${fieldClass} resize-y`}
           />
           {state.fieldErrors?.message ? (
@@ -141,13 +147,16 @@ export function FitCheckForm({ defaultGoal }: FitCheckFormProps) {
           disabled={pending}
           className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-green px-6 text-base font-semibold text-white transition hover:bg-green-dark disabled:opacity-70"
         >
-          {pending ? "Even geduld…" : "Stuur mijn FitCheck"}
+          {pending ? t("pending") : t("submit")}
         </button>
         <p className="text-sm leading-6 text-muted">
-          Ik neem contact op. Geen nieuwsbrief, geen medisch advies.{" "}
-          <a href="/privacy" className="underline decoration-indigo/30 underline-offset-4">
-            Privacy
-          </a>
+          {t("fineprint")}{" "}
+          <Link
+            href="/privacy"
+            className="underline decoration-indigo/30 underline-offset-4"
+          >
+            {t("privacy")}
+          </Link>
           .
         </p>
       </div>

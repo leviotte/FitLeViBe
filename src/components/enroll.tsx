@@ -1,4 +1,7 @@
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { site } from "@/lib/site";
 
 type ButtonWidth = {
@@ -27,12 +30,13 @@ type EnrollButtonProps = ButtonWidth & {
 };
 
 export function StartButton({ children, className, fullWidth }: ButtonWidth) {
+  const t = useTranslations("Common");
   const width = fullWidth ? widths.full : widths.auto;
   const classes = className ? `${primary} ${width} ${className}` : `${primary} ${width}`;
 
   return (
     <Link href="/start" className={classes}>
-      {children ?? "Starten"}
+      {children ?? t("start")}
     </Link>
   );
 }
@@ -44,18 +48,20 @@ export function EnrollButton({
   variant = "primary",
   fullWidth,
 }: EnrollButtonProps) {
+  const t = useTranslations("Common");
   const look = variant === "secondary" ? secondary : variant === "onDark" ? onDark : primary;
   const width = fullWidth ? widths.full : widths.auto;
   const classes = className ? `${look} ${width} ${className}` : `${look} ${width}`;
 
   return (
     <a id={id} href={site.enrollUrl} className={classes}>
-      {children ?? "Inschrijven"}
+      {children ?? t("enroll")}
     </a>
   );
 }
 
 export function TelegramButton({ className, fullWidth }: ButtonWidth) {
+  const t = useTranslations("Common");
   const width = fullWidth ? widths.full : widths.auto;
   return (
     <a
@@ -64,15 +70,16 @@ export function TelegramButton({ className, fullWidth }: ButtonWidth) {
       rel="noopener"
       className={className ?? `${secondary} ${width}`}
     >
-      Telegram community
+      {t("telegram")}
     </a>
   );
 }
 
 export function EnrollDisclosure({ className }: { className?: string }) {
+  const t = useTranslations("Common");
   return (
     <p className={className ?? "max-w-md text-sm leading-6 text-muted"}>
-      Onafhankelijk Herbalife-lid. Dit is geen officiële Herbalife-website.
+      {t("disclosureShort")}
     </p>
   );
 }

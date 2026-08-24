@@ -1,12 +1,15 @@
+import { getTranslations } from "next-intl/server";
 import { site } from "@/lib/site";
 
-const items = [
-  { label: site.address.city, detail: "België" },
-  { label: `Sinds ${site.foundedYear}`, detail: "persoonlijk coach" },
-  { label: `Google ${site.googleRating}`, detail: "publieke reviews" },
-];
+export async function TrustRow() {
+  const t = await getTranslations("Trust");
 
-export function TrustRow() {
+  const items = [
+    { label: site.address.city, detail: t("country") },
+    { label: t("since", { year: site.foundedYear }), detail: t("coach") },
+    { label: t("google", { rating: site.googleRating }), detail: t("reviews") },
+  ];
+
   return (
     <section className="border-y border-indigo/10 bg-sand/40">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 sm:grid-cols-3 sm:px-8 sm:py-14">

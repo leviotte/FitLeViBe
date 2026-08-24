@@ -46,7 +46,7 @@ export default function OpenGraphImage() {
           </div>
         </div>
         <div style={{ display: "flex", fontSize: 22, color: "#5E5D72" }}>
-          fitlevibe.com
+          www.fitlevibe.com
         </div>
       </div>
     ),

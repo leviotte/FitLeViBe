@@ -1,0 +1,233 @@
+{
+  "Meta": {
+    "site": {
+      "defaultTitle": "Fit met Levi · Levi Otte, coach en Roosdaal",
+      "defaultDescription": "Fit met Levi — Levi Otte, entrenador personal en Roosdaal, Bélgica. Vivir más sano a tu ritmo, desde 2015."
+    },
+    "home": {
+      "title": "Fit met Levi · Levi Otte, coach en Roosdaal",
+      "description": "Levi Otte, entrenador personal en Roosdaal (Bélgica). FitCheck, acompañamiento y un punto de partida claro. Sin consejo médico ni promesas de ingresos."
+    },
+    "start": {
+      "title": "Empezar",
+      "description": "Empieza con Fit met Levi. Inscripción o comunidad de Telegram. Levi Otte, entrenador personal en Roosdaal, Bélgica."
+    },
+    "fitcheck": {
+      "title": "FitCheck gratis",
+      "description": "Pide un FitCheck a Levi Otte. Nombre, móvil y objetivo. Te contacto. Coaching de hábitos, no consejo médico."
+    },
+    "programs": {
+      "title": "Programas",
+      "description": "Tres caminos en Fit met Levi: peso, músculo o vitalidad. A tu ritmo. Los resultados varían de una persona a otra."
+    },
+    "about": {
+      "title": "Sobre Levi Otte",
+      "description": "Levi Otte es entrenador personal en Roosdaal (Bélgica) desde 2015. 20 % entrenamiento, 80 % alimentación, 100 % mindset. Miembro independiente de Herbalife."
+    },
+    "privacy": {
+      "title": "Privacidad",
+      "description": "Cómo Fit met Levi usa los datos del FitCheck: nombre, móvil y objetivo, para ponerse en contacto."
+    },
+    "notFound": {
+      "title": "Página no encontrada",
+      "description": "Ese enlace ya no existe en Fit met Levi."
+    },
+    "ogAlt": "Fit met Levi · Levi Otte, entrenador personal en Roosdaal",
+    "keywords": ["Fit met Levi", "Levi Otte", "entrenador personal Roosdaal", "FitCheck", "FitLeViBe", "coaching Bélgica"]
+  },
+  "Nav": {
+    "programs": "Programas",
+    "about": "Sobre Levi",
+    "fitcheck": "FitCheck",
+    "start": "Empezar",
+    "privacy": "Privacidad",
+    "home": "Inicio",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "language": "Idioma"
+  },
+  "Common": {
+    "publicName": "Fit met Levi",
+    "jobTitle": "Entrenador personal",
+    "jobTitleLower": "entrenador personal",
+    "tagline": "20 % entrenamiento, 80 % alimentación, 100 % mindset.",
+    "country": "Bélgica",
+    "enroll": "Inscribirme",
+    "telegram": "Comunidad de Telegram",
+    "start": "Empezar",
+    "fitCheckFirst": "Primero un FitCheck",
+    "disclosureShort": "Miembro independiente de Herbalife. Este no es un sitio oficial de Herbalife.",
+    "disclosureFooter": "Levi Otte es miembro independiente de Herbalife. Fit met Levi / FitLeViBe no es un sitio oficial de Herbalife y no está vinculado a Herbalife International como web corporativa. Los resultados varían de una persona a otra. Sin consejo médico, sin promesas de ingresos, sin cifras garantizadas de pérdida de peso.",
+    "footerBlurb": "Te ayudo a vivir más sano, a un ritmo que encaje contigo.",
+    "contact": "Contacto",
+    "navigate": "Explorar",
+    "training": "Entrenamiento",
+    "nutrition": "Alimentación",
+    "mindset": "Mindset"
+  },
+  "Photos": {
+    "hero": "Estiramientos tranquilos con luz cálida",
+    "about": "Moverse al aire libre con el sol de la mañana",
+    "nutrition": "Verduras frescas y una comida sencilla y colorida",
+    "weight": "Movimiento calmado en un espacio luminoso",
+    "muscle": "Entrenamiento de fuerza al aire libre",
+    "vitality": "Moverse con calma en la naturaleza"
+  },
+  "Hero": {
+    "kicker": "{name} · {job} en {city}",
+    "title": "Fit met Levi",
+    "body": "Soy Levi Otte, y te ayudo a vivir más sano, a un ritmo que encaje contigo."
+  },
+  "Trust": {
+    "country": "Bélgica",
+    "since": "Desde {year}",
+    "coach": "entrenador personal",
+    "google": "Google {rating}",
+    "reviews": "reseñas públicas"
+  },
+  "Goals": {
+    "eyebrow": "Tu dirección",
+    "title": "¿Qué quieres ahora para ti?",
+    "intro": "Elige lo que más encaja hoy. Sin recorrido obligatorio ni cifras garantizadas.",
+    "cta": "Primero un FitCheck",
+    "gewichtsverlies": {
+      "title": "Peso y equilibrio",
+      "short": "Comer con más calma, moverte con más claridad.",
+      "body": "No hace falta estrellarse. Miramos una alimentación y un movimiento que puedas sostener — sin kilos prometidos."
+    },
+    "spiermassa": {
+      "title": "Músculo",
+      "short": "Hacerte más fuerte, a tu ritmo.",
+      "body": "Hacerte más fuerte puede ser tranquilo. Recibes un ritmo sostenible, no jornadas interminables de gimnasio."
+    },
+    "vitaliteit": {
+      "title": "Vitalidad",
+      "short": "Más energía en los días normales.",
+      "body": "Más energía en los días normales: sueño, comida, una cabeza que acompaña. Sin truco."
+    }
+  },
+  "How": {
+    "eyebrow": "FitCheck",
+    "title": "¿Prefieres hablar primero?",
+    "intro": "Puede ser. Un FitCheck es una conversación breve, sin compromiso.",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Cuentas dónde estás",
+        "body": "Tu nombre, tu móvil y lo que quieres. Una frase de más está bien; no es obligatoria."
+      },
+      {
+        "n": "02",
+        "title": "Te contacto",
+        "body": "Sin chatbot. Un mensaje o una llamada, para oír cómo te van los días."
+      },
+      {
+        "n": "03",
+        "title": "Lo vemos juntos",
+        "body": "Recibes una primera dirección. Coaching de hábitos: no es consejo médico ni una obligación."
+      }
+    ]
+  },
+  "About": {
+    "eyebrow": "Sobre mí",
+    "homeTitle": "Entreno en Roosdaal, desde 2015.",
+    "homeBody": "Soy {name}. Si quieres sentirte más sano y más calmado en tu cuerpo, camino contigo: con una alimentación que hace la mayor parte, un entrenamiento que se puede sostener y una cabeza que se queda.",
+    "homeDisclosure": "En persona, al aire libre o en línea, con cita. Soy miembro independiente de Herbalife; este sitio es de Fit met Levi, no de Herbalife.",
+    "more": "Más sobre mí",
+    "pageTitle": "Levi Otte",
+    "pageLead": "Entrenador personal en {city}, Bélgica. Desde {year}. Google {rating}.",
+    "p1": "Si quieres seguir con salud y motivación, conviene saber qué necesitas de verdad. Alimentación, movimiento y cabeza funcionan mejor juntos que solo entrenar más duro. Desde 2015 afino ese enfoque: sin hype, con un ritmo que puedas sostener.",
+    "p2": "El acompañamiento puede ser en persona en Roosdaal, al aire libre o en línea, siempre con cita.",
+    "p3": "Soy miembro independiente de Herbalife. Este sitio web es de Fit met Levi / Levi Otte, no el sitio oficial de Herbalife. Sin promesas de ingresos ni afirmaciones médicas."
+  },
+  "StartBand": {
+    "title": "Si esto encaja, empiezas aquí.",
+    "body": "Sin presión. Un primer paso, conmigo."
+  },
+  "Start": {
+    "kicker": "{name} · {city}",
+    "title": "Empieza aquí.",
+    "body": "Ahora no tienes que demostrar nada. Elige lo que te deje más tranquilo.",
+    "meta": "{city} · desde {year} · Google {rating}",
+    "note": "Sin presión. Sin promesas de kilos ni de ingresos. Un primer paso, conmigo."
+  },
+  "FitCheck": {
+    "eyebrow": "FitCheck",
+    "title": "Cuéntame hacia dónde quieres ir.",
+    "intro": "¿Prefieres hablar primero? Deja tu nombre, móvil y objetivo. Te contacto.",
+    "successKicker": "Recibido",
+    "successTitle": "Te contacto.",
+    "successBody": "Gracias. Leo lo que escribiste y te llamo o te escribo al número que dejaste.",
+    "name": "Nombre y apellidos",
+    "namePlaceholder": "Como quieres que te llamemos",
+    "phone": "Número de móvil",
+    "phonePlaceholder": "0475 12 34 56",
+    "goalLegend": "¿Cuál es tu objetivo?",
+    "goalPrefill": "Preselección: {goal}.",
+    "message": "Mensaje",
+    "optional": "(opcional)",
+    "messagePlaceholder": "¿Qué está pasando ahora? Ritmo, familia, trabajo, una lesión…",
+    "submit": "Enviar mi FitCheck",
+    "pending": "Un momento…",
+    "fineprint": "Te contacto. Sin boletín ni consejo médico.",
+    "privacy": "Privacidad",
+    "errors": {
+      "rateLimit": "Un momento. Prueba de nuevo en unos minutos.",
+      "name": "Indica tu nombre y apellidos.",
+      "phone": "Indica un número de móvil belga, por ejemplo 0475 34 44 02.",
+      "goal": "Elige un objetivo.",
+      "message": "Deja el mensaje por debajo de 600 caracteres.",
+      "fields": "Revisa los campos de abajo.",
+      "notConfigured": "El formulario no puede enviar correo ahora. Llámame al {phone}.",
+      "sendFailed": "No se pudo enviar. Prueba de nuevo o llámame al {phone}."
+    }
+  },
+  "Faq": {
+    "eyebrow": "Preguntas",
+    "title": "Corto y honesto.",
+    "items": [
+      {
+        "q": "¿Qué es un FitCheck?",
+        "a": "Una conversación breve, sin compromiso. Dejas tu nombre, móvil y objetivo. Te contacto y vemos si tiene sentido un acompañamiento. Coaching de hábitos, no un examen médico."
+      },
+      {
+        "q": "¿Cuánto cuesta el FitCheck?",
+        "a": "El FitCheck en sí es gratis. Después hablamos de si seguimos y cómo. No hay inscripción oculta en este formulario."
+      },
+      {
+        "q": "¿Tengo que entrenar ya?",
+        "a": "No. Da igual si vuelves a empezar o si llevas años entrenando: partimos de donde estás."
+      },
+      {
+        "q": "¿También trabajas en línea?",
+        "a": "Sí. El coaching puede ser en persona en Roosdaal, al aire libre o en línea, con cita."
+      },
+      {
+        "q": "¿Qué significa «miembro independiente de Herbalife»?",
+        "a": "Levi es coach miembro por cuenta propia, no empleado de Herbalife. Este sitio es de Fit met Levi / Levi Otte, no el sitio oficial de Herbalife. Los productos son opcionales y nunca una promesa de ingresos."
+      },
+      {
+        "q": "¿Esto es consejo médico?",
+        "a": "No. El FitCheck y el coaching no tratan enfermedades ni sustituyen a un médico o dietista. Si hay una pregunta médica, te oriento a otro profesional."
+      }
+    ]
+  },
+  "Programs": {
+    "eyebrow": "Programas",
+    "title": "¿Qué quieres ahora para ti?",
+    "intro": "Tres pistas claras. No es un catálogo de promesas. Los resultados varían de una persona a otra."
+  },
+  "Privacy": {
+    "title": "Privacidad",
+    "p1": "Responsable del tratamiento: {name} ({publicName}), {street}, {postal} {city}, {country}. Tel. {phone}.",
+    "p2": "A través del formulario FitCheck recojo nombre y apellidos, número de móvil, objetivo elegido y, si quieres, un mensaje. Finalidad: contactarte sobre coaching de hábitos. Base jurídica: tu solicitud (medidas precontractuales / interés legítimo de responder).",
+    "p3": "Los datos no van a un boletín público. Las solicitudes FitCheck se envían por correo a {email} mientras dura la conversación; después se borran o se limitan a lo que exija la contabilidad o un conflicto.",
+    "p4": "Tienes derecho de acceso, rectificación, supresión y reclamación ante la Autoridad de Protección de Datos de Bélgica. Escribe o llama al número de arriba.",
+    "p5": "Este sitio no es un sitio oficial de Herbalife. Levi Otte es miembro independiente. El FitCheck no recoge datos de tarjeta de pago."
+  },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "body": "Ese enlace ya no existe en Fit met Levi.",
+    "home": "Volver al inicio"
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "Meta": {
+    "site": {
+      "defaultTitle": "Fit met Levi · Levi Otte, coach in Roosdaal",
+      "defaultDescription": "Fit met Levi — Levi Otte, persoonlijk coach in Roosdaal. Gezonder leven op jouw ritme, sinds 2015."
+    },
+    "home": {
+      "title": "Fit met Levi · Levi Otte, coach in Roosdaal",
+      "description": "Levi Otte, persoonlijk coach in Roosdaal. FitCheck, coaching en een helder startpunt. Geen medisch advies, geen inkomensbeloftes."
+    },
+    "start": {
+      "title": "Starten",
+      "description": "Begin bij Fit met Levi. Inschrijven of meevolgen in Telegram. Levi Otte, persoonlijk coach in Roosdaal."
+    },
+    "fitcheck": {
+      "title": "Gratis FitCheck",
+      "description": "Vraag een FitCheck aan bij Levi Otte. Naam, gsm en doel. Ik neem contact op. Lifestyle coaching, geen medisch advies."
+    },
+    "programs": {
+      "title": "Programma's",
+      "description": "Drie richtingen bij Fit met Levi: gewicht, spiermassa of vitaliteit. Begin op jouw ritme. Resultaten verschillen per persoon."
+    },
+    "about": {
+      "title": "Over Levi Otte",
+      "description": "Levi Otte is persoonlijk coach in Roosdaal sinds 2015. 20% training, 80% voeding, 100% mindset. Onafhankelijk Herbalife-lid."
+    },
+    "privacy": {
+      "title": "Privacy",
+      "description": "Hoe Fit met Levi FitCheck-gegevens gebruikt: naam, gsm en doel, om contact op te nemen."
+    },
+    "notFound": {
+      "title": "Pagina niet gevonden",
+      "description": "Die link bestaat niet (meer) op Fit met Levi."
+    },
+    "ogAlt": "Fit met Levi · Levi Otte, persoonlijk coach in Roosdaal",
+    "keywords": ["Fit met Levi", "Levi Otte", "persoonlijk coach Roosdaal", "FitCheck", "FitLeViBe", "coaching België"]
+  },
+  "Nav": {
+    "programs": "Programma's",
+    "about": "Over Levi",
+    "fitcheck": "FitCheck",
+    "start": "Starten",
+    "privacy": "Privacy",
+    "home": "Home",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "language": "Taal"
+  },
+  "Common": {
+    "publicName": "Fit met Levi",
+    "jobTitle": "Persoonlijk coach",
+    "jobTitleLower": "persoonlijk coach",
+    "tagline": "20% training, 80% voeding, 100% mindset.",
+    "country": "België",
+    "enroll": "Inschrijven",
+    "telegram": "Telegram community",
+    "start": "Starten",
+    "fitCheckFirst": "Eerst een FitCheck",
+    "disclosureShort": "Onafhankelijk Herbalife-lid. Dit is geen officiële Herbalife-website.",
+    "disclosureFooter": "Levi Otte is een onafhankelijk Herbalife-lid. Fit met Levi / FitLeViBe is geen officiële Herbalife-website en is niet verbonden met Herbalife International als bedrijfswebsite. Resultaten verschillen per persoon. Geen medisch advies, geen inkomensbeloftes, geen gegarandeerde gewichtsverliescijfers.",
+    "footerBlurb": "Ik help je gezonder leven op een ritme dat bij jou past.",
+    "contact": "Contact",
+    "navigate": "Navigeren",
+    "training": "Training",
+    "nutrition": "Voeding",
+    "mindset": "Mindset"
+  },
+  "Photos": {
+    "hero": "Rustige stretching in warm daglicht",
+    "about": "Buiten bewegen in de ochtendzon",
+    "nutrition": "Verse groenten en een eenvoudige, kleurrijke maaltijd",
+    "weight": "Rustige beweging in een lichte ruimte",
+    "muscle": "Krachttraining in open lucht",
+    "vitality": "Rustig bewegen in de natuur"
+  },
+  "Hero": {
+    "kicker": "{name} · {job} in {city}",
+    "title": "Fit met Levi",
+    "body": "Ik ben Levi Otte, en ik help je gezonder leven op een ritme dat bij jou past."
+  },
+  "Trust": {
+    "country": "België",
+    "since": "Sinds {year}",
+    "coach": "persoonlijk coach",
+    "google": "Google {rating}",
+    "reviews": "publieke reviews"
+  },
+  "Goals": {
+    "eyebrow": "Jouw richting",
+    "title": "Wat wil je nu voor jezelf?",
+    "intro": "Kies wat nu het meest klopt. Geen verplicht traject, geen gegarandeerde cijfers.",
+    "cta": "Eerst een FitCheck",
+    "gewichtsverlies": {
+      "title": "Gewichtsverlies & -beheersing",
+      "short": "Rustiger eten, duidelijker bewegen.",
+      "body": "Je hoeft niet te crashen. We kijken naar eten en bewegen dat je volhoudt — zonder beloofde kilo’s."
+    },
+    "spiermassa": {
+      "title": "Spiermassa",
+      "short": "Sterker worden, op jouw ritme.",
+      "body": "Sterker worden mag rustig. Je krijgt een haalbaar ritme, geen eindeloze gymdagen."
+    },
+    "vitaliteit": {
+      "title": "Vitaliteit",
+      "short": "Meer energie in gewone dagen.",
+      "body": "Meer energie in gewone dagen: slaap, voeding, een hoofd dat meewerkt. Geen trucje."
+    }
+  },
+  "How": {
+    "eyebrow": "FitCheck",
+    "title": "Liever eerst praten?",
+    "intro": "Dat mag. Een FitCheck is een kort, vrijblijvend gesprek.",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Je vertelt waar je staat",
+        "body": "Je naam, gsm, en wat je wilt. Een zin extra mag, hoeft niet."
+      },
+      {
+        "n": "02",
+        "title": "Ik neem contact op",
+        "body": "Geen chatbot. Een bericht of gesprek, om te horen hoe jouw dagen lopen."
+      },
+      {
+        "n": "03",
+        "title": "We kijken samen",
+        "body": "Je krijgt een eerste richting. Lifestyle coaching — geen medisch advies, geen verplichting."
+      }
+    ]
+  },
+  "About": {
+    "eyebrow": "Over mij",
+    "homeTitle": "Ik coach in Roosdaal, sinds 2015.",
+    "homeBody": "Ik ben {name}. Als je gezonder en rustiger in je lijf wilt staan, loop ik met je mee — met voeding die het grootste deel doet, training die haalbaar is, en een hoofd dat blijft.",
+    "homeDisclosure": "Ter plaatse, buiten of online, na afspraak. Ik ben onafhankelijk Herbalife-lid; deze site is van Fit met Levi, niet van Herbalife.",
+    "more": "Meer over mij",
+    "pageTitle": "Levi Otte",
+    "pageLead": "Persoonlijk coach in {city}, België. Sinds {year}. Google {rating}.",
+    "p1": "Als je gezond en gemotiveerd verder wilt, is het belangrijk om te weten wat jij nodig hebt. Voeding, beweging en hoofd samen werken beter dan alleen harder trainen. Sinds 2015 verfijn ik die aanpak — niet met hype, wel met ritme dat je volhoudt.",
+    "p2": "Begeleiding kan ter plaatse in Roosdaal, buiten, of online, altijd na afspraak.",
+    "p3": "Ik ben onafhankelijk Herbalife-lid. Deze website is van Fit met Levi / Levi Otte, niet de officiële Herbalife-site. Geen inkomensbeloftes, geen medische claims."
+  },
+  "StartBand": {
+    "title": "Als dit klopt, begin je hier.",
+    "body": "Geen druk. Een eerste stap, met mij."
+  },
+  "Start": {
+    "kicker": "{name} · {city}",
+    "title": "Begin hier.",
+    "body": "Je hoeft nu niets te bewijzen. Kies wat het rustigst voelt.",
+    "meta": "{city} · sinds {year} · Google {rating}",
+    "note": "Geen druk. Geen beloftes over kilo’s of inkomen. Een eerste stap, met mij."
+  },
+  "FitCheck": {
+    "eyebrow": "FitCheck",
+    "title": "Vertel me waar je naartoe wilt.",
+    "intro": "Liever eerst een gesprek? Laat je naam, gsm en doel achter. Ik neem contact op.",
+    "successKicker": "Ontvangen",
+    "successTitle": "Ik neem contact op.",
+    "successBody": "Bedankt. Ik bekijk wat je schreef en bel of bericht je op het nummer dat je achterliet.",
+    "name": "Voornaam & naam",
+    "namePlaceholder": "Zoals je aangesproken wilt worden",
+    "phone": "GSM-nummer",
+    "phonePlaceholder": "0475 12 34 56",
+    "goalLegend": "Wat is jouw doel?",
+    "goalPrefill": "Voorkeuze: {goal}.",
+    "message": "Bericht",
+    "optional": "(optioneel)",
+    "messagePlaceholder": "Wat speelt er nu? Ritme, gezin, werk, blessure…",
+    "submit": "Stuur mijn FitCheck",
+    "pending": "Even geduld…",
+    "fineprint": "Ik neem contact op. Geen nieuwsbrief, geen medisch advies.",
+    "privacy": "Privacy",
+    "errors": {
+      "rateLimit": "Even geduld. Probeer over een paar minuten opnieuw.",
+      "name": "Vul je voor- en achternaam in.",
+      "phone": "Vul een Belgisch gsm-nummer in, bijvoorbeeld 0475 34 44 02.",
+      "goal": "Kies een doel.",
+      "message": "Houd je bericht onder 600 tekens.",
+      "fields": "Controleer even de velden hieronder.",
+      "notConfigured": "Dit formulier kan nu geen e-mail sturen. Bel me op {phone}.",
+      "sendFailed": "Verzenden lukte niet. Probeer opnieuw of bel me op {phone}."
+    }
+  },
+  "Faq": {
+    "eyebrow": "Vragen",
+    "title": "Kort en eerlijk.",
+    "items": [
+      {
+        "q": "Wat is een FitCheck?",
+        "a": "Een kort, vrijblijvend gesprek. Je laat je naam, gsm en doel achter. Ik neem contact op, en we kijken of begeleiding zinvol is. Lifestyle coaching, geen medisch onderzoek."
+      },
+      {
+        "q": "Wat kost de FitCheck?",
+        "a": "De FitCheck zelf is gratis. Daarna bespreken we of en hoe we verdergaan. Geen verborgen inschrijving via dit formulier."
+      },
+      {
+        "q": "Moet ik al sporten?",
+        "a": "Nee. Of je nu opnieuw begint of al jaren traint: we starten bij waar jij staat."
+      },
+      {
+        "q": "Werk je ook online?",
+        "a": "Ja. Coaching kan ter plaatse in Roosdaal, buiten, of online — na afspraak."
+      },
+      {
+        "q": "Wat betekent ‘onafhankelijk Herbalife-lid’?",
+        "a": "Levi is zelfstandig lid-coach, geen werknemer van Herbalife. Deze website is van Fit met Levi / Levi Otte, niet de officiële Herbalife-site. Producten zijn optioneel en nooit een inkomensbelofte."
+      },
+      {
+        "q": "Is dit medisch advies?",
+        "a": "Nee. FitCheck en coaching zijn geen behandeling van ziektes en vervangen geen arts of diëtist. Bij medische vragen verwijs ik je door."
+      }
+    ]
+  },
+  "Programs": {
+    "eyebrow": "Programma's",
+    "title": "Wat wil je nu voor jezelf?",
+    "intro": "Drie duidelijke pistes. Geen catalogus van beloftes. Resultaten verschillen per persoon."
+  },
+  "Privacy": {
+    "title": "Privacy",
+    "p1": "Verwerkingsverantwoordelijke: {name} ({publicName}), {street}, {postal} {city}, {country}. Tel. {phone}.",
+    "p2": "Via het FitCheck-formulier verzamel ik voornaam en naam, gsm-nummer, gekozen doel en optioneel een bericht. Doel: contact opnemen over lifestyle coaching. Rechtsgrond: jouw verzoek (precontractueel / gerechtvaardigd belang om te antwoorden).",
+    "p3": "Gegevens gaan niet naar een openbare nieuwsbrief. FitCheck-aanvragen worden per e-mail bezorgd op {email}, zolang het gesprek loopt, daarna gewist of beperkt tot wat boekhouding of geschil vereist.",
+    "p4": "Je hebt recht op inzage, verbetering, wissing en klacht bij de Gegevensbeschermingsautoriteit. Stuur een bericht via het nummer hierboven.",
+    "p5": "Deze site is geen officiële Herbalife-website. Levi Otte is onafhankelijk lid. Er worden geen betaalkaartgegevens via FitCheck verzameld."
+  },
+  "NotFound": {
+    "title": "Pagina niet gevonden",
+    "body": "Die link bestaat niet (meer) op Fit met Levi.",
+    "home": "Terug naar home"
+  }
+}

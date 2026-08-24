@@ -1,11 +1,14 @@
 import { Resend } from "resend";
-import { goals, site, type GoalId } from "@/lib/site";
+import nl from "../../messages/nl.json";
+import type { AppLocale } from "@/i18n/locales";
+import { site, type GoalId } from "@/lib/site";
 
 export type FitCheckRecord = {
   name: string;
   phone: string;
   goal: GoalId;
   message?: string;
+  locale: AppLocale;
   createdAt: string;
 };
 
@@ -22,8 +25,15 @@ export type FitCheckMailResult =
   | { ok: true }
   | { ok: false; reason: "not_configured" | "send_failed" };
 
+const localeLabel: Record<AppLocale, string> = {
+  nl: "Nederlands (nl-BE)",
+  fr: "Frans",
+  en: "Engels",
+  es: "Spaans",
+};
+
 function goalLabel(goal: GoalId): string {
-  return goals[goal].title;
+  return nl.Goals[goal].title;
 }
 
 function timestampBrussels(iso: string): string {
@@ -42,6 +52,7 @@ export function buildFitCheckEmail(record: FitCheckRecord): {
     `Naam: ${record.name}`,
     `Telefoon: ${record.phone}`,
     `Doel: ${goalLabel(record.goal)}`,
+    `Taal van de site: ${localeLabel[record.locale]}`,
     `Tijd: ${timestampBrussels(record.createdAt)}`,
   ];
 
