@@ -1,5 +1,5 @@
 import createMiddleware from "next-intl/middleware";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { routing } from "./i18n/routing";
 
 /**
@@ -13,7 +13,23 @@ function isCrawler(request: NextRequest) {
   return CRAWLER_UA.test(request.headers.get("user-agent") ?? "");
 }
 
+function skipI18n(pathname: string) {
+  return (
+    pathname.startsWith("/icon") ||
+    pathname.startsWith("/apple-icon") ||
+    pathname.startsWith("/opengraph-image") ||
+    pathname.startsWith("/twitter-image") ||
+    pathname.startsWith("/sitemap") ||
+    pathname === "/robots.txt"
+  );
+}
+
 export default function proxy(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  if (skipI18n(pathname)) {
+    return NextResponse.next();
+  }
+
   const crawler = isCrawler(request);
   const handleI18n = createMiddleware({
     ...routing,
@@ -21,8 +37,9 @@ export default function proxy(request: NextRequest) {
     localeCookie: crawler ? false : routing.localeCookie,
   });
   const headers = new Headers(request.headers);
-  headers.set("x-public-pathname", request.nextUrl.pathname);
-  headers.set("x-public-url", request.nextUrl.origin + request.nextUrl.pathname);
+  headers.set("x-public-pathname", pathname);
+  headers.set("x-public-url", request.nextUrl.origin + pathname);
+  headers.set("x-public-search", request.nextUrl.search);
   return handleI18n(new NextRequest(request, { headers }));
 }
 

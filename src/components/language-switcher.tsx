@@ -1,26 +1,29 @@
-"use client";
-
-import { useLocale, useTranslations } from "next-intl";
-import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
-import { Link, usePathname } from "@/i18n/navigation";
+import { getLocale, getTranslations } from "next-intl/server";
+import { headers } from "next/headers";
 import { hreflangOf, localeSwitcherLabel } from "@/i18n/locales";
-import { routing, type AppPathname } from "@/i18n/routing";
+import { routing } from "@/i18n/routing";
+import {
+  internalPathnameFromPublic,
+  publicHref,
+} from "@/lib/paths";
 
-function LanguageSwitcherNav({ query }: { query?: Record<string, string> }) {
-  const locale = useLocale();
-  const pathname = usePathname() as AppPathname;
-  const t = useTranslations("Nav");
+export async function LanguageSwitcher() {
+  const locale = await getLocale();
+  const t = await getTranslations("Nav");
+  const headerList = await headers();
+  const publicPath = headerList.get("x-public-pathname") ?? "/";
+  const search = headerList.get("x-public-search") ?? "";
+  const internal = internalPathnameFromPublic(publicPath);
+  const query = Object.fromEntries(new URLSearchParams(search).entries());
 
   return (
     <nav aria-label={t("language")} className="flex shrink-0 items-center gap-0.5">
       {routing.locales.map((code) => {
         const current = code === locale;
         return (
-          <Link
+          <a
             key={code}
-            href={query && Object.keys(query).length > 0 ? { pathname, query } : pathname}
-            locale={code}
+            href={publicHref(code, internal, query)}
             hrefLang={hreflangOf(code)}
             aria-current={current ? "true" : undefined}
             className={`inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-2 text-[11px] font-semibold tracking-wide transition ${
@@ -30,23 +33,9 @@ function LanguageSwitcherNav({ query }: { query?: Record<string, string> }) {
             }`}
           >
             {localeSwitcherLabel[code]}
-          </Link>
+          </a>
         );
       })}
     </nav>
-  );
-}
-
-function LanguageSwitcherWithQuery() {
-  const searchParams = useSearchParams();
-  const query = Object.fromEntries(searchParams.entries());
-  return <LanguageSwitcherNav query={query} />;
-}
-
-export function LanguageSwitcher() {
-  return (
-    <Suspense fallback={<LanguageSwitcherNav />}>
-      <LanguageSwitcherWithQuery />
-    </Suspense>
   );
 }

@@ -54,6 +54,7 @@ export async function generateMetadata({
       siteName: site.publicName,
       locale: ogLocaleOf(locale),
       alternateLocale: otherOgLocales(locale),
+      images: [{ url: "/opengraph-image" }],
     },
   };
 }

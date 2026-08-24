@@ -5,12 +5,12 @@ import {
   otherOgLocales,
   type AppLocale,
 } from "@/i18n/locales";
-import { getPathname } from "@/i18n/navigation";
 import { routing, type AppPathname } from "@/i18n/routing";
+import { publicPath } from "@/lib/paths";
 import { site } from "@/lib/site";
 
 export function localizedPath(locale: AppLocale, href: AppPathname): string {
-  return getPathname({ locale, href });
+  return publicPath(locale, href);
 }
 
 export function absoluteUrl(locale: AppLocale, href: AppPathname): string {
@@ -59,6 +59,7 @@ export function localeMetadata({
       alternateLocale: otherOgLocales(locale),
       siteName: site.publicName,
       type: "website",
+      images: [{ url: "/opengraph-image" }],
     },
     twitter: {
       card: "summary_large_image",
