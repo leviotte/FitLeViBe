@@ -13,8 +13,71 @@ export function localizedPath(locale: AppLocale, href: AppPathname): string {
   return publicPath(locale, href);
 }
 
+/** Origin-absolute URL. NL home is slashless (`https://www.fitlevibe.com`), matching `/fr` `/en` `/es`. */
 export function absoluteUrl(locale: AppLocale, href: AppPathname): string {
-  return `${site.url}${localizedPath(locale, href)}`;
+  const path = localizedPath(locale, href);
+  if (path === "/") return site.url;
+  return `${site.url}${path.endsWith("/") ? path.slice(0, -1) : path}`;
+}
+
+type PageMetaTitleKey =
+  | "home.title"
+  | "start.title"
+  | "fitcheck.title"
+  | "programs.title"
+  | "about.title"
+  | "privacy.title";
+
+type PageMetaDescriptionKey =
+  | "home.description"
+  | "start.description"
+  | "fitcheck.description"
+  | "programs.description"
+  | "about.description"
+  | "privacy.description";
+
+export const PAGE_META: Record<
+  AppPathname,
+  {
+    titleKey: PageMetaTitleKey;
+    descriptionKey: PageMetaDescriptionKey;
+    absoluteTitle: boolean;
+  }
+> = {
+  "/": {
+    titleKey: "home.title",
+    descriptionKey: "home.description",
+    absoluteTitle: true,
+  },
+  "/start": {
+    titleKey: "start.title",
+    descriptionKey: "start.description",
+    absoluteTitle: false,
+  },
+  "/fitcheck": {
+    titleKey: "fitcheck.title",
+    descriptionKey: "fitcheck.description",
+    absoluteTitle: false,
+  },
+  "/programmas": {
+    titleKey: "programs.title",
+    descriptionKey: "programs.description",
+    absoluteTitle: false,
+  },
+  "/over": {
+    titleKey: "about.title",
+    descriptionKey: "about.description",
+    absoluteTitle: false,
+  },
+  "/privacy": {
+    titleKey: "privacy.title",
+    descriptionKey: "privacy.description",
+    absoluteTitle: false,
+  },
+};
+
+export function documentTitle(title: string, absoluteTitle = false): string {
+  return absoluteTitle ? title : `${title} · ${site.publicName}`;
 }
 
 /** hreflang map: nl-BE / fr / en / es + x-default = Dutch sibling of this page. */
@@ -46,9 +109,7 @@ export function localeMetadata({
   absoluteTitle?: boolean;
 }): Metadata {
   const canonical = absoluteUrl(locale, pathname);
-  const documentTitle = absoluteTitle
-    ? title
-    : `${title} · ${site.publicName}`;
+  const fullTitle = documentTitle(title, absoluteTitle);
 
   return {
     title: absoluteTitle ? { absolute: title } : title,
@@ -58,7 +119,7 @@ export function localeMetadata({
       languages: languageAlternates(pathname),
     },
     openGraph: {
-      title: documentTitle,
+      title: fullTitle,
       description,
       url: canonical,
       locale: ogLocaleOf(locale),
@@ -69,7 +130,7 @@ export function localeMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: documentTitle,
+      title: fullTitle,
       description,
     },
   };
