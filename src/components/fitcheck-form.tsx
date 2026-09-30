@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
+import FormGuardFields from "@/components/FormGuardFields";
 import { useLocale, useTranslations } from "next-intl";
 import {
   submitFitCheckAction,
@@ -39,8 +40,9 @@ export function FitCheckForm({ defaultGoal }: FitCheckFormProps) {
   }
 
   return (
-    <form action={action} className="rounded-3xl border border-indigo/10 bg-white p-5 sm:p-8">
+    <form action={action} className="relative rounded-3xl border border-indigo/10 bg-white p-5 sm:p-8">
       <input type="hidden" name="locale" value={locale} />
+      <FormGuardFields honeypot={false} />
       <div className="grid gap-5">
         <label className="block">
           <span className="text-sm font-medium text-indigo">{t("name")}</span>
