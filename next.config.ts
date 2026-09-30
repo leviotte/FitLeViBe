@@ -5,6 +5,9 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   images: {
+    // Never use the Vercel Image Optimizer (/_next/image). Photos come
+    // pre-sized and auto-formatted from the Unsplash CDN.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
