@@ -1,11 +1,10 @@
 "use server";
 
 import { getTranslations } from "next-intl/server";
-import { headers } from "next/headers";
 import { isAppLocale } from "@/i18n/locales";
 import { routing } from "@/i18n/routing";
 import { sendFitCheckEmail } from "@/lib/persist-fitcheck";
-import { tooManyRequests } from "@/lib/rate-limit";
+import { classifyContact, readFormGuard, reportBlock } from "@/lib/thumbsupp-ingest";
 import { normalizeBeMobile } from "@/lib/phone";
 import { isGoalId, site, type GoalId } from "@/lib/site";
 
@@ -20,12 +19,6 @@ export type FitCheckState = {
   };
 };
 
-function clientKey(headerList: Headers): string {
-  const forwarded = headerList.get("x-forwarded-for");
-  if (forwarded) return forwarded.split(",")[0]?.trim() || "unknown";
-  return headerList.get("x-real-ip") || "unknown";
-}
-
 export async function submitFitCheckAction(
   _prev: FitCheckState,
   formData: FormData,
@@ -36,17 +29,10 @@ export async function submitFitCheckAction(
     : routing.defaultLocale;
   const t = await getTranslations({ locale, namespace: "FitCheck.errors" });
 
-  const honeypot = String(formData.get("website") ?? "").trim();
-  if (honeypot) {
+  const guard = readFormGuard(formData);
+  if (guard.honeypotHit) {
+    await reportBlock("contact", "honeypot");
     return { status: "success" };
-  }
-
-  const headerList = await headers();
-  if (tooManyRequests(clientKey(headerList))) {
-    return {
-      status: "error",
-      message: t("rateLimit"),
-    };
   }
 
   const name = String(formData.get("name") ?? "").trim();
@@ -79,6 +65,20 @@ export async function submitFitCheckAction(
       message: t("fields"),
       fieldErrors,
     };
+  }
+
+  // Thumbsupp ops (800 ms, fails open): shared 5 / 10 min gate per client (replaces the per-instance
+  // in-memory limiter) + classification; only high-confidence spam skips the email.
+  const verdict = await classifyContact(
+    "fitcheck",
+    { name, phone: phone!, subject: goalRaw, message: messageRaw },
+    guard,
+  );
+  if (!verdict.allow) {
+    return { status: "error", message: t("rateLimit") };
+  }
+  if (!verdict.deliver) {
+    return { status: "success" };
   }
 
   try {

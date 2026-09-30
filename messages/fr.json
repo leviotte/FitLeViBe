@@ -226,6 +226,7 @@
     "p5": "Ce site n’est pas un site officiel Herbalife. Levi Otte est membre indépendant. Aucune donnée de carte de paiement n’est collectée via le FitCheck."
   },
   "NotFound": {
+    "metaTitle": "Page introuvable | Fit met Levi",
     "title": "Page introuvable",
     "body": "Ce lien n’existe pas (ou plus) sur Fit met Levi.",
     "home": "Retour à l’accueil"
