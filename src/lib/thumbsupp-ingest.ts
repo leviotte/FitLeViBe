@@ -1,19 +1,35 @@
 
 import { createHmac } from "node:crypto";
 import { headers } from "next/headers";
+import { after } from "next/server";
 
 /**
  * Thumbsupp ops base (wave 2): server-to-server calls to thumbsupp-ingest.
  *  - /v1/contact classifies a contact submission (bug|feature|question|sales|spam); delivery is skipped
  *    only when the ingest says `deliver: false` (high-confidence spam).
  *  - /v1/gate rate-limits sensitive surfaces on hashed keys.
- * Every call has an 800 ms timeout and FAILS OPEN (no secret, timeout, error → allow / deliver).
+ * Every call FAILS OPEN (no secret, timeout, error → allow / deliver). gate: 800 ms timeout.
+ * Contact classify: the request itself runs up to 5 s and is kept alive with after() so the Thumbsupp
+ * contact record lands even when the ingest is slow; the form only waits VERDICT_WAIT_MS for the verdict.
  * Raw IPs and emails never leave this server: k = HMAC(secret, ip + day), ek = HMAC(secret, lower(email)),
  * both cut to 16 hex. Nothing here is stored locally.
  */
 const SITE = "flv";
 const INGEST_URL = (process.env.THUMBSUPP_INGEST_URL || "https://ingest.thumbsupp.com").replace(/\/+$/, "");
 const TIMEOUT_MS = 800;
+/** Contact record call budget (runs on after the response when the verdict is late). */
+const RECORD_TIMEOUT_MS = 5000;
+/** How long a form submit waits for the spam/rate-limit verdict before delivering (fail-open). */
+const VERDICT_WAIT_MS = 500;
+
+/** Keep `p` running after the response (next/server after); no-op outside a request scope. */
+function keepAlive(p: Promise<unknown>): void {
+  try {
+    after(() => p.then(() => undefined, () => undefined));
+  } catch {
+    /* not in a request scope (tests/scripts): the promise still runs */
+  }
+}
 
 const secret = () => (process.env.THUMBSUPP_INGEST_SECRET || "").trim();
 const h16 = (v: string) => createHmac("sha256", secret()).update(v).digest("hex").slice(0, 16);
@@ -48,7 +64,7 @@ export function accountKey(v: string | null | undefined): string | undefined {
   return s && secret() ? h16(s) : undefined;
 }
 
-async function post<T>(path: string, body: Record<string, unknown>): Promise<T | null> {
+async function post<T>(path: string, body: Record<string, unknown>, timeoutMs = TIMEOUT_MS): Promise<T | null> {
   const s = secret();
   if (!s) return null;
   try {
@@ -56,7 +72,7 @@ async function post<T>(path: string, body: Record<string, unknown>): Promise<T |
       method: "POST",
       headers: { authorization: `Bearer ${s}`, "content-type": "application/json" },
       body: JSON.stringify({ site: SITE, ...body }),
-      signal: AbortSignal.timeout(TIMEOUT_MS),
+      signal: AbortSignal.timeout(timeoutMs),
       cache: "no-store",
     });
     return res.ok ? ((await res.json()) as T) : null;
@@ -75,7 +91,7 @@ export async function gate(surface: GateSurface, opts: { k?: string; ek?: string
 
 /** Report a local block (honeypot, validation) so spikes raise an alert. Fire-and-forget, fails silently. */
 export async function reportBlock(surface: GateSurface, reason: string): Promise<void> {
-  await post("/v1/block", { surface, reason });
+  keepAlive(post("/v1/block", { surface, reason }, RECORD_TIMEOUT_MS));
 }
 
 export type ContactVerdict = { class: string | null; deliver: boolean; allow: boolean; retryAfter: number };
@@ -103,13 +119,18 @@ export async function classifyContact(
   guard: { honeypotHit: boolean; elapsedMs?: number }
 ): Promise<ContactVerdict> {
   const k = await clientKey();
-  const r = await post<{ class?: string; deliver?: boolean; allow?: boolean; retryAfter?: number }>("/v1/contact", {
+  const call = post<{ class?: string; deliver?: boolean; allow?: boolean; retryAfter?: number }>("/v1/contact", {
     form,
     ...fields,
     honeypotHit: guard.honeypotHit,
     ...(guard.elapsedMs !== undefined ? { elapsedMs: guard.elapsedMs } : {}),
     ...(k ? { k } : {}),
-  });
+  }, RECORD_TIMEOUT_MS);
+  // The record always completes (after the response if needed); the submit waits at most VERDICT_WAIT_MS.
+  keepAlive(call);
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const r = await Promise.race([call, new Promise<null>((res) => { timer = setTimeout(() => res(null), VERDICT_WAIT_MS); })]);
+  clearTimeout(timer);
   if (!r) return { class: null, deliver: true, allow: true, retryAfter: 0 };
   return {
     class: typeof r.class === "string" ? r.class : null,
