@@ -42,7 +42,7 @@ export default async function FitCheckPage({
 
   return (
     <div className="pt-6">
-      <FitCheckSection defaultGoal={defaultGoal} />
+      <FitCheckSection defaultGoal={defaultGoal} heading="h1" />
     </div>
   );
 }
