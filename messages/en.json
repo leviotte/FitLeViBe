@@ -55,8 +55,6 @@
     "telegram": "Telegram community",
     "start": "Start",
     "fitCheckFirst": "Start with a FitCheck",
-    "disclosureShort": "Independent Herbalife member. This is not an official Herbalife website.",
-    "disclosureFooter": "Levi Otte is an independent Herbalife member. Fit met Levi / FitLeViBe is not an official Herbalife website and is not affiliated with Herbalife International as a corporate site. Results vary from person to person. No medical advice, no income claims, no guaranteed weight-loss figures.",
     "footerBlurb": "I help you live healthier at a pace that fits your life.",
     "contact": "Contact",
     "navigate": "Explore",
@@ -300,7 +298,7 @@
     "p3": "Data does not go to a public newsletter. FitCheck requests are emailed to {email} for as long as the conversation runs, then deleted or limited to what accounting or a dispute requires.",
     "pThumbsupp": "FitCheck requests are also passed to Thumbsupp, my internal operations tool that I run myself, for internal handling and bug triage. The request is sorted automatically using simple rules (for example question, bug report or spam). Only minimal metadata is kept there: the category, the length of the message, which form was used, whether a phone number was entered, any spam signals and a timestamp. Your name, mobile number and the text of your message are not stored there, with one exception: if your message is recognised as a bug report or feature request, I keep a copy with email addresses, phone numbers and links removed (up to 1,000 characters) as an internal task to fix the problem. To prevent abuse, I use a pseudonymised key derived from your IP address, kept for at most one hour; your IP address itself is never passed on. None of this is made public, and Thumbsupp does not send automated replies. Thumbsupp runs on Cloudflare and Google Cloud (Firebase). Legal basis: my legitimate interest in handling your request and preventing abuse.",
     "p4": "You have the right of access, rectification, erasure, and complaint to the Belgian Data Protection Authority. Send a message via the number above.",
-    "p5": "This site is not an official Herbalife website. Levi Otte is an independent member. No payment-card data is collected through FitCheck."
+    "p5": "No payment-card data is collected through FitCheck."
   },
   "NotFound": {
     "metaTitle": "Page not found | Fit met Levi",

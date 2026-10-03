@@ -84,12 +84,3 @@ export function TelegramButton({ className, fullWidth }: ButtonWidth) {
     </a>
   );
 }
-
-export function EnrollDisclosure({ className }: { className?: string }) {
-  const t = useTranslations("Common");
-  return (
-    <p className={className ?? "max-w-md text-sm leading-6 text-muted"}>
-      {t("disclosureShort")}
-    </p>
-  );
-}

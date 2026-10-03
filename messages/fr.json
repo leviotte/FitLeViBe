@@ -55,8 +55,6 @@
     "telegram": "Communauté Telegram",
     "start": "Commencer",
     "fitCheckFirst": "D’abord un FitCheck",
-    "disclosureShort": "Membre Herbalife indépendant. Ceci n’est pas un site officiel Herbalife.",
-    "disclosureFooter": "Levi Otte est membre Herbalife indépendant. Fit met Levi / FitLeViBe n’est pas un site officiel Herbalife et n’est pas le site d’entreprise de Herbalife International. Les résultats varient d’une personne à l’autre. Pas de conseil médical, pas de promesse de revenus, pas de chiffres de perte de poids garantis.",
     "footerBlurb": "Je t’aide à vivre plus sainement, à un rythme qui te ressemble.",
     "contact": "Contact",
     "navigate": "Navigation",
@@ -300,7 +298,7 @@
     "p3": "Les données ne partent pas vers une newsletter publique. Les demandes FitCheck sont envoyées par e-mail à {email}, le temps de l’échange, puis effacées ou limitées à ce que la comptabilité ou un litige exige.",
     "pThumbsupp": "Les demandes FitCheck sont également transmises à Thumbsupp, mon outil interne de gestion opérationnelle que j’exploite moi-même, pour leur traitement interne et le tri des bugs. La demande est classée automatiquement selon des règles simples (par exemple question, signalement de bug ou spam). Seules des métadonnées minimales y sont conservées : la catégorie, la longueur du message, le formulaire utilisé, la présence ou non d’un numéro de téléphone, d’éventuels signaux de spam et un horodatage. Votre nom, votre numéro de GSM et le texte de votre message n’y sont pas conservés, à une exception près : si votre message est reconnu comme un signalement de bug ou une demande de fonctionnalité, je conserve une copie dont les adresses e-mail, numéros de téléphone et liens ont été retirés (1 000 caractères au maximum) comme tâche interne pour résoudre le problème. Pour prévenir les abus, j’utilise une clé pseudonymisée dérivée de votre adresse IP, conservée une heure au maximum ; votre adresse IP elle-même n’est jamais transmise. Rien de tout cela n’est rendu public et Thumbsupp n’envoie aucune réponse automatique. Thumbsupp fonctionne sur Cloudflare et Google Cloud (Firebase). Base juridique : mon intérêt légitime à traiter votre demande et à prévenir les abus.",
     "p4": "Tu as droit d’accès, de rectification, d’effacement et de réclamation auprès de l’Autorité de protection des données (Belgique). Écris ou appelle via le numéro ci-dessus.",
-    "p5": "Ce site n’est pas un site officiel Herbalife. Levi Otte est membre indépendant. Aucune donnée de carte de paiement n’est collectée via le FitCheck."
+    "p5": "Aucune donnée de carte de paiement n’est collectée via le FitCheck."
   },
   "NotFound": {
     "metaTitle": "Page introuvable | Fit met Levi",

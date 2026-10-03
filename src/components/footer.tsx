@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { EnrollButton, EnrollDisclosure, TelegramButton } from "@/components/enroll";
+import { EnrollButton, TelegramButton } from "@/components/enroll";
 import { Link } from "@/i18n/navigation";
 import { formatAddress, site } from "@/lib/site";
 
@@ -96,14 +96,8 @@ export async function Footer() {
           <div className="mt-8 flex flex-col gap-3">
             <EnrollButton variant="ghostDark" />
             <TelegramButton className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-cream/25 bg-transparent px-6 text-center text-sm font-semibold text-cream transition hover:bg-white/10 sm:w-auto" />
-            <EnrollDisclosure className="text-xs leading-5 text-cream/55" />
           </div>
         </div>
-      </div>
-      <div className="border-t border-cream/10 px-5 py-6 sm:px-8">
-        <p className="mx-auto max-w-6xl text-xs leading-6 text-cream/55">
-          {t("disclosureFooter")}
-        </p>
       </div>
     </footer>
   );
