@@ -85,6 +85,14 @@
     "google": "Google {rating}",
     "reviews": "avis publics"
   },
+  "Reviews": {
+    "eyebrow": "Avis",
+    "title": "Ce que disent les clients sur Google",
+    "count": "{count, plural, one {# avis sur Google} other {# avis sur Google}}",
+    "stars": "{rating} sur 5 étoiles",
+    "cta": "Tous les avis sur Google",
+    "source": "Avis via"
+  },
   "Goals": {
     "eyebrow": "Ta direction",
     "title": "Qu’est-ce que tu veux pour toi, maintenant ?",

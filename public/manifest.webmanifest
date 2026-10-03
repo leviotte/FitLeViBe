@@ -1,0 +1,16 @@
+{
+  "name": "Fit met Levi",
+  "short_name": "Fit met Levi",
+  "description": "Levi Otte, persoonlijk coach in Roosdaal.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "lang": "nl-BE",
+  "background_color": "#f6f1e8",
+  "theme_color": "#444566",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

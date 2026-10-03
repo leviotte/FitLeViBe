@@ -85,6 +85,14 @@
     "google": "Google {rating}",
     "reviews": "publieke reviews"
   },
+  "Reviews": {
+    "eyebrow": "Reviews",
+    "title": "Wat klanten zeggen op Google",
+    "count": "{count, plural, one {# review op Google} other {# reviews op Google}}",
+    "stars": "{rating} van 5 sterren",
+    "cta": "Alle reviews op Google",
+    "source": "Reviews via"
+  },
   "Goals": {
     "eyebrow": "Jouw richting",
     "title": "Wat wil je nu voor jezelf?",

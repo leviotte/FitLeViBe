@@ -85,6 +85,14 @@
     "google": "Google {rating}",
     "reviews": "reseñas públicas"
   },
+  "Reviews": {
+    "eyebrow": "Reseñas",
+    "title": "Lo que dicen los clientes en Google",
+    "count": "{count, plural, one {# reseña en Google} other {# reseñas en Google}}",
+    "stars": "{rating} de 5 estrellas",
+    "cta": "Todas las reseñas en Google",
+    "source": "Reseñas vía"
+  },
   "Goals": {
     "eyebrow": "Tu dirección",
     "title": "¿Qué quieres ahora para ti?",

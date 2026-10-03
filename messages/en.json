@@ -85,6 +85,14 @@
     "google": "Google {rating}",
     "reviews": "public reviews"
   },
+  "Reviews": {
+    "eyebrow": "Reviews",
+    "title": "What clients say on Google",
+    "count": "{count, plural, one {# review on Google} other {# reviews on Google}}",
+    "stars": "{rating} out of 5 stars",
+    "cta": "All reviews on Google",
+    "source": "Reviews via"
+  },
   "Goals": {
     "eyebrow": "Your direction",
     "title": "What do you want for yourself right now?",

@@ -44,6 +44,10 @@ FitCheck (`submitFitCheckAction` on `/` and `/fitcheck`, including `/fr` `/en` `
 | Variable | Required | Role |
 | --- | --- | --- |
 | `RESEND_API_KEY` | Yes, for mail to send | Add this on Vercel. Without it the form shows a clear error instead of fake success. |
+| `GOOGLE_PLACES_API_KEY` | Optional | Server-only key restricted to Places API (New). Powers the Google reviews section on the homepage. |
+| `FITLEVIBE_PLACE_ID` | Optional | Google place id of the business profile: `ChIJz7JbPl-5w0cRFfg8dEa0_Bg`. |
+
+The Google reviews section (rating, count, up to 3 reviews, Google Maps attribution, link to the profile) is fetched server-side from Places API (New) Place Details and cached 24 h per language (≈4 calls/day, free tier). If either variable is missing or Google fails, the section renders nothing. There is deliberately **no** `AggregateRating`/`Review` structured data for the business.
 
 From-address is hardcoded: `Fit met Levi <noreply@myfiletracker.com>` (the verified Resend domain). Do not send from `fitlevibe.com` until that domain is verified in Resend.
 
