@@ -4,8 +4,6 @@ import { routing } from "./i18n/routing";
 
 function skipI18n(pathname: string) {
   return (
-    pathname.startsWith("/icon") ||
-    pathname.startsWith("/apple-icon") ||
     pathname.startsWith("/opengraph-image") ||
     pathname.startsWith("/twitter-image") ||
     pathname.startsWith("/sitemap") ||
