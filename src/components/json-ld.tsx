@@ -68,12 +68,6 @@ export async function JsonLd() {
         site.social.linkedin,
         site.social.telegram,
       ],
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "5",
-        bestRating: "5",
-        reviewCount: String(site.googleReviewCount),
-      },
     });
   }
 

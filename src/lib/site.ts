@@ -14,7 +14,6 @@ export const site = {
   email: "fitlevibe@icloud.com",
   foundedYear: 2015,
   googleRating: "5/5",
-  googleReviewCount: 11,
   social: {
     instagram: "https://www.instagram.com/fitlevibe/",
     instagramHandle: "@FitLeViBe",
