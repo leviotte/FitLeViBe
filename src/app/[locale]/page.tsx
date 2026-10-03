@@ -7,13 +7,14 @@ import { FitCheckSection } from "@/components/fitcheck-section";
 import { GoalCards } from "@/components/goal-cards";
 import { GoogleReviews } from "@/components/google-reviews";
 import { Hero } from "@/components/hero";
+import { Approach } from "@/components/home/approach";
+import { Measures } from "@/components/home/measures";
 import { HowItWorks } from "@/components/how-it-works";
 import { FaqJsonLd } from "@/components/json-ld";
-import { StartBand } from "@/components/start-band";
-import { TrustRow } from "@/components/trust-row";
 import { isAppLocale } from "@/i18n/locales";
 import { routing } from "@/i18n/routing";
 import { localeMetadata } from "@/lib/seo";
+import { isGoalId, type GoalId } from "@/lib/site";
 
 export async function generateMetadata({
   params,
@@ -32,28 +33,40 @@ export async function generateMetadata({
   });
 }
 
+function parseGoal(value: string | string[] | undefined): GoalId | undefined {
+  const raw = Array.isArray(value) ? value[0] : value;
+  return raw && isGoalId(raw) ? raw : undefined;
+}
+
+/**
+ * One goal: a free FitCheck request. Every section ends in the same CTA
+ * (→ #fitcheck); the form is the final section.
+ */
 export default async function HomePage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ doel?: string | string[] }>;
 }) {
   const { locale } = await params;
   if (isAppLocale(locale)) setRequestLocale(locale);
+  const defaultGoal = parseGoal((await searchParams).doel);
 
   return (
     <>
       <FaqJsonLd />
       <Hero />
-      <TrustRow />
+      <Measures />
       <GoalCards />
+      <Approach />
       <HowItWorks />
-      <AboutLevi />
       <Suspense fallback={null}>
         <GoogleReviews />
       </Suspense>
-      <StartBand />
-      <FitCheckSection />
+      <AboutLevi />
       <Faq />
+      <FitCheckSection defaultGoal={defaultGoal} />
     </>
   );
 }

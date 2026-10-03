@@ -4,11 +4,10 @@ import { publicPath } from "@/lib/paths";
 import { pagePathnames, routing, type AppPathname } from "@/i18n/routing";
 import { site } from "@/lib/site";
 import en from "../../../../messages/en.json";
-import es from "../../../../messages/es.json";
 import fr from "../../../../messages/fr.json";
 import nl from "../../../../messages/nl.json";
 
-const catalogs = { nl, fr, en, es } as const;
+const catalogs = { nl, fr, en } as const;
 
 function url(locale: (typeof routing.locales)[number], href: AppPathname) {
   return `${site.url}${publicPath(locale, href)}`;
@@ -39,7 +38,6 @@ export async function GET(
     `- Dutch (nl-BE, default): ${url("nl", "/")}`,
     `- French: ${url("fr", "/")}`,
     `- English: ${url("en", "/")}`,
-    `- Spanish: ${url("es", "/")}`,
     ``,
     `## Pages (${lang})`,
     ...pagePathnames.map((href) => `- ${url(locale, href)}`),

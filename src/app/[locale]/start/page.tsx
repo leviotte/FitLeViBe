@@ -54,7 +54,6 @@ export default async function StartPage({
         {t("meta", {
           city: site.address.city,
           year: site.foundedYear,
-          rating: site.googleRating,
         })}
       </p>
       <p className="mt-3 text-sm leading-6 text-muted">{t("note")}</p>

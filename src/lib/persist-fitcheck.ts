@@ -6,7 +6,7 @@ import { site, type GoalId } from "@/lib/site";
 export type FitCheckRecord = {
   name: string;
   phone: string;
-  goal: GoalId;
+  goal?: GoalId;
   message?: string;
   locale: AppLocale;
   createdAt: string;
@@ -29,11 +29,10 @@ const localeLabel: Record<AppLocale, string> = {
   nl: "Nederlands (nl-BE)",
   fr: "Frans",
   en: "Engels",
-  es: "Spaans",
 };
 
-function goalLabel(goal: GoalId): string {
-  return nl.Goals[goal].title;
+function goalLabel(goal?: GoalId): string {
+  return goal ? nl.Goals[goal].title : "(niet gekozen)";
 }
 
 function timestampBrussels(iso: string): string {

@@ -1,11 +1,12 @@
 import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
-  locales: ["nl", "fr", "en", "es"],
+  locales: ["nl", "fr", "en"],
   defaultLocale: "nl",
   localePrefix: "as-needed",
   /**
-   * `/` is always Dutch. Explicit `/fr` `/en` `/es` are respected.
+   * `/` is always Dutch. Explicit `/fr` `/en` are respected.
+   * Spanish was removed (2026-10-03); `/es/*` 301s to Dutch in next.config.ts.
    * No Accept-Language or cookie redirects — humans and crawlers alike.
    */
   localeDetection: false,
@@ -20,19 +21,16 @@ export const routing = defineRouting({
       nl: "/programmas",
       fr: "/programmes",
       en: "/programs",
-      es: "/programas",
     },
     "/over": {
       nl: "/over",
       fr: "/a-propos",
       en: "/about",
-      es: "/sobre",
     },
     "/privacy": {
       nl: "/privacy",
       fr: "/confidentialite",
       en: "/privacy",
-      es: "/privacidad",
     },
   },
 });

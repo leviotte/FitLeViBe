@@ -5,24 +5,24 @@
       "defaultDescription": "Fit met Levi — Levi Otte, coach personnel à Roosdaal, en Belgique. Vivre plus sainement, à ton rythme, depuis 2015."
     },
     "home": {
-      "title": "Fit met Levi · Levi Otte, coach à Roosdaal",
-      "description": "Levi Otte, coach personnel à Roosdaal (Belgique). FitCheck, accompagnement et un point de départ clair. Pas de conseil médical, pas de promesse de revenus."
+      "title": "FitCheck gratuit à Roosdaal · Fit met Levi",
+      "description": "Demande ton FitCheck gratuit chez Levi Otte à Roosdaal. Nous mesurons ta masse grasse, ta masse musculaire, ton hydratation et ton métabolisme. Ensuite, un plan ensemble : 80 % alimentation, 20 % mouvement."
     },
     "start": {
       "title": "Commencer",
       "description": "Commence avec Fit met Levi. Inscription ou communauté Telegram. Levi Otte, coach personnel à Roosdaal, Belgique."
     },
     "fitcheck": {
-      "title": "FitCheck gratuit",
-      "description": "Demande un FitCheck à Levi Otte. Prénom, mobile et objectif. Je te recontacte. Coaching de mode de vie, pas un avis médical."
+      "title": "Demander un FitCheck gratuit",
+      "description": "Demande ton FitCheck gratuit chez Levi Otte à Roosdaal. Ton nom et ton GSM suffisent. Je te contacte pour fixer un moment."
     },
     "programs": {
-      "title": "Programmes",
-      "description": "Trois pistes chez Fit met Levi : poids, muscle ou vitalité. À ton rythme. Les résultats varient d’une personne à l’autre."
+      "title": "Objectifs",
+      "description": "Santé, perte de poids, masse musculaire, prévention des blessures, sport ou un régime alimentaire. Commence par un FitCheck gratuit chez Fit met Levi."
     },
     "about": {
       "title": "À propos de Levi Otte",
-      "description": "Levi Otte est coach personnel à Roosdaal (Belgique) depuis 2015. 20 % entraînement, 80 % alimentation, 100 % mindset. Membre Herbalife indépendant."
+      "description": "Levi Otte est coach à Roosdaal, spécialisé en santé et en corps. 80 % alimentation, 20 % mouvement. Commence par un FitCheck gratuit."
     },
     "privacy": {
       "title": "Confidentialité",
@@ -36,7 +36,7 @@
     "keywords": ["Fit met Levi", "Levi Otte", "coach personnel Roosdaal", "FitCheck", "FitLeViBe", "coaching Belgique"]
   },
   "Nav": {
-    "programs": "Programmes",
+    "programs": "Objectifs",
     "about": "À propos",
     "fitcheck": "FitCheck",
     "start": "Commencer",
@@ -65,6 +65,11 @@
     "nutrition": "Alimentation",
     "mindset": "Mindset"
   },
+  "Cta": {
+    "label": "Demande ton FitCheck gratuit",
+    "short": "FitCheck gratuit",
+    "note": "Gratuit · Sans engagement · En personne avec Levi"
+  },
   "Photos": {
     "hero": "Étirements calmes dans une lumière chaude",
     "about": "Bouger dehors au soleil du matin",
@@ -74,16 +79,43 @@
     "vitality": "Bouger tranquillement dans la nature"
   },
   "Hero": {
-    "kicker": "{name} · {job} à {city}",
-    "title": "Fit met Levi",
-    "body": "Je suis Levi Otte, et je t’aide à vivre plus sainement, à un rythme qui te ressemble."
+    "kicker": "{name} · coach à {city}",
+    "title": "Sache où tu en es. Vise ton objectif.",
+    "body": "Commence par un FitCheck gratuit. Nous mesurons ta masse grasse, ta masse musculaire, ton hydratation et plus encore. Ensuite, nous construisons ensemble le pont vers ton objectif.",
+    "points": [
+      "Entièrement gratuit",
+      "Sans engagement",
+      "En personne, avec Levi"
+    ]
   },
-  "Trust": {
-    "country": "Belgique",
-    "since": "Depuis {year}",
-    "coach": "coach personnel",
-    "google": "Google {rating}",
-    "reviews": "avis publics"
+  "Measures": {
+    "eyebrow": "Étape 1 · Le FitCheck",
+    "title": "D’abord mesurer. Ensuite savoir.",
+    "intro": "Pendant le FitCheck gratuit, nous faisons le point sur ton corps. Pas de devinettes, un point de départ clair.",
+    "items": [
+      {
+        "key": "fat",
+        "title": "Masse grasse",
+        "body": "La part de ton poids qui est de la graisse."
+      },
+      {
+        "key": "muscle",
+        "title": "Masse musculaire",
+        "body": "Tes muscles, et où tu peux progresser."
+      },
+      {
+        "key": "water",
+        "title": "Hydratation",
+        "body": "Ton taux d’eau. Bois-tu assez ?"
+      },
+      {
+        "key": "metabolism",
+        "title": "Métabolisme",
+        "body": "Combien d’énergie ton corps utilise."
+      }
+    ],
+    "more": "Et d’autres valeurs encore. Je t’explique tout simplement.",
+    "note": "Une mesure et une conversation. Pas un examen médical."
   },
   "Reviews": {
     "eyebrow": "Avis",
@@ -94,56 +126,82 @@
     "source": "Avis via"
   },
   "Goals": {
-    "eyebrow": "Ta direction",
-    "title": "Qu’est-ce que tu veux pour toi, maintenant ?",
-    "intro": "Choisis ce qui te parle aujourd’hui. Pas de parcours obligatoire, pas de chiffres garantis.",
-    "cta": "D’abord un FitCheck",
+    "eyebrow": "Étape 2 · Ton objectif",
+    "title": "Que veux-tu atteindre ?",
+    "intro": "Après la mesure, nous regardons ensemble ton objectif. Choisis ce qui te correspond. Tu hésites ? On le découvre ensemble.",
+    "cta": "Choisir cet objectif",
+    "vitaliteit": {
+      "title": "Santé",
+      "short": "Te sentir mieux et plus en forme.",
+      "body": "Plus d’énergie au quotidien. Manger plus sainement, être bien dans ta peau."
+    },
     "gewichtsverlies": {
-      "title": "Poids et équilibre",
-      "short": "Manger plus posément, bouger plus clairement.",
-      "body": "Pas besoin de tout casser. On regarde une alimentation et un mouvement que tu tiens — sans kilos promis."
+      "title": "Perdre du poids",
+      "short": "Maigrir de façon réaliste.",
+      "body": "Pas de régime express. Une alimentation et du mouvement que tu tiens dans la durée."
     },
     "spiermassa": {
-      "title": "Muscle",
-      "short": "Devenir plus fort, à ton rythme.",
-      "body": "Devenir plus fort peut rester calme. Tu reçois un rythme tenable, pas des journées de salle sans fin."
+      "title": "Prendre du muscle",
+      "short": "Devenir plus fort, pas à pas.",
+      "body": "Manger et t’entraîner de façon ciblée pour développer tes muscles."
     },
-    "vitaliteit": {
-      "title": "Vitalité",
-      "short": "Plus d’énergie au quotidien.",
-      "body": "Plus d’énergie dans les jours ordinaires : sommeil, alimentation, une tête qui suit. Pas de recette miracle."
+    "blessurepreventie": {
+      "title": "Prévenir les blessures",
+      "short": "Rester fort et équilibré.",
+      "body": "Un corps en équilibre, pour continuer à bouger."
+    },
+    "sportspecifiek": {
+      "title": "Spécifique à ton sport",
+      "short": "Tirer plus de ton sport.",
+      "body": "Alimentation et entraînement adaptés à ton sport et à ton rythme."
+    },
+    "voedingspatroon": {
+      "title": "Suivre un régime alimentaire",
+      "short": "Par ex. végétarien ou riche en protéines.",
+      "body": "Tu suis une façon de manger précise ? Nous construisons ton plan autour."
     }
   },
+  "Approach": {
+    "eyebrow": "L’approche",
+    "title": "80 % alimentation. 20 % mouvement.",
+    "body": "La différence se fait surtout à table. C’est pourquoi mon approche repose toujours sur 80 % d’alimentation et 20 % de mouvement ou de sport. J’adapte le bon dosage à ton objectif.",
+    "nutrition": "Alimentation",
+    "nutritionBody": "Quoi, combien et quand tu manges. Réaliste, avec des plats que tu aimes.",
+    "movement": "Mouvement",
+    "movementBody": "Un entraînement ou un sport adapté à ton objectif et à ton agenda.",
+    "quote": "Ensemble, nous construisons le pont entre là où tu es et ton objectif."
+  },
   "How": {
-    "eyebrow": "FitCheck",
-    "title": "Tu préfères d’abord en parler ?",
-    "intro": "C’est possible. Un FitCheck est un échange court, sans engagement.",
+    "eyebrow": "Comment ça marche",
+    "title": "Ton objectif en 3 étapes.",
     "steps": [
       {
-        "n": "01",
-        "title": "Tu dis où tu en es",
-        "body": "Ton nom, ton mobile, et ce que tu veux. Une phrase en plus, si tu veux — ce n’est pas obligatoire."
+        "n": "1",
+        "title": "FitCheck gratuit",
+        "body": "Nous mesurons ta masse grasse, ta masse musculaire, ton hydratation et ton métabolisme. Tu sais où tu en es."
       },
       {
-        "n": "02",
-        "title": "Je te recontacte",
-        "body": "Pas de chatbot. Un message ou un appel, pour entendre comment tes journées se passent."
+        "n": "2",
+        "title": "Objectif et plan",
+        "body": "Nous parlons de ce que tu veux atteindre et faisons un plan sur mesure."
       },
       {
-        "n": "03",
-        "title": "On regarde ensemble",
-        "body": "Tu reçois une première direction. Coaching de mode de vie — pas de conseil médical, pas d’obligation."
+        "n": "3",
+        "title": "Ensemble vers le résultat",
+        "body": "Tu te lances et je t’accompagne. Pas à pas."
       }
-    ]
+    ],
+    "followupTitle": "Ensuite : un suivi si tu le souhaites",
+    "followup": "Tu veux être accompagné(e) plus loin ? Je continue à te coacher et nous suivons tes progrès ensemble. Sans obligation."
   },
   "About": {
-    "eyebrow": "À propos",
-    "homeTitle": "Je coache à Roosdaal, depuis 2015.",
-    "homeBody": "Je suis {name}. Si tu veux te sentir plus sainement et plus posément dans ton corps, je marche avec toi — avec une alimentation qui fait le plus gros du travail, un entraînement tenable, et une tête qui reste.",
-    "homeDisclosure": "Sur place, dehors ou en ligne, sur rendez-vous. Je suis membre Herbalife indépendant ; ce site est celui de Fit met Levi, pas celui d’Herbalife.",
-    "more": "En savoir plus",
+    "eyebrow": "À propos de Levi",
+    "homeTitle": "Salut, moi c’est Levi.",
+    "homeBody": "Je suis coach depuis des années, toujours spécialisé en santé et en corps. Je ne crois pas aux astuces rapides. Je crois à savoir où tu en es, à un plan qui te correspond, et à quelqu’un qui avance avec toi.",
+    "homeDisclosure": "Coaching à Roosdaal, en extérieur ou en ligne. Toujours sur rendez-vous.",
+    "more": "En savoir plus sur moi",
     "pageTitle": "Levi Otte",
-    "pageLead": "Coach personnel à {city}, en Belgique. Depuis {year}. Google {rating}.",
+    "pageLead": "Coach à {city}, en Belgique, depuis {year}. Spécialisé en santé et en corps.",
     "p1": "Si tu veux avancer en santé et avec de la motivation, il faut d’abord voir ce dont tu as besoin. Alimentation, mouvement et tête fonctionnent mieux ensemble que s’entraîner plus fort seulement. Depuis 2015, je peaufine cette approche — sans hype, avec un rythme que tu tiens.",
     "p2": "L’accompagnement peut se faire sur place à Roosdaal, dehors, ou en ligne, toujours sur rendez-vous.",
     "p3": "Je suis membre Herbalife indépendant. Ce site appartient à Fit met Levi / Levi Otte, ce n’est pas le site officiel Herbalife. Pas de promesse de revenus, pas d’allégation médicale."
@@ -156,74 +214,80 @@
     "kicker": "{name} · {city}",
     "title": "Commence ici.",
     "body": "Tu n’as rien à prouver pour l’instant. Choisis ce qui te met le plus à l’aise.",
-    "meta": "{city} · depuis {year} · Google {rating}",
+    "meta": "{city} · depuis {year}",
     "note": "Sans pression. Pas de promesses de kilos ni de revenus. Un premier pas, avec moi."
   },
   "FitCheck": {
-    "eyebrow": "FitCheck",
-    "title": "Dis-moi où tu veux aller.",
-    "intro": "Tu préfères d’abord un échange ? Laisse ton nom, ton mobile et ton objectif. Je te recontacte.",
-    "successKicker": "Reçu",
-    "successTitle": "Je te recontacte.",
-    "successBody": "Merci. Je lis ce que tu as écrit et je t’appelle ou t’écris au numéro que tu as laissé.",
-    "name": "Prénom et nom",
-    "namePlaceholder": "Comme tu veux qu’on t’appelle",
-    "phone": "Numéro de mobile",
+    "eyebrow": "FitCheck gratuit",
+    "title": "Demande ton FitCheck gratuit.",
+    "intro": "Laisse ton nom et ton numéro de GSM. Je t’appelle ou t’envoie un message pour fixer un moment.",
+    "bullets": {
+      "free": "Entièrement gratuit et sans engagement",
+      "measure": "Mesure de la graisse, des muscles, de l’hydratation et du métabolisme",
+      "advice": "Des conseils personnels pour ton objectif"
+    },
+    "successKicker": "C’est fait !",
+    "successTitle": "Ta demande est bien arrivée.",
+    "successBody": "Merci ! Je te contacte au numéro indiqué pour planifier ton FitCheck.",
+    "name": "Nom",
+    "namePlaceholder": "Prénom et nom",
+    "phone": "Numéro de GSM",
     "phonePlaceholder": "0475 12 34 56",
-    "goalLegend": "Quel est ton objectif ?",
-    "goalPrefill": "Préselection : {goal}.",
-    "message": "Message",
+    "goalLegend": "Ton objectif",
     "optional": "(facultatif)",
-    "messagePlaceholder": "Qu’est-ce qui joue en ce moment ? Rythme, famille, travail, blessure…",
-    "submit": "Envoyer mon FitCheck",
+    "submit": "Demande ton FitCheck gratuit",
     "pending": "Un instant…",
-    "fineprint": "Je te recontacte. Pas de newsletter, pas de conseil médical.",
+    "fineprint": "Gratuit et sans engagement. Pas de newsletter, pas de spam.",
     "privacy": "Confidentialité",
     "errors": {
       "rateLimit": "Un instant. Réessaie dans quelques minutes.",
-      "name": "Indique ton prénom et ton nom.",
-      "phone": "Indique un numéro de mobile belge, par exemple 0475 34 44 02.",
-      "goal": "Choisis un objectif.",
+      "name": "Indique ton nom.",
+      "phone": "Indique un numéro de GSM belge, par exemple 0475 34 44 02.",
+      "goal": "Choisis un objectif dans la liste.",
       "message": "Garde ton message sous 600 caractères.",
       "fields": "Vérifie les champs ci-dessous.",
-      "notConfigured": "Le formulaire ne peut pas envoyer d’e-mail pour le moment. Appelle-moi au {phone}.",
-      "sendFailed": "L’envoi n’a pas abouti. Réessaie ou appelle-moi au {phone}."
+      "notConfigured": "Ce formulaire ne peut pas transmettre de demande pour l’instant. Appelle-moi au {phone}.",
+      "sendFailed": "L’envoi a échoué. Réessaie ou appelle-moi au {phone}."
     }
   },
   "Faq": {
     "eyebrow": "Questions",
-    "title": "Court et honnête.",
+    "title": "Bon à savoir.",
     "items": [
       {
-        "q": "C’est quoi un FitCheck ?",
-        "a": "Un échange court, sans engagement. Tu laisses ton nom, ton mobile et ton objectif. Je te recontacte, et on voit si un accompagnement a du sens. Coaching de mode de vie, pas un examen médical."
+        "q": "Le FitCheck est-il vraiment gratuit ?",
+        "a": "Oui. Le FitCheck ne coûte rien et tu ne t’engages à rien. Ensuite, c’est toi qui décides si tu veux continuer."
       },
       {
-        "q": "Combien coûte le FitCheck ?",
-        "a": "Le FitCheck lui-même est gratuit. Ensuite on voit si, et comment, on continue. Pas d’inscription cachée via ce formulaire."
+        "q": "Que mesure le FitCheck ?",
+        "a": "Entre autres ta masse grasse, ta masse musculaire, ton hydratation et ton métabolisme. Je t’explique chaque valeur simplement."
       },
       {
-        "q": "Je dois déjà faire du sport ?",
-        "a": "Non. Que tu recommences ou que tu t’entraînes depuis des années : on part de là où tu es."
+        "q": "Où a lieu le FitCheck ?",
+        "a": "À Roosdaal, sur rendez-vous. Après ta demande, je t’appelle ou t’envoie un message pour fixer un moment."
       },
       {
-        "q": "Tu travailles aussi en ligne ?",
-        "a": "Oui. Le coaching peut se faire sur place à Roosdaal, dehors, ou en ligne — sur rendez-vous."
+        "q": "Que se passe-t-il après le FitCheck ?",
+        "a": "Nous regardons ton objectif ensemble et faisons un plan. Tu veux un accompagnement ensuite ? C’est possible, pas obligatoire."
       },
       {
-        "q": "Que veut dire « membre Herbalife indépendant » ?",
-        "a": "Levi est coach membre indépendant, pas salarié d’Herbalife. Ce site est celui de Fit met Levi / Levi Otte, pas le site officiel Herbalife. Les produits sont facultatifs et ne sont jamais une promesse de revenus."
+        "q": "Dois-je déjà faire du sport ?",
+        "a": "Non. Que tu débutes ou que tu t’entraînes depuis des années : on part de là où tu es."
       },
       {
-        "q": "Est-ce un conseil médical ?",
-        "a": "Non. Le FitCheck et le coaching ne traitent pas de maladies et ne remplacent pas un médecin ou un diététicien. Pour une question médicale, je t’oriente ailleurs."
+        "q": "Pourquoi 80 % alimentation ?",
+        "a": "Ce que tu manges influence beaucoup comment tu te sens et comment ton corps évolue. Le mouvement fait le reste. J’adapte le dosage à ton objectif."
+      },
+      {
+        "q": "Est-ce un avis médical ?",
+        "a": "Non. Le FitCheck et le coaching ne sont pas un traitement médical et ne remplacent ni un médecin ni un diététicien. Pour toute question médicale, je t’oriente."
       }
     ]
   },
   "Programs": {
-    "eyebrow": "Programmes",
-    "title": "Qu’est-ce que tu veux pour toi, maintenant ?",
-    "intro": "Trois pistes claires. Pas un catalogue de promesses. Les résultats varient d’une personne à l’autre."
+    "eyebrow": "Objectifs",
+    "title": "Que veux-tu atteindre ?",
+    "intro": "Six directions, un seul départ : le FitCheck gratuit. Les résultats varient d’une personne à l’autre."
   },
   "Privacy": {
     "title": "Confidentialité",

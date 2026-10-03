@@ -7,14 +7,13 @@ const TITLES: Record<string, string> = {
   nl: "Pagina niet gevonden",
   fr: "Page introuvable",
   en: "Page not found",
-  es: "Página no encontrada",
 };
 
 async function notFoundLang() {
   const h = await headers();
   // next-intl proxy sets the URL locale; dotted paths skip it, so fall back to Accept-Language.
   const al = `${h.get("x-next-intl-locale") || ""} ${h.get("accept-language") || ""}`.toLowerCase();
-  const lang = al.match(/\b(nl|fr|en|es)\b/)?.[1] || "nl";
+  const lang = al.match(/\b(nl|fr|en)\b/)?.[1] || "nl";
   return lang;
 }
 
@@ -44,10 +43,6 @@ export default function RootNotFound() {
             {" · "}
             <Link href="/en" style={{ color: "#1E9153", fontWeight: 600 }}>
               Home
-            </Link>
-            {" · "}
-            <Link href="/es" style={{ color: "#1E9153", fontWeight: 600 }}>
-              Inicio
             </Link>
           </p>
         </div>
