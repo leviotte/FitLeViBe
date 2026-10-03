@@ -30,7 +30,7 @@ export async function GET(
     `Public name: **Fit met Levi**. Person: **Levi Otte**. Handle: FitLeViBe.`,
     `NAP (Belgium only): ${site.address.street}, ${site.address.postalCode} ${site.address.city}, ${copy.Common.country}. ${site.phoneDisplay}.`,
     `Language of this file: ${lang}. Home market: Belgium. Other locales are language editions, not extra offices.`,
-    `FitCheck, follow-up and coaching: online or in person (by appointment). The address is the business location, not the only place coaching happens.`,
+    `FitCheck, follow-up and coaching: online or offline, but always personal (by appointment). The address is the business location, not the only place coaching happens.`,
     ``,
     `## Disclosure`,
     copy.Common.disclosureFooter,
