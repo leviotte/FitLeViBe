@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { EnrollButton, EnrollDisclosure, TelegramButton } from "@/components/enroll";
+import { EnrollButton, TelegramButton } from "@/components/enroll";
 import { isAppLocale } from "@/i18n/locales";
 import { routing } from "@/i18n/routing";
 import { localeMetadata } from "@/lib/seo";
@@ -43,7 +43,6 @@ export default async function StartPage({
 
       <div className="mt-12 flex flex-col gap-4">
         <EnrollButton fullWidth className="min-h-14 text-lg" />
-        <EnrollDisclosure />
         <TelegramButton
           fullWidth
           className="inline-flex min-h-14 w-full items-center justify-center rounded-full border border-indigo/15 bg-white px-7 text-center text-lg font-semibold text-indigo transition hover:bg-sand"
