@@ -53,14 +53,8 @@ export async function JsonLd() {
       telephone: site.phoneE164,
       image: `${origin}/opengraph-image`,
       address,
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Roosdaal",
-        containedInPlace: {
-          "@type": "Country",
-          name: "Belgium",
-        },
-      },
+      // Coaching is online or in person; the address stays as the business location.
+      areaServed: { "@type": "Country", name: "Belgium" },
       founder: { "@id": `${origin}/#person` },
       sameAs: [
         site.social.instagram,

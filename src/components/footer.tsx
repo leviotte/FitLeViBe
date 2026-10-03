@@ -14,7 +14,7 @@ export async function Footer() {
         <div className="md:col-span-5">
           <p className="font-display text-3xl text-cream">{site.publicName}</p>
           <p className="mt-4 max-w-sm text-sm leading-7 text-cream/75">
-            {site.personName}, {t("jobTitleLower")} in {site.address.city}.{" "}
+            {site.personName}, {t("jobTitleLower")}. {t("onlineOrInPerson")}.{" "}
             {t("footerBlurb")}
           </p>
           <p className="mt-8 text-xs tracking-wide text-cream/55">
