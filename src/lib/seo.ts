@@ -17,7 +17,7 @@ export function absoluteUrl(locale: AppLocale, href: AppPathname): string {
   return `${site.url}${localizedPath(locale, href)}`;
 }
 
-/** hreflang map: nl-BE / fr / en / es + x-default = Dutch sibling of this page. */
+/** hreflang map: nl-BE / fr / en + x-default = Dutch sibling of this page. */
 export function languageAlternates(
   href: AppPathname,
 ): Record<string, string> {

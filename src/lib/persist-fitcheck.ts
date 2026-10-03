@@ -29,7 +29,6 @@ const localeLabel: Record<AppLocale, string> = {
   nl: "Nederlands (nl-BE)",
   fr: "Frans",
   en: "Engels",
-  es: "Spaans",
 };
 
 function goalLabel(goal: GoalId): string {

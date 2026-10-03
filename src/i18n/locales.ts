@@ -7,7 +7,6 @@ export const htmlLang: Record<AppLocale, string> = {
   nl: "nl-BE",
   fr: "fr",
   en: "en",
-  es: "es",
 };
 
 /** hreflang codes. Dutch is nl-BE, not nl. */
@@ -15,7 +14,6 @@ export const hreflang: Record<AppLocale, string> = {
   nl: "nl-BE",
   fr: "fr",
   en: "en",
-  es: "es",
 };
 
 /** Open Graph og:locale */
@@ -23,14 +21,12 @@ export const ogLocale: Record<AppLocale, string> = {
   nl: "nl_BE",
   fr: "fr_FR",
   en: "en_US",
-  es: "es_ES",
 };
 
 export const localeSwitcherLabel: Record<AppLocale, string> = {
   nl: "NL",
   fr: "FR",
   en: "EN",
-  es: "ES",
 };
 
 export function isAppLocale(value: string | null | undefined): value is AppLocale {

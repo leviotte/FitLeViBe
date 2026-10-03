@@ -16,9 +16,8 @@ Dutch (nl-BE) is the default at `/`. Language editions:
 | Dutch (Belgium) | `/` |
 | French | `/fr` |
 | English | `/en` |
-| Spanish | `/es` |
 
-Copy lives in `messages/{nl,fr,en,es}.json`. The public name **Fit met Levi** is unchanged in every language.
+Copy lives in `messages/{nl,fr,en}.json`. Spanish was removed on 2026-10-03; every `/es` and `/es/*` URL 301s to the Dutch page (see `next.config.ts`). The public name **Fit met Levi** is unchanged in every language.
 
 ## Run locally
 
@@ -39,7 +38,7 @@ pnpm build
 
 Copy `.env.example` to `.env.local`.
 
-FitCheck (`submitFitCheckAction` on `/` and `/fitcheck`, including `/fr` `/en` `/es` equivalents — never `/start`) emails each lead to **fitlevibe@icloud.com** via [Resend](https://resend.com).
+FitCheck (`submitFitCheckAction` on `/` and `/fitcheck`, including `/fr` `/en` equivalents — never `/start`) emails each lead to **fitlevibe@icloud.com** via [Resend](https://resend.com).
 
 | Variable | Required | Role |
 | --- | --- | --- |
@@ -57,12 +56,12 @@ The one.com Website Builder contact form is not used. Do not put secrets in the 
 
 | Path (Dutch / others) | Role |
 | --- | --- |
-| `/`, `/fr`, `/en`, `/es` | Homepage |
-| `/programmas`, `/fr/programmes`, `/en/programs`, `/es/programas` | Three programs → FitCheck with goal prefilled |
+| `/`, `/fr`, `/en` | Homepage |
+| `/programmas`, `/fr/programmes`, `/en/programs` | Three programs → FitCheck with goal prefilled |
 | `/fitcheck` (same segment in every locale) | Dedicated FitCheck form |
 | `/start` (same segment in every locale) | Enroll + Telegram community |
-| `/over`, `/fr/a-propos`, `/en/about`, `/es/sobre` | About Levi |
-| `/privacy`, `/fr/confidentialite`, `/en/privacy`, `/es/privacidad` | Short privacy note |
+| `/over`, `/fr/a-propos`, `/en/about` | About Levi |
+| `/privacy`, `/fr/confidentialite`, `/en/privacy` | Short privacy note |
 
 The enroll URL on `/start` is exact (query `locale=nl-BE` is not rewritten per page language). Telegram is only https://t.me/fitlevibe.
 

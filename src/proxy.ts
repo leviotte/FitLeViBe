@@ -29,6 +29,6 @@ export const config = {
   matcher: [
     "/((?!api|trpc|_next|_vercel|.*\\..*).*)",
     "/llms.txt",
-    "/(fr|en|es)/llms.txt",
+    "/(fr|en)/llms.txt",
   ],
 };

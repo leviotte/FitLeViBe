@@ -17,6 +17,14 @@ const nextConfig: NextConfig = {
   },
   serverExternalPackages: ["resend"],
   async redirects() {
+    // Spanish edition removed (2026-10-03): 301 every /es URL to its Dutch page.
+    const spanishGone = [
+      { source: "/es", destination: "/" },
+      { source: "/es/programas", destination: "/programmas" },
+      { source: "/es/sobre", destination: "/over" },
+      { source: "/es/privacidad", destination: "/privacy" },
+      { source: "/es/:path*", destination: "/:path*" },
+    ].map((rule) => ({ ...rule, statusCode: 301 as const }));
     return [
       {
         source: "/",
@@ -30,6 +38,7 @@ const nextConfig: NextConfig = {
         destination: "https://www.fitlevibe.com/:path*",
         permanent: true,
       },
+      ...spanishGone,
     ];
   },
 };
