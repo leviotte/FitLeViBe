@@ -76,7 +76,8 @@
     "nutrition": "Légumes frais et un repas simple, coloré",
     "weight": "Mouvement calme dans un espace lumineux",
     "muscle": "Renforcement en plein air",
-    "vitality": "Bouger tranquillement dans la nature"
+    "vitality": "Bouger tranquillement dans la nature",
+    "levi": "Levi Otte, coach chez FitLeViBe, pendant la Strong Viking"
   },
   "Hero": {
     "kicker": "{name} · coach à {city}",
@@ -205,6 +206,13 @@
     "p1": "Si tu veux avancer en santé et avec de la motivation, il faut d’abord voir ce dont tu as besoin. Alimentation, mouvement et tête fonctionnent mieux ensemble que s’entraîner plus fort seulement. Depuis 2015, je peaufine cette approche — sans hype, avec un rythme que tu tiens.",
     "p2": "L’accompagnement peut se faire sur place à Roosdaal, dehors, ou en ligne, toujours sur rendez-vous.",
     "p3": "Je suis membre Herbalife indépendant. Ce site appartient à Fit met Levi / Levi Otte, ce n’est pas le site officiel Herbalife. Pas de promesse de revenus, pas d’allégation médicale."
+  },
+  "Result": {
+    "eyebrow": "Mon propre résultat",
+    "title": "Est-ce vraiment une question de poids ?",
+    "line": "Ce ne sont pas les kilos qui comptent, mais ce qui les compose : graisse, muscles et eau.",
+    "caption": "C’est moi : de 70,2 kg à 75,4 kg. Mon propre parcours, pas une promesse. Chaque corps est différent.",
+    "alt": "Photo avant/après de Levi Otte lui-même : 70,2 kg à gauche, 75,4 kg à droite, avec le texte « Still think it’s about the weight? »"
   },
   "StartBand": {
     "title": "Si ça te parle, tu commences ici.",

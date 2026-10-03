@@ -76,7 +76,8 @@
     "nutrition": "Fresh vegetables and a simple, colourful meal",
     "weight": "Easy movement in a bright space",
     "muscle": "Strength training in the open air",
-    "vitality": "Moving quietly in nature"
+    "vitality": "Moving quietly in nature",
+    "levi": "Levi Otte, coach at FitLeViBe, at Strong Viking"
   },
   "Hero": {
     "kicker": "{name} · coach in {city}",
@@ -205,6 +206,13 @@
     "p1": "If you want to keep going in a healthy, motivated way, it helps to know what you actually need. Food, movement, and mindset work better together than training harder on its own. I’ve been refining that approach since 2015 — not with hype, but with a rhythm you can keep.",
     "p2": "Coaching can happen in person in Roosdaal, outdoors, or online, always by appointment.",
     "p3": "I’m an independent Herbalife member. This website belongs to Fit met Levi / Levi Otte, not the official Herbalife site. No income claims, no medical claims."
+  },
+  "Result": {
+    "eyebrow": "My own result",
+    "title": "Is it really about the weight?",
+    "line": "It’s not about the kilos, but what they’re made of: fat, muscle and water.",
+    "caption": "This is me: from 70.2 kg to 75.4 kg. My own journey, not a promise. Every body is different.",
+    "alt": "Levi Otte’s own before/after photo: 70.2 kg on the left, 75.4 kg on the right, with the text “Still think it’s about the weight?”"
   },
   "StartBand": {
     "title": "If this feels right, you start here.",
