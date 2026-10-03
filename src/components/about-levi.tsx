@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { SectionCta } from "@/components/fitcheck-cta";
 import { Link } from "@/i18n/navigation";
-import { photos } from "@/lib/photos";
+import { ResponsivePicture } from "@/components/responsive-picture";
+import { leviPhotos } from "@/lib/levi-photos";
 
 export async function AboutLevi() {
   const t = await getTranslations("About");
@@ -13,13 +13,12 @@ export async function AboutLevi() {
     <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24" id="over">
       <div className="grid items-center gap-10 lg:grid-cols-12">
         <div className="relative lg:col-span-5">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] bg-sand lg:aspect-[4/5]">
-            <Image
-              src={photos.about}
-              alt={photoAlts("about")}
-              fill
-              sizes="(max-width: 1024px) 100vw, 40vw"
-              className="object-cover"
+          <div className="overflow-hidden rounded-[2rem] bg-sand">
+            <ResponsivePicture
+              {...leviPhotos.strongViking}
+              alt={photoAlts("levi")}
+              sizes="(max-width: 1024px) calc(100vw - 2.5rem), 440px"
+              className="block aspect-square h-auto w-full object-cover object-[center_30%]"
             />
           </div>
         </div>

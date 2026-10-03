@@ -9,6 +9,7 @@ import { GoogleReviews } from "@/components/google-reviews";
 import { Hero } from "@/components/hero";
 import { Approach } from "@/components/home/approach";
 import { Measures } from "@/components/home/measures";
+import { OwnResult } from "@/components/home/own-result";
 import { HowItWorks } from "@/components/how-it-works";
 import { FaqJsonLd } from "@/components/json-ld";
 import { isAppLocale } from "@/i18n/locales";
@@ -65,6 +66,7 @@ export default async function HomePage({
         <GoogleReviews />
       </Suspense>
       <AboutLevi />
+      <OwnResult />
       <Faq />
       <FitCheckSection defaultGoal={defaultGoal} />
     </>
