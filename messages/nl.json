@@ -1,20 +1,20 @@
 {
   "Meta": {
     "site": {
-      "defaultTitle": "Fit met Levi · Levi Otte, coach online en persoonlijk",
-      "defaultDescription": "Fit met Levi — Levi Otte, coach in gezondheid en lichaam. Online of persoonlijk. Start met een gratis FitCheck."
+      "defaultTitle": "Fit met Levi · Levi Otte, coach online of offline, altijd persoonlijk",
+      "defaultDescription": "Fit met Levi — Levi Otte, coach in gezondheid en lichaam. Online of offline, maar altijd persoonlijk. Start met een gratis FitCheck."
     },
     "home": {
-      "title": "Gratis FitCheck, online of persoonlijk · Fit met Levi",
-      "description": "Vraag je gratis FitCheck aan bij coach Levi Otte, online of persoonlijk. We meten je vetmassa, spiermassa, vocht en stofwisseling. Daarna samen een plan: 80% voeding, 20% beweging."
+      "title": "Gratis FitCheck, online of offline, altijd persoonlijk · Fit met Levi",
+      "description": "Vraag je gratis FitCheck aan bij coach Levi Otte. Online of offline, maar altijd persoonlijk. We meten je vetmassa, spiermassa, vocht en stofwisseling. Daarna samen een plan: 80% voeding, 20% beweging."
     },
     "start": {
       "title": "Starten",
-      "description": "Begin bij Fit met Levi. Inschrijven of meevolgen in Telegram. Levi Otte, coach online en persoonlijk."
+      "description": "Begin bij Fit met Levi. Inschrijven of meevolgen in Telegram. Levi Otte, coach online of offline, maar altijd persoonlijk."
     },
     "fitcheck": {
       "title": "Gratis FitCheck aanvragen",
-      "description": "Vraag je gratis FitCheck aan bij Levi Otte, online of persoonlijk. Naam en gsm volstaan. Ik neem contact op om een moment af te spreken."
+      "description": "Vraag je gratis FitCheck aan bij Levi Otte. Online of offline, maar altijd persoonlijk. Naam en gsm volstaan. Ik neem contact op om een moment af te spreken."
     },
     "programs": {
       "title": "Doelen",
@@ -22,7 +22,7 @@
     },
     "about": {
       "title": "Over Levi Otte",
-      "description": "Levi Otte is coach, gespecialiseerd in gezondheid en het lichaam. Online of persoonlijk. 80% voeding, 20% beweging. Start met een gratis FitCheck."
+      "description": "Levi Otte is coach, gespecialiseerd in gezondheid en het lichaam. Online of offline, maar altijd persoonlijk. 80% voeding, 20% beweging. Start met een gratis FitCheck."
     },
     "privacy": {
       "title": "Privacy",
@@ -32,7 +32,7 @@
       "title": "Pagina niet gevonden",
       "description": "Die link bestaat niet (meer) op Fit met Levi."
     },
-    "ogAlt": "Fit met Levi · Levi Otte, coach online en persoonlijk",
+    "ogAlt": "Fit met Levi · Levi Otte, coach online of offline, altijd persoonlijk",
     "keywords": ["Fit met Levi", "Levi Otte", "coach online", "persoonlijk coach", "FitCheck", "FitLeViBe", "coaching België"]
   },
   "Nav": {
@@ -49,7 +49,6 @@
   "Common": {
     "publicName": "Fit met Levi",
     "jobTitle": "Persoonlijk coach",
-    "jobTitleLower": "persoonlijk coach",
     "tagline": "20% training, 80% voeding, 100% mindset.",
     "country": "België",
     "enroll": "Inschrijven",
@@ -64,12 +63,12 @@
     "training": "Training",
     "nutrition": "Voeding",
     "mindset": "Mindset",
-    "onlineOrInPerson": "Online of bij mij"
+    "onlineOrInPerson": "Online of offline, maar altijd persoonlijk"
   },
   "Cta": {
     "label": "Vraag je gratis FitCheck aan",
     "short": "Gratis FitCheck",
-    "note": "Gratis · Vrijblijvend · Online of bij mij"
+    "note": "Gratis · Online of offline · Altijd persoonlijk"
   },
   "Photos": {
     "hero": "Rustige stretching in warm daglicht",
@@ -87,7 +86,7 @@
     "points": [
       "Volledig gratis",
       "Vrijblijvend",
-      "Online of bij mij"
+      "Online of offline, maar altijd persoonlijk"
     ],
     "more": "Meer over mij"
   },
@@ -181,7 +180,7 @@
       {
         "n": "1",
         "title": "Gratis FitCheck",
-        "body": "Online of bij mij. We meten je vetmassa, spiermassa, vocht en stofwisseling. Zo weet je waar je staat."
+        "body": "Online of offline, maar altijd persoonlijk. We meten je vetmassa, spiermassa, vocht en stofwisseling. Zo weet je waar je staat."
       },
       {
         "n": "2",
@@ -191,23 +190,18 @@
       {
         "n": "3",
         "title": "Samen naar resultaat",
-        "body": "Je gaat aan de slag en ik help je op weg. Stap voor stap, online of bij mij."
+        "body": "Je gaat aan de slag en ik help je op weg. Stap voor stap, online of offline, maar altijd persoonlijk."
       }
     ],
     "followupTitle": "Daarna: opvolging als je dat wilt",
-    "followup": "Wil je verder begeleid worden? Dan blijf ik je coachen en volgen we samen je vooruitgang op, online of bij mij. Geen verplichting."
+    "followup": "Wil je verder begeleid worden? Dan blijf ik je coachen en volgen we samen je vooruitgang op, online of offline, maar altijd persoonlijk. Geen verplichting."
   },
   "About": {
     "eyebrow": "Over Levi",
-    "homeTitle": "Hoi, ik ben Levi.",
-    "homeBody": "Ik ben al jaren coach, altijd gespecialiseerd in gezondheid en het lichaam. Ik geloof niet in snelle trucjes. Wel in weten waar je staat, een plan dat bij je past, en iemand die met je meegaat.",
-    "homeDisclosure": "FitCheck, opvolging en coaching: online of bij mij. Altijd na afspraak.",
-    "more": "Meer over mij",
     "pageTitle": "Levi Otte",
-    "pageLead": "Coach sinds {year}, gespecialiseerd in gezondheid en het lichaam. Online of persoonlijk.",
+    "pageLead": "Coach sinds {year}, gespecialiseerd in gezondheid en het lichaam. Online of offline, maar altijd persoonlijk.",
     "p1": "Als je gezond en gemotiveerd verder wilt, is het belangrijk om te weten wat jij nodig hebt. Voeding, beweging en hoofd samen werken beter dan alleen harder trainen. Sinds 2015 verfijn ik die aanpak — niet met hype, wel met ritme dat je volhoudt.",
-    "p2": "FitCheck, opvolging en coaching kunnen online of persoonlijk, altijd na afspraak.",
-    "p3": "Ik ben onafhankelijk Herbalife-lid. Deze website is van Fit met Levi / Levi Otte, niet de officiële Herbalife-site. Geen inkomensbeloftes, geen medische claims."
+    "p2": "FitCheck, opvolging en coaching kunnen online of offline, maar altijd persoonlijk en na afspraak."
   },
   "Result": {
     "eyebrow": "Mijn eigen resultaat",
@@ -221,10 +215,10 @@
     "body": "Geen druk. Een eerste stap, met mij."
   },
   "Start": {
-    "kicker": "{name} · online of persoonlijk",
+    "kicker": "{name} · online of offline, altijd persoonlijk",
     "title": "Begin hier.",
     "body": "Je hoeft nu niets te bewijzen. Kies wat het rustigst voelt.",
-    "meta": "Online of persoonlijk · sinds {year}",
+    "meta": "Online of offline, altijd persoonlijk · sinds {year}",
     "note": "Geen druk. Geen beloftes over kilo’s of inkomen. Een eerste stap, met mij."
   },
   "FitCheck": {
@@ -274,7 +268,7 @@
       },
       {
         "q": "Moet ik naar Roosdaal komen?",
-        "a": "Nee, het kan online of bij mij. De FitCheck, de opvolging en de coaching. Na je aanvraag spreken we samen af wat jou het best past."
+        "a": "Nee, het kan online of offline, maar altijd persoonlijk. De FitCheck, de opvolging en de coaching. Na je aanvraag spreken we samen af wat jou het best past."
       },
       {
         "q": "Wat gebeurt er na de FitCheck?",

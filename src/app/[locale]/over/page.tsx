@@ -76,7 +76,6 @@ export default async function OverPage({
           </div>
           <p className="mt-8 max-w-xl text-base leading-7 text-muted">{t("p1")}</p>
           <p className="mt-4 max-w-xl text-base leading-7 text-muted">{t("p2")}</p>
-          <p className="mt-4 max-w-xl text-base leading-7 text-muted">{t("p3")}</p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <FitCheckCta />
           </div>

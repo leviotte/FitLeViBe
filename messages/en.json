@@ -1,20 +1,20 @@
 {
   "Meta": {
     "site": {
-      "defaultTitle": "Fit met Levi · Levi Otte, coach online and in person",
-      "defaultDescription": "Fit met Levi — Levi Otte, coach in health and the body. Online or in person. Start with a free FitCheck."
+      "defaultTitle": "Fit met Levi · Levi Otte, coach online or offline, always personal",
+      "defaultDescription": "Fit met Levi — Levi Otte, coach in health and the body. Online or offline, but always personal. Start with a free FitCheck."
     },
     "home": {
-      "title": "Free FitCheck, online or in person · Fit met Levi",
-      "description": "Request your free FitCheck with coach Levi Otte, online or in person. We measure your fat mass, muscle mass, body water and metabolism. Then we make a plan together: 80% nutrition, 20% exercise."
+      "title": "Free FitCheck, online or offline, always personal · Fit met Levi",
+      "description": "Request your free FitCheck with coach Levi Otte. Online or offline, but always personal. We measure your fat mass, muscle mass, body water and metabolism. Then we make a plan together: 80% nutrition, 20% exercise."
     },
     "start": {
       "title": "Start",
-      "description": "Start with Fit met Levi. Enrol or join the Telegram community. Levi Otte, coach online and in person."
+      "description": "Start with Fit met Levi. Enrol or join the Telegram community. Levi Otte, coach online or offline, but always personal."
     },
     "fitcheck": {
       "title": "Request a free FitCheck",
-      "description": "Request your free FitCheck with Levi Otte, online or in person. Your name and mobile number are enough. I’ll get in touch to set a time."
+      "description": "Request your free FitCheck with Levi Otte. Online or offline, but always personal. Your name and mobile number are enough. I’ll get in touch to set a time."
     },
     "programs": {
       "title": "Goals",
@@ -22,7 +22,7 @@
     },
     "about": {
       "title": "About Levi Otte",
-      "description": "Levi Otte is a coach specialised in health and the body. Online or in person. 80% nutrition, 20% exercise. Start with a free FitCheck."
+      "description": "Levi Otte is a coach specialised in health and the body. Online or offline, but always personal. 80% nutrition, 20% exercise. Start with a free FitCheck."
     },
     "privacy": {
       "title": "Privacy notice",
@@ -32,7 +32,7 @@
       "title": "Page not found",
       "description": "That link does not exist (anymore) on Fit met Levi."
     },
-    "ogAlt": "Fit met Levi · Levi Otte, coach online and in person",
+    "ogAlt": "Fit met Levi · Levi Otte, coach online or offline, always personal",
     "keywords": ["Fit met Levi", "Levi Otte", "online coach", "personal coach", "FitCheck", "FitLeViBe", "coaching Belgium"]
   },
   "Nav": {
@@ -49,7 +49,6 @@
   "Common": {
     "publicName": "Fit met Levi",
     "jobTitle": "Personal coach",
-    "jobTitleLower": "personal coach",
     "tagline": "20% training, 80% nutrition, 100% mindset.",
     "country": "Belgium",
     "enroll": "Enrol",
@@ -64,12 +63,12 @@
     "training": "Training",
     "nutrition": "Nutrition",
     "mindset": "Mindset",
-    "onlineOrInPerson": "Online or in person"
+    "onlineOrInPerson": "Online or offline, but always personal"
   },
   "Cta": {
     "label": "Request your free FitCheck",
     "short": "Free FitCheck",
-    "note": "Free · No strings attached · Online or in person"
+    "note": "Free · Online or offline · Always personal"
   },
   "Photos": {
     "hero": "Calm stretching in warm daylight",
@@ -87,7 +86,7 @@
     "points": [
       "Completely free",
       "No strings attached",
-      "Online or in person"
+      "Online or offline, but always personal"
     ],
     "more": "More about me"
   },
@@ -181,7 +180,7 @@
       {
         "n": "1",
         "title": "Free FitCheck",
-        "body": "Online or in person. We measure your fat mass, muscle mass, body water and metabolism. Now you know where you stand."
+        "body": "Online or offline, but always personal. We measure your fat mass, muscle mass, body water and metabolism. Now you know where you stand."
       },
       {
         "n": "2",
@@ -191,23 +190,18 @@
       {
         "n": "3",
         "title": "Together to the result",
-        "body": "You get started and I help you along. Step by step, online or in person."
+        "body": "You get started and I help you along. Step by step, online or offline, but always personal."
       }
     ],
     "followupTitle": "Afterwards: follow-up if you want it",
-    "followup": "Want more guidance? I keep coaching you and we track your progress together, online or in person. No obligation."
+    "followup": "Want more guidance? I keep coaching you and we track your progress together, online or offline, but always personal. No obligation."
   },
   "About": {
     "eyebrow": "About Levi",
-    "homeTitle": "Hi, I’m Levi.",
-    "homeBody": "I’ve been a coach for years, always specialised in health and the body. I don’t believe in quick tricks. I believe in knowing where you stand, a plan that suits you, and someone who walks with you.",
-    "homeDisclosure": "FitCheck, follow-up and coaching: online or in person. Always by appointment.",
-    "more": "More about me",
     "pageTitle": "Levi Otte",
-    "pageLead": "Coach since {year}, specialised in health and the body. Online or in person.",
+    "pageLead": "Coach since {year}, specialised in health and the body. Online or offline, but always personal.",
     "p1": "If you want to keep going in a healthy, motivated way, it helps to know what you actually need. Food, movement, and mindset work better together than training harder on its own. I’ve been refining that approach since 2015 — not with hype, but with a rhythm you can keep.",
-    "p2": "The FitCheck, follow-up and coaching can happen online or in person, always by appointment.",
-    "p3": "I’m an independent Herbalife member. This website belongs to Fit met Levi / Levi Otte, not the official Herbalife site. No income claims, no medical claims."
+    "p2": "The FitCheck, follow-up and coaching can happen online or offline, but always personally and by appointment."
   },
   "Result": {
     "eyebrow": "My own result",
@@ -221,10 +215,10 @@
     "body": "No pressure. A first step, with me."
   },
   "Start": {
-    "kicker": "{name} · online or in person",
+    "kicker": "{name} · online or offline, always personal",
     "title": "Start here.",
     "body": "You don’t have to prove anything right now. Choose what feels quietest.",
-    "meta": "Online or in person · since {year}",
+    "meta": "Online or offline, always personal · since {year}",
     "note": "No pressure. No promises about kilos or income. A first step, with me."
   },
   "FitCheck": {
@@ -274,7 +268,7 @@
       },
       {
         "q": "Do I need to come to Roosdaal?",
-        "a": "No, it can be online or in person. The FitCheck, the follow-up and the coaching. After your request we agree on what suits you best."
+        "a": "No, it can be online or offline, but always personal. The FitCheck, the follow-up and the coaching. After your request we agree on what suits you best."
       },
       {
         "q": "What happens after the FitCheck?",
