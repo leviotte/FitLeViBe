@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { AboutLevi } from "@/components/about-levi";
 import { Faq } from "@/components/faq";
 import { FitCheckSection } from "@/components/fitcheck-section";
 import { GoalCards } from "@/components/goal-cards";
@@ -62,11 +61,10 @@ export default async function HomePage({
       <GoalCards />
       <Approach />
       <HowItWorks />
+      <OwnResult />
       <Suspense fallback={null}>
         <GoogleReviews />
       </Suspense>
-      <AboutLevi />
-      <OwnResult />
       <Faq />
       <FitCheckSection defaultGoal={defaultGoal} />
     </>

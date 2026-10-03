@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Fit met Levi · Levi Otte, persoonlijk coach in Roosdaal";
+export const alt = "Fit met Levi · Levi Otte, coach online en persoonlijk";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -29,7 +29,7 @@ export default function OpenGraphImage() {
             fontWeight: 600,
           }}
         >
-          Levi Otte · Roosdaal
+          Levi Otte · online of persoonlijk
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
           <div

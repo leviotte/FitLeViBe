@@ -1,20 +1,20 @@
 {
   "Meta": {
     "site": {
-      "defaultTitle": "Fit met Levi · Levi Otte, coach à Roosdaal",
-      "defaultDescription": "Fit met Levi — Levi Otte, coach personnel à Roosdaal, en Belgique. Vivre plus sainement, à ton rythme, depuis 2015."
+      "defaultTitle": "Fit met Levi · Levi Otte, coach en ligne et en personne",
+      "defaultDescription": "Fit met Levi — Levi Otte, coach en santé et en corps. En ligne ou en personne. Commence par un FitCheck gratuit."
     },
     "home": {
-      "title": "FitCheck gratuit à Roosdaal · Fit met Levi",
-      "description": "Demande ton FitCheck gratuit chez Levi Otte à Roosdaal. Nous mesurons ta masse grasse, ta masse musculaire, ton hydratation et ton métabolisme. Ensuite, un plan ensemble : 80 % alimentation, 20 % mouvement."
+      "title": "FitCheck gratuit, en ligne ou en personne · Fit met Levi",
+      "description": "Demande ton FitCheck gratuit chez le coach Levi Otte, en ligne ou en personne. Nous mesurons ta masse grasse, ta masse musculaire, ton hydratation et ton métabolisme. Ensuite, un plan ensemble : 80 % alimentation, 20 % mouvement."
     },
     "start": {
       "title": "Commencer",
-      "description": "Commence avec Fit met Levi. Inscription ou communauté Telegram. Levi Otte, coach personnel à Roosdaal, Belgique."
+      "description": "Commence avec Fit met Levi. Inscription ou communauté Telegram. Levi Otte, coach en ligne et en personne."
     },
     "fitcheck": {
       "title": "Demander un FitCheck gratuit",
-      "description": "Demande ton FitCheck gratuit chez Levi Otte à Roosdaal. Ton nom et ton GSM suffisent. Je te contacte pour fixer un moment."
+      "description": "Demande ton FitCheck gratuit chez Levi Otte, en ligne ou en personne. Ton nom et ton GSM suffisent. Je te contacte pour fixer un moment."
     },
     "programs": {
       "title": "Objectifs",
@@ -22,7 +22,7 @@
     },
     "about": {
       "title": "À propos de Levi Otte",
-      "description": "Levi Otte est coach à Roosdaal, spécialisé en santé et en corps. 80 % alimentation, 20 % mouvement. Commence par un FitCheck gratuit."
+      "description": "Levi Otte est coach, spécialisé en santé et en corps. En ligne ou en personne. 80 % alimentation, 20 % mouvement. Commence par un FitCheck gratuit."
     },
     "privacy": {
       "title": "Confidentialité",
@@ -32,8 +32,8 @@
       "title": "Page introuvable",
       "description": "Ce lien n’existe pas (ou plus) sur Fit met Levi."
     },
-    "ogAlt": "Fit met Levi · Levi Otte, coach personnel à Roosdaal",
-    "keywords": ["Fit met Levi", "Levi Otte", "coach personnel Roosdaal", "FitCheck", "FitLeViBe", "coaching Belgique"]
+    "ogAlt": "Fit met Levi · Levi Otte, coach en ligne et en personne",
+    "keywords": ["Fit met Levi", "Levi Otte", "coach en ligne", "coach personnel", "FitCheck", "FitLeViBe", "coaching Belgique"]
   },
   "Nav": {
     "programs": "Objectifs",
@@ -63,12 +63,13 @@
     "navigate": "Navigation",
     "training": "Entraînement",
     "nutrition": "Alimentation",
-    "mindset": "Mindset"
+    "mindset": "Mindset",
+    "onlineOrInPerson": "En ligne ou chez moi"
   },
   "Cta": {
     "label": "Demande ton FitCheck gratuit",
     "short": "FitCheck gratuit",
-    "note": "Gratuit · Sans engagement · En personne avec Levi"
+    "note": "Gratuit · Sans engagement · En ligne ou chez moi"
   },
   "Photos": {
     "hero": "Étirements calmes dans une lumière chaude",
@@ -80,14 +81,15 @@
     "levi": "Levi Otte, coach chez FitLeViBe, pendant la Strong Viking"
   },
   "Hero": {
-    "kicker": "{name} · coach à {city}",
+    "kicker": "Salut, moi c’est {name}",
     "title": "Sache où tu en es. Vise ton objectif.",
-    "body": "Commence par un FitCheck gratuit. Nous mesurons ta masse grasse, ta masse musculaire, ton hydratation et plus encore. Ensuite, nous construisons ensemble le pont vers ton objectif.",
+    "body": "Je suis coach depuis des années, toujours spécialisé en santé et en corps. Commence par un FitCheck gratuit : nous mesurons ta masse grasse, ta masse musculaire, ton hydratation et plus encore. Ensuite, nous construisons ensemble le pont vers ton objectif.",
     "points": [
       "Entièrement gratuit",
       "Sans engagement",
-      "En personne, avec Levi"
-    ]
+      "En ligne ou chez moi"
+    ],
+    "more": "En savoir plus sur moi"
   },
   "Measures": {
     "eyebrow": "Étape 1 · Le FitCheck",
@@ -179,7 +181,7 @@
       {
         "n": "1",
         "title": "FitCheck gratuit",
-        "body": "Nous mesurons ta masse grasse, ta masse musculaire, ton hydratation et ton métabolisme. Tu sais où tu en es."
+        "body": "En ligne ou chez moi. Nous mesurons ta masse grasse, ta masse musculaire, ton hydratation et ton métabolisme. Tu sais où tu en es."
       },
       {
         "n": "2",
@@ -189,22 +191,22 @@
       {
         "n": "3",
         "title": "Ensemble vers le résultat",
-        "body": "Tu te lances et je t’accompagne. Pas à pas."
+        "body": "Tu te lances et je t’accompagne. Pas à pas, en ligne ou chez moi."
       }
     ],
     "followupTitle": "Ensuite : un suivi si tu le souhaites",
-    "followup": "Tu veux être accompagné(e) plus loin ? Je continue à te coacher et nous suivons tes progrès ensemble. Sans obligation."
+    "followup": "Tu veux être accompagné(e) plus loin ? Je continue à te coacher et nous suivons tes progrès ensemble, en ligne ou chez moi. Sans obligation."
   },
   "About": {
     "eyebrow": "À propos de Levi",
     "homeTitle": "Salut, moi c’est Levi.",
     "homeBody": "Je suis coach depuis des années, toujours spécialisé en santé et en corps. Je ne crois pas aux astuces rapides. Je crois à savoir où tu en es, à un plan qui te correspond, et à quelqu’un qui avance avec toi.",
-    "homeDisclosure": "Coaching à Roosdaal, en extérieur ou en ligne. Toujours sur rendez-vous.",
+    "homeDisclosure": "FitCheck, suivi et coaching : en ligne ou chez moi. Toujours sur rendez-vous.",
     "more": "En savoir plus sur moi",
     "pageTitle": "Levi Otte",
-    "pageLead": "Coach à {city}, en Belgique, depuis {year}. Spécialisé en santé et en corps.",
+    "pageLead": "Coach depuis {year}, spécialisé en santé et en corps. En ligne ou en personne.",
     "p1": "Si tu veux avancer en santé et avec de la motivation, il faut d’abord voir ce dont tu as besoin. Alimentation, mouvement et tête fonctionnent mieux ensemble que s’entraîner plus fort seulement. Depuis 2015, je peaufine cette approche — sans hype, avec un rythme que tu tiens.",
-    "p2": "L’accompagnement peut se faire sur place à Roosdaal, dehors, ou en ligne, toujours sur rendez-vous.",
+    "p2": "Le FitCheck, le suivi et le coaching peuvent se faire en ligne ou en personne, toujours sur rendez-vous.",
     "p3": "Je suis membre Herbalife indépendant. Ce site appartient à Fit met Levi / Levi Otte, ce n’est pas le site officiel Herbalife. Pas de promesse de revenus, pas d’allégation médicale."
   },
   "Result": {
@@ -219,10 +221,10 @@
     "body": "Sans pression. Un premier pas, avec moi."
   },
   "Start": {
-    "kicker": "{name} · {city}",
+    "kicker": "{name} · en ligne ou en personne",
     "title": "Commence ici.",
     "body": "Tu n’as rien à prouver pour l’instant. Choisis ce qui te met le plus à l’aise.",
-    "meta": "{city} · depuis {year}",
+    "meta": "En ligne ou en personne · depuis {year}",
     "note": "Sans pression. Pas de promesses de kilos ni de revenus. Un premier pas, avec moi."
   },
   "FitCheck": {
@@ -271,8 +273,8 @@
         "a": "Entre autres ta masse grasse, ta masse musculaire, ton hydratation et ton métabolisme. Je t’explique chaque valeur simplement."
       },
       {
-        "q": "Où a lieu le FitCheck ?",
-        "a": "À Roosdaal, sur rendez-vous. Après ta demande, je t’appelle ou t’envoie un message pour fixer un moment."
+        "q": "Dois-je venir à Roosdaal ?",
+        "a": "Non, c’est possible en ligne ou chez moi. Le FitCheck, le suivi et le coaching. Après ta demande, nous choisissons ensemble ce qui te convient le mieux."
       },
       {
         "q": "Que se passe-t-il après le FitCheck ?",
