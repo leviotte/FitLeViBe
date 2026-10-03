@@ -6,7 +6,7 @@ import { routing } from "@/i18n/routing";
 import { sendFitCheckEmail } from "@/lib/persist-fitcheck";
 import { classifyContact, readFormGuard, reportBlock } from "@/lib/thumbsupp-ingest";
 import { normalizeBeMobile } from "@/lib/phone";
-import { isGoalId, site, type GoalId } from "@/lib/site";
+import { isGoalId, site } from "@/lib/site";
 
 export type FitCheckState = {
   status: "idle" | "success" | "error";
@@ -51,9 +51,11 @@ export async function submitFitCheckAction(
     fieldErrors.phone = t("phone");
   }
 
-  if (!isGoalId(goalRaw)) {
+  // Goal is optional (one tap); only reject values that are not in the list.
+  if (goalRaw && !isGoalId(goalRaw)) {
     fieldErrors.goal = t("goal");
   }
+  const goal = goalRaw && isGoalId(goalRaw) ? goalRaw : undefined;
 
   if (messageRaw.length > 600) {
     fieldErrors.message = t("message");
@@ -71,7 +73,7 @@ export async function submitFitCheckAction(
   // in-memory limiter) + classification; only high-confidence spam skips the email.
   const verdict = await classifyContact(
     "fitcheck",
-    { name, phone: phone!, subject: goalRaw, message: messageRaw },
+    { name, phone: phone!, subject: goal ?? "fitcheck", message: messageRaw },
     guard,
   );
   if (!verdict.allow) {
@@ -85,7 +87,7 @@ export async function submitFitCheckAction(
     const result = await sendFitCheckEmail({
       name,
       phone: phone!,
-      goal: goalRaw as GoalId,
+      goal,
       message: messageRaw || undefined,
       locale,
       createdAt: new Date().toISOString(),

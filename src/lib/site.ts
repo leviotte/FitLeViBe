@@ -13,7 +13,6 @@ export const site = {
   phoneE164: "+32475344402",
   email: "fitlevibe@icloud.com",
   foundedYear: 2015,
-  googleRating: "5/5",
   social: {
     instagram: "https://www.instagram.com/fitlevibe/",
     instagramHandle: "@FitLeViBe",
@@ -30,12 +29,22 @@ export const site = {
     "https://accounts.myherbalife.com/Account/Create?appId=1&qrFlow=1&locale=nl-BE&SponsorId=EMT1USfnhsQos54r6gUEjw==&cmp=m_nl_be_wbs_dssignup_btn_nap_copylink_20250305",
 } as const;
 
-export type GoalId = "gewichtsverlies" | "spiermassa" | "vitaliteit";
+/** `vitaliteit` is shown as "Gezondheid" (id kept so old ?doel= links still work). */
+export type GoalId =
+  | "vitaliteit"
+  | "gewichtsverlies"
+  | "spiermassa"
+  | "blessurepreventie"
+  | "sportspecifiek"
+  | "voedingspatroon";
 
 export const GOAL_IDS = [
+  "vitaliteit",
   "gewichtsverlies",
   "spiermassa",
-  "vitaliteit",
+  "blessurepreventie",
+  "sportspecifiek",
+  "voedingspatroon",
 ] as const satisfies readonly GoalId[];
 
 export function isGoalId(value: string): value is GoalId {

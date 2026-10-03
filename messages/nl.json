@@ -5,24 +5,24 @@
       "defaultDescription": "Fit met Levi — Levi Otte, persoonlijk coach in Roosdaal. Gezonder leven op jouw ritme, sinds 2015."
     },
     "home": {
-      "title": "Fit met Levi · Levi Otte, coach in Roosdaal",
-      "description": "Levi Otte, persoonlijk coach in Roosdaal. FitCheck, coaching en een helder startpunt. Geen medisch advies, geen inkomensbeloftes."
+      "title": "Gratis FitCheck in Roosdaal · Fit met Levi",
+      "description": "Vraag je gratis FitCheck aan bij Levi Otte in Roosdaal. We meten je vetmassa, spiermassa, vocht en stofwisseling. Daarna samen een plan: 80% voeding, 20% beweging."
     },
     "start": {
       "title": "Starten",
       "description": "Begin bij Fit met Levi. Inschrijven of meevolgen in Telegram. Levi Otte, persoonlijk coach in Roosdaal."
     },
     "fitcheck": {
-      "title": "Gratis FitCheck",
-      "description": "Vraag een FitCheck aan bij Levi Otte. Naam, gsm en doel. Ik neem contact op. Lifestyle coaching, geen medisch advies."
+      "title": "Gratis FitCheck aanvragen",
+      "description": "Vraag je gratis FitCheck aan bij Levi Otte in Roosdaal. Naam en gsm volstaan. Ik neem contact op om een moment af te spreken."
     },
     "programs": {
-      "title": "Programma's",
-      "description": "Drie richtingen bij Fit met Levi: gewicht, spiermassa of vitaliteit. Begin op jouw ritme. Resultaten verschillen per persoon."
+      "title": "Doelen",
+      "description": "Gezondheid, gewicht verliezen, spiermassa, blessurepreventie, sportspecifiek of een voedingspatroon. Start met een gratis FitCheck bij Fit met Levi."
     },
     "about": {
       "title": "Over Levi Otte",
-      "description": "Levi Otte is persoonlijk coach in Roosdaal sinds 2015. 20% training, 80% voeding, 100% mindset. Onafhankelijk Herbalife-lid."
+      "description": "Levi Otte is coach in Roosdaal, gespecialiseerd in gezondheid en het lichaam. 80% voeding, 20% beweging. Start met een gratis FitCheck."
     },
     "privacy": {
       "title": "Privacy",
@@ -36,7 +36,7 @@
     "keywords": ["Fit met Levi", "Levi Otte", "persoonlijk coach Roosdaal", "FitCheck", "FitLeViBe", "coaching België"]
   },
   "Nav": {
-    "programs": "Programma's",
+    "programs": "Doelen",
     "about": "Over Levi",
     "fitcheck": "FitCheck",
     "start": "Starten",
@@ -65,6 +65,11 @@
     "nutrition": "Voeding",
     "mindset": "Mindset"
   },
+  "Cta": {
+    "label": "Vraag je gratis FitCheck aan",
+    "short": "Gratis FitCheck",
+    "note": "Gratis · Vrijblijvend · Persoonlijk met Levi"
+  },
   "Photos": {
     "hero": "Rustige stretching in warm daglicht",
     "about": "Buiten bewegen in de ochtendzon",
@@ -74,16 +79,43 @@
     "vitality": "Rustig bewegen in de natuur"
   },
   "Hero": {
-    "kicker": "{name} · {job} in {city}",
-    "title": "Fit met Levi",
-    "body": "Ik ben Levi Otte, en ik help je gezonder leven op een ritme dat bij jou past."
+    "kicker": "{name} · coach in {city}",
+    "title": "Weet waar je staat. Ga voor je doel.",
+    "body": "Start met een gratis FitCheck. We meten je vetmassa, spiermassa, vocht en meer. Daarna bouwen we samen de brug naar jouw doel.",
+    "points": [
+      "Volledig gratis",
+      "Vrijblijvend",
+      "Persoonlijk, met Levi"
+    ]
   },
-  "Trust": {
-    "country": "België",
-    "since": "Sinds {year}",
-    "coach": "persoonlijk coach",
-    "google": "Google {rating}",
-    "reviews": "publieke reviews"
+  "Measures": {
+    "eyebrow": "Stap 1 · De FitCheck",
+    "title": "Eerst meten. Dan weten.",
+    "intro": "In de gratis FitCheck brengen we je lichaam in kaart. Geen giswerk, wel een helder vertrekpunt.",
+    "items": [
+      {
+        "key": "fat",
+        "title": "Vetmassa",
+        "body": "Hoeveel van je gewicht uit vet bestaat."
+      },
+      {
+        "key": "muscle",
+        "title": "Spiermassa",
+        "body": "Hoeveel spieren je hebt, en waar je kunt groeien."
+      },
+      {
+        "key": "water",
+        "title": "Vocht",
+        "body": "Je vochtgehalte. Drink je genoeg?"
+      },
+      {
+        "key": "metabolism",
+        "title": "Stofwisseling",
+        "body": "Inzicht in hoeveel energie je lichaam verbruikt."
+      }
+    ],
+    "more": "En nog meer waarden. Ik leg alles uit in gewone taal.",
+    "note": "Een meting en een gesprek. Geen medisch onderzoek."
   },
   "Reviews": {
     "eyebrow": "Reviews",
@@ -94,56 +126,82 @@
     "source": "Reviews via"
   },
   "Goals": {
-    "eyebrow": "Jouw richting",
-    "title": "Wat wil je nu voor jezelf?",
-    "intro": "Kies wat nu het meest klopt. Geen verplicht traject, geen gegarandeerde cijfers.",
-    "cta": "Eerst een FitCheck",
+    "eyebrow": "Stap 2 · Jouw doel",
+    "title": "Wat wil jij bereiken?",
+    "intro": "Na de meting kijken we samen naar jouw doel. Kies wat het best past. Twijfel je? Dan zoeken we het samen uit.",
+    "cta": "Kies dit doel",
+    "vitaliteit": {
+      "title": "Gezondheid",
+      "short": "Je fitter en beter voelen.",
+      "body": "Meer energie in gewone dagen. Gezonder eten, beter in je vel."
+    },
     "gewichtsverlies": {
-      "title": "Gewichtsverlies & -beheersing",
-      "short": "Rustiger eten, duidelijker bewegen.",
-      "body": "Je hoeft niet te crashen. We kijken naar eten en bewegen dat je volhoudt — zonder beloofde kilo’s."
+      "title": "Gewicht verliezen",
+      "short": "Afvallen op een haalbare manier.",
+      "body": "Geen crashdieet. Wel eten en bewegen dat je volhoudt."
     },
     "spiermassa": {
-      "title": "Spiermassa",
-      "short": "Sterker worden, op jouw ritme.",
-      "body": "Sterker worden mag rustig. Je krijgt een haalbaar ritme, geen eindeloze gymdagen."
+      "title": "Spiermassa opbouwen",
+      "short": "Sterker worden, stap voor stap.",
+      "body": "Gericht eten en trainen om spieren op te bouwen."
     },
-    "vitaliteit": {
-      "title": "Vitaliteit",
-      "short": "Meer energie in gewone dagen.",
-      "body": "Meer energie in gewone dagen: slaap, voeding, een hoofd dat meewerkt. Geen trucje."
+    "blessurepreventie": {
+      "title": "Blessurepreventie",
+      "short": "Sterk en in balans blijven.",
+      "body": "Een lichaam in balans, zodat je kunt blijven bewegen."
+    },
+    "sportspecifiek": {
+      "title": "Sportspecifiek",
+      "short": "Meer halen uit jouw sport.",
+      "body": "Voeding en training afgestemd op jouw sport en jouw ritme."
+    },
+    "voedingspatroon": {
+      "title": "Een voedingspatroon volgen",
+      "short": "Bv. vegetarisch of eiwitrijk.",
+      "body": "Volg je een bepaald eetpatroon? Dan bouwen we je plan daarrond."
     }
   },
+  "Approach": {
+    "eyebrow": "De aanpak",
+    "title": "80% voeding. 20% beweging.",
+    "body": "Het verschil maak je vooral aan tafel. Daarom draait mijn aanpak altijd om 80% voeding en 20% beweging of sport. De juiste mix stem ik af op jouw doel.",
+    "nutrition": "Voeding",
+    "nutritionBody": "Wat, hoeveel en wanneer je eet. Haalbaar, met eten dat je lekker vindt.",
+    "movement": "Beweging",
+    "movementBody": "Training of sport die past bij je doel en je agenda.",
+    "quote": "We bouwen samen de brug tussen waar je nu staat en je doel."
+  },
   "How": {
-    "eyebrow": "FitCheck",
-    "title": "Liever eerst praten?",
-    "intro": "Dat mag. Een FitCheck is een kort, vrijblijvend gesprek.",
+    "eyebrow": "Zo werkt het",
+    "title": "In 3 stappen naar je doel.",
     "steps": [
       {
-        "n": "01",
-        "title": "Je vertelt waar je staat",
-        "body": "Je naam, gsm, en wat je wilt. Een zin extra mag, hoeft niet."
+        "n": "1",
+        "title": "Gratis FitCheck",
+        "body": "We meten je vetmassa, spiermassa, vocht en stofwisseling. Zo weet je waar je staat."
       },
       {
-        "n": "02",
-        "title": "Ik neem contact op",
-        "body": "Geen chatbot. Een bericht of gesprek, om te horen hoe jouw dagen lopen."
+        "n": "2",
+        "title": "Doel en plan",
+        "body": "We bespreken wat je wilt bereiken en maken een plan op jouw maat."
       },
       {
-        "n": "03",
-        "title": "We kijken samen",
-        "body": "Je krijgt een eerste richting. Lifestyle coaching — geen medisch advies, geen verplichting."
+        "n": "3",
+        "title": "Samen naar resultaat",
+        "body": "Je gaat aan de slag en ik help je op weg. Stap voor stap."
       }
-    ]
+    ],
+    "followupTitle": "Daarna: opvolging als je dat wilt",
+    "followup": "Wil je verder begeleid worden? Dan blijf ik je coachen en volgen we samen je vooruitgang op. Geen verplichting."
   },
   "About": {
-    "eyebrow": "Over mij",
-    "homeTitle": "Ik coach in Roosdaal, sinds 2015.",
-    "homeBody": "Ik ben {name}. Als je gezonder en rustiger in je lijf wilt staan, loop ik met je mee — met voeding die het grootste deel doet, training die haalbaar is, en een hoofd dat blijft.",
-    "homeDisclosure": "Ter plaatse, buiten of online, na afspraak. Ik ben onafhankelijk Herbalife-lid; deze site is van Fit met Levi, niet van Herbalife.",
+    "eyebrow": "Over Levi",
+    "homeTitle": "Hoi, ik ben Levi.",
+    "homeBody": "Ik ben al jaren coach, altijd gespecialiseerd in gezondheid en het lichaam. Ik geloof niet in snelle trucjes. Wel in weten waar je staat, een plan dat bij je past, en iemand die met je meegaat.",
+    "homeDisclosure": "Coaching in Roosdaal, buiten of online. Altijd na afspraak.",
     "more": "Meer over mij",
     "pageTitle": "Levi Otte",
-    "pageLead": "Persoonlijk coach in {city}, België. Sinds {year}. Google {rating}.",
+    "pageLead": "Coach in {city}, België, sinds {year}. Gespecialiseerd in gezondheid en het lichaam.",
     "p1": "Als je gezond en gemotiveerd verder wilt, is het belangrijk om te weten wat jij nodig hebt. Voeding, beweging en hoofd samen werken beter dan alleen harder trainen. Sinds 2015 verfijn ik die aanpak — niet met hype, wel met ritme dat je volhoudt.",
     "p2": "Begeleiding kan ter plaatse in Roosdaal, buiten, of online, altijd na afspraak.",
     "p3": "Ik ben onafhankelijk Herbalife-lid. Deze website is van Fit met Levi / Levi Otte, niet de officiële Herbalife-site. Geen inkomensbeloftes, geen medische claims."
@@ -156,74 +214,80 @@
     "kicker": "{name} · {city}",
     "title": "Begin hier.",
     "body": "Je hoeft nu niets te bewijzen. Kies wat het rustigst voelt.",
-    "meta": "{city} · sinds {year} · Google {rating}",
+    "meta": "{city} · sinds {year}",
     "note": "Geen druk. Geen beloftes over kilo’s of inkomen. Een eerste stap, met mij."
   },
   "FitCheck": {
-    "eyebrow": "FitCheck",
-    "title": "Vertel me waar je naartoe wilt.",
-    "intro": "Liever eerst een gesprek? Laat je naam, gsm en doel achter. Ik neem contact op.",
-    "successKicker": "Ontvangen",
-    "successTitle": "Ik neem contact op.",
-    "successBody": "Bedankt. Ik bekijk wat je schreef en bel of bericht je op het nummer dat je achterliet.",
-    "name": "Voornaam & naam",
-    "namePlaceholder": "Zoals je aangesproken wilt worden",
+    "eyebrow": "Gratis FitCheck",
+    "title": "Vraag je gratis FitCheck aan.",
+    "intro": "Laat je naam en gsm-nummer achter. Ik bel of bericht je om een moment af te spreken.",
+    "bullets": {
+      "free": "Volledig gratis en vrijblijvend",
+      "measure": "Meting van vet, spieren, vocht en stofwisseling",
+      "advice": "Persoonlijk advies voor jouw doel"
+    },
+    "successKicker": "Gelukt!",
+    "successTitle": "Je aanvraag is binnen.",
+    "successBody": "Bedankt! Ik neem contact op via het nummer dat je achterliet om je FitCheck in te plannen.",
+    "name": "Naam",
+    "namePlaceholder": "Voornaam en naam",
     "phone": "GSM-nummer",
     "phonePlaceholder": "0475 12 34 56",
-    "goalLegend": "Wat is jouw doel?",
-    "goalPrefill": "Voorkeuze: {goal}.",
-    "message": "Bericht",
+    "goalLegend": "Jouw doel",
     "optional": "(optioneel)",
-    "messagePlaceholder": "Wat speelt er nu? Ritme, gezin, werk, blessure…",
-    "submit": "Stuur mijn FitCheck",
+    "submit": "Vraag je gratis FitCheck aan",
     "pending": "Even geduld…",
-    "fineprint": "Ik neem contact op. Geen nieuwsbrief, geen medisch advies.",
+    "fineprint": "Gratis en vrijblijvend. Geen nieuwsbrief, geen spam.",
     "privacy": "Privacy",
     "errors": {
       "rateLimit": "Even geduld. Probeer over een paar minuten opnieuw.",
-      "name": "Vul je voor- en achternaam in.",
+      "name": "Vul je naam in.",
       "phone": "Vul een Belgisch gsm-nummer in, bijvoorbeeld 0475 34 44 02.",
-      "goal": "Kies een doel.",
+      "goal": "Kies een doel uit de lijst.",
       "message": "Houd je bericht onder 600 tekens.",
       "fields": "Controleer even de velden hieronder.",
-      "notConfigured": "Dit formulier kan nu geen e-mail sturen. Bel me op {phone}.",
+      "notConfigured": "Dit formulier kan nu geen aanvraag doorsturen. Bel me op {phone}.",
       "sendFailed": "Verzenden lukte niet. Probeer opnieuw of bel me op {phone}."
     }
   },
   "Faq": {
     "eyebrow": "Vragen",
-    "title": "Kort en eerlijk.",
+    "title": "Goed om te weten.",
     "items": [
       {
-        "q": "Wat is een FitCheck?",
-        "a": "Een kort, vrijblijvend gesprek. Je laat je naam, gsm en doel achter. Ik neem contact op, en we kijken of begeleiding zinvol is. Lifestyle coaching, geen medisch onderzoek."
+        "q": "Is de FitCheck echt gratis?",
+        "a": "Ja. De FitCheck kost niets en je zit nergens aan vast. Daarna beslis jij of je verder wilt."
       },
       {
-        "q": "Wat kost de FitCheck?",
-        "a": "De FitCheck zelf is gratis. Daarna bespreken we of en hoe we verdergaan. Geen verborgen inschrijving via dit formulier."
+        "q": "Wat meet de FitCheck?",
+        "a": "Onder meer je vetmassa, spiermassa, vochtgehalte en stofwisseling. Ik leg elke waarde uit in gewone taal."
+      },
+      {
+        "q": "Waar vindt de FitCheck plaats?",
+        "a": "In Roosdaal, na afspraak. Na je aanvraag bel of bericht ik je om een moment te kiezen."
+      },
+      {
+        "q": "Wat gebeurt er na de FitCheck?",
+        "a": "We bekijken samen je doel en maken een plan. Wil je daarna begeleiding? Dat kan, maar het hoeft niet."
       },
       {
         "q": "Moet ik al sporten?",
-        "a": "Nee. Of je nu opnieuw begint of al jaren traint: we starten bij waar jij staat."
+        "a": "Nee. Of je nu net begint of al jaren traint: we starten waar jij staat."
       },
       {
-        "q": "Werk je ook online?",
-        "a": "Ja. Coaching kan ter plaatse in Roosdaal, buiten, of online — na afspraak."
-      },
-      {
-        "q": "Wat betekent ‘onafhankelijk Herbalife-lid’?",
-        "a": "Levi is zelfstandig lid-coach, geen werknemer van Herbalife. Deze website is van Fit met Levi / Levi Otte, niet de officiële Herbalife-site. Producten zijn optioneel en nooit een inkomensbelofte."
+        "q": "Waarom 80% voeding?",
+        "a": "Wat je eet, bepaalt voor een groot deel hoe je je voelt en hoe je lichaam verandert. Beweging doet de rest. De mix stem ik af op jouw doel."
       },
       {
         "q": "Is dit medisch advies?",
-        "a": "Nee. FitCheck en coaching zijn geen behandeling van ziektes en vervangen geen arts of diëtist. Bij medische vragen verwijs ik je door."
+        "a": "Nee. De FitCheck en coaching zijn geen medische behandeling en vervangen geen arts of diëtist. Bij medische vragen verwijs ik je door."
       }
     ]
   },
   "Programs": {
-    "eyebrow": "Programma's",
-    "title": "Wat wil je nu voor jezelf?",
-    "intro": "Drie duidelijke pistes. Geen catalogus van beloftes. Resultaten verschillen per persoon."
+    "eyebrow": "Doelen",
+    "title": "Wat wil jij bereiken?",
+    "intro": "Zes richtingen, één start: de gratis FitCheck. Resultaten verschillen per persoon."
   },
   "Privacy": {
     "title": "Privacy",

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { StartButton } from "@/components/enroll";
 import { Link } from "@/i18n/navigation";
 import { isAppLocale } from "@/i18n/locales";
 import { routing } from "@/i18n/routing";
@@ -25,16 +24,16 @@ export async function generateMetadata({
   });
 }
 
-const photoByGoal: Record<GoalId, string> = {
-  gewichtsverlies: photos.weight,
-  spiermassa: photos.muscle,
-  vitaliteit: photos.vitality,
-};
+type PhotoKey = keyof typeof photos;
 
-const photoAltKey: Record<GoalId, "weight" | "muscle" | "vitality"> = {
+/** Existing site photos only, one per goal. */
+const photoKeyByGoal: Record<GoalId, PhotoKey> = {
+  vitaliteit: "vitality",
   gewichtsverlies: "weight",
   spiermassa: "muscle",
-  vitaliteit: "vitality",
+  blessurepreventie: "hero",
+  sportspecifiek: "about",
+  voedingspatroon: "nutrition",
 };
 
 export default async function ProgrammasPage({
@@ -47,6 +46,7 @@ export default async function ProgrammasPage({
   const t = await getTranslations("Programs");
   const goals = await getTranslations("Goals");
   const photoAlts = await getTranslations("Photos");
+  const cta = await getTranslations("Cta");
 
   return (
     <div className="mx-auto max-w-6xl px-5 py-16 pb-28 sm:px-8 sm:py-24">
@@ -64,8 +64,8 @@ export default async function ProgrammasPage({
           >
             <div className="relative aspect-[16/11] lg:aspect-auto lg:min-h-[22rem]">
               <Image
-                src={photoByGoal[id]}
-                alt={photoAlts(photoAltKey[id])}
+                src={photos[photoKeyByGoal[id]]}
+                alt={photoAlts(photoKeyByGoal[id])}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -79,12 +79,11 @@ export default async function ProgrammasPage({
                 {goals(`${id}.body`)}
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <StartButton className="text-sm shadow-none" />
                 <Link
                   href={{ pathname: "/fitcheck", query: { doel: id } }}
-                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-indigo/15 bg-white px-6 text-sm font-semibold text-indigo hover:bg-sand"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-green px-6 text-base font-semibold text-white hover:bg-green-dark"
                 >
-                  {goals("cta")}
+                  {cta("label")}
                 </Link>
               </div>
             </div>

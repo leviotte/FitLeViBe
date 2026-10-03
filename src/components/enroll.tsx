@@ -24,9 +24,12 @@ const secondary =
 const onDark =
   "inline-flex min-h-12 items-center justify-center rounded-full bg-green px-7 text-center text-base font-semibold text-white transition hover:bg-green-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green";
 
+const ghostDark =
+  "inline-flex min-h-12 items-center justify-center rounded-full border border-cream/25 bg-transparent px-6 text-center text-sm font-semibold text-cream transition hover:bg-white/10";
+
 type EnrollButtonProps = ButtonWidth & {
   id?: string;
-  variant?: "primary" | "secondary" | "onDark";
+  variant?: "primary" | "secondary" | "onDark" | "ghostDark";
 };
 
 export function StartButton({ children, className, fullWidth }: ButtonWidth) {
@@ -49,7 +52,14 @@ export function EnrollButton({
   fullWidth,
 }: EnrollButtonProps) {
   const t = useTranslations("Common");
-  const look = variant === "secondary" ? secondary : variant === "onDark" ? onDark : primary;
+  const look =
+    variant === "secondary"
+      ? secondary
+      : variant === "onDark"
+        ? onDark
+        : variant === "ghostDark"
+          ? ghostDark
+          : primary;
   const width = fullWidth ? widths.full : widths.auto;
   const classes = className ? `${look} ${width} ${className}` : `${look} ${width}`;
 

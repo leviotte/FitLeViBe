@@ -2,7 +2,7 @@
 
 import { useState, type ReactNode } from "react";
 import { useTranslations } from "next-intl";
-import { StartButton } from "@/components/enroll";
+import { FitCheckCta } from "@/components/fitcheck-cta";
 import { Link } from "@/i18n/navigation";
 import { site } from "@/lib/site";
 
@@ -37,7 +37,7 @@ export function HeaderBar({ languageSwitcher }: { languageSwitcher: ReactNode })
             </Link>
           ))}
           {languageSwitcher}
-          <StartButton className="min-h-11 px-5 text-sm shadow-none" />
+          <FitCheckCta short size="sm" />
         </nav>
 
         <div className="flex items-center gap-2 md:hidden">
@@ -76,7 +76,7 @@ export function HeaderBar({ languageSwitcher }: { languageSwitcher: ReactNode })
               </Link>
             ))}
             <div className="pt-2" onClick={() => setOpen(false)}>
-              <StartButton fullWidth />
+              <FitCheckCta fullWidth size="md" />
             </div>
           </nav>
         </div>

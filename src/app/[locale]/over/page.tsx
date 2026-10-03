@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { StartButton } from "@/components/enroll";
-import { Link } from "@/i18n/navigation";
+import { FitCheckCta } from "@/components/fitcheck-cta";
 import { isAppLocale } from "@/i18n/locales";
 import { routing } from "@/i18n/routing";
 import { photos } from "@/lib/photos";
@@ -46,7 +45,6 @@ export default async function OverPage({
         {t("pageLead", {
           city: site.address.city,
           year: site.foundedYear,
-          rating: site.googleRating,
         })}
       </p>
 
@@ -80,13 +78,7 @@ export default async function OverPage({
           <p className="mt-4 max-w-xl text-base leading-7 text-muted">{t("p2")}</p>
           <p className="mt-4 max-w-xl text-base leading-7 text-muted">{t("p3")}</p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <StartButton />
-            <Link
-              href="/fitcheck"
-              className="inline-flex min-h-12 items-center justify-center rounded-full border border-indigo/15 bg-white px-6 text-base font-semibold text-indigo hover:bg-sand"
-            >
-              {common("fitCheckFirst")}
-            </Link>
+            <FitCheckCta />
           </div>
         </div>
       </div>

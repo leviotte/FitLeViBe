@@ -56,9 +56,9 @@ The one.com Website Builder contact form is not used. Do not put secrets in the 
 
 | Path (Dutch / others) | Role |
 | --- | --- |
-| `/`, `/fr`, `/en` | Homepage |
-| `/programmas`, `/fr/programmes`, `/en/programs` | Three programs → FitCheck with goal prefilled |
-| `/fitcheck` (same segment in every locale) | Dedicated FitCheck form |
+| `/`, `/fr`, `/en` | Homepage, one goal: request a free FitCheck (hero → what it measures → goals → 80/20 → 3 steps → Google reviews → about → FAQ → form `#fitcheck`) |
+| `/programmas`, `/fr/programmes`, `/en/programs` | Six goals → FitCheck with goal prefilled |
+| `/fitcheck` (same segment in every locale) | Dedicated FitCheck form (name + Belgian mobile required, goal optional) |
 | `/start` (same segment in every locale) | Enroll + Telegram community |
 | `/over`, `/fr/a-propos`, `/en/about` | About Levi |
 | `/privacy`, `/fr/confidentialite`, `/en/privacy` | Short privacy note |

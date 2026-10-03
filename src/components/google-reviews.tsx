@@ -1,4 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
+import { SectionCta } from "@/components/fitcheck-cta";
 import { getGoogleReviews } from "@/lib/google-reviews";
 
 function Stars({ value, label }: { value: number; label: string }) {
@@ -105,6 +106,7 @@ export async function GoogleReviews() {
             </span>
           </p>
         </div>
+        <SectionCta />
       </div>
     </section>
   );
