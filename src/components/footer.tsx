@@ -17,13 +17,13 @@ export async function Footer() {
             {site.personName}, coach. {t("onlineOrInPerson")}.{" "}
             {t("footerBlurb")}
           </p>
-          <p className="mt-8 text-xs tracking-wide text-cream/55">
+          <p className="mt-8 text-xs tracking-wide text-cream/75">
             {site.legalHandle} · {site.personName}
           </p>
         </div>
 
         <div className="md:col-span-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cream/55">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cream/75">
             {t("contact")}
           </p>
           <address className="mt-3 not-italic text-sm leading-7 text-cream/90">
@@ -63,7 +63,7 @@ export async function Footer() {
         </div>
 
         <div className="md:col-span-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cream/55">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cream/75">
             {t("navigate")}
           </p>
           <ul className="mt-3 space-y-2 text-sm text-cream/80">

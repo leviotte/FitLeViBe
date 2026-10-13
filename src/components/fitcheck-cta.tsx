@@ -7,7 +7,7 @@ const base =
   "inline-flex items-center justify-center rounded-full bg-green text-center font-semibold text-white transition hover:bg-green-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green";
 
 const sizes = {
-  lg: "min-h-14 px-7 text-lg shadow-[0_10px_28px_rgba(30,145,83,0.28)]",
+  lg: "min-h-14 px-7 text-lg shadow-[0_10px_28px_rgba(23,117,68,0.28)]",
   md: "min-h-12 px-6 text-base",
   sm: "min-h-11 px-5 text-sm",
 };
