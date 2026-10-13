@@ -29,7 +29,7 @@ export async function LanguageSwitcher() {
             className={`inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-2 text-[11px] font-semibold tracking-wide transition ${
               current
                 ? "bg-indigo text-cream"
-                : "text-indigo/70 hover:bg-sand hover:text-indigo"
+                : "text-indigo/90 hover:bg-sand hover:text-indigo"
             }`}
           >
             {localeSwitcherLabel[code]}

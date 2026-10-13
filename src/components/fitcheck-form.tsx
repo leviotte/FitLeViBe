@@ -129,7 +129,7 @@ export function FitCheckForm({ defaultGoal }: FitCheckFormProps) {
         <button
           type="submit"
           disabled={pending}
-          className="inline-flex min-h-14 w-full items-center justify-center rounded-full bg-green px-6 text-lg font-semibold text-white shadow-[0_10px_28px_rgba(30,145,83,0.28)] transition hover:bg-green-dark disabled:opacity-70"
+          className="inline-flex min-h-14 w-full items-center justify-center rounded-full bg-green px-6 text-lg font-semibold text-white shadow-[0_10px_28px_rgba(23,117,68,0.28)] transition hover:bg-green-dark disabled:opacity-70"
         >
           {pending ? t("pending") : t("submit")}
         </button>

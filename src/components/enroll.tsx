@@ -16,7 +16,7 @@ const widths = {
 };
 
 const primary =
-  "inline-flex min-h-12 items-center justify-center rounded-full bg-green px-7 text-center text-base font-semibold text-white shadow-[0_8px_24px_rgba(30,145,83,0.18)] transition hover:bg-green-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green";
+  "inline-flex min-h-12 items-center justify-center rounded-full bg-green px-7 text-center text-base font-semibold text-white shadow-[0_8px_24px_rgba(23,117,68,0.18)] transition hover:bg-green-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green";
 
 const secondary =
   "inline-flex min-h-12 items-center justify-center rounded-full border border-indigo/15 bg-white px-7 text-center text-base font-semibold text-indigo transition hover:bg-sand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo";
