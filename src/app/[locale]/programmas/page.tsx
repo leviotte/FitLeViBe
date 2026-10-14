@@ -73,7 +73,7 @@ export default async function ProgrammasPage({
             </div>
             <div className="px-6 pb-10 lg:px-10 lg:py-12">
               <h2 className="font-display text-3xl text-indigo">
-                {goals(`${id}.title`)}
+                {t(`questions.${id}`)}
               </h2>
               <p className="mt-4 text-base leading-7 text-muted">
                 {goals(`${id}.body`)}

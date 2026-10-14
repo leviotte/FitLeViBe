@@ -49,6 +49,15 @@ export default async function StartPage({
         />
       </div>
 
+      <div className="mt-14 grid gap-8">
+        {(["How", "Free"] as const).map((key) => (
+          <section key={key}>
+            <h2 className="font-display text-2xl text-indigo">{t(`q${key}Title`)}</h2>
+            <p className="mt-3 text-base leading-7 text-muted">{t(`q${key}Body`)}</p>
+          </section>
+        ))}
+      </div>
+
       <p className="mt-14 text-sm leading-6 text-muted">
         {t("meta", {
           city: site.address.city,
