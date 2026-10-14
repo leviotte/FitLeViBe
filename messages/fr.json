@@ -33,7 +33,15 @@
       "description": "Ce lien n’existe pas (ou plus) sur Fit met Levi."
     },
     "ogAlt": "Fit met Levi · Levi Otte, coach en ligne ou hors ligne, toujours personnel",
-    "keywords": ["Fit met Levi", "Levi Otte", "coach en ligne", "coach personnel", "FitCheck", "FitLeViBe", "coaching Belgique"]
+    "keywords": [
+      "Fit met Levi",
+      "Levi Otte",
+      "coach en ligne",
+      "coach personnel",
+      "FitCheck",
+      "FitLeViBe",
+      "coaching Belgique"
+    ]
   },
   "Nav": {
     "programs": "Objectifs",
@@ -199,7 +207,10 @@
     "pageTitle": "Levi Otte",
     "pageLead": "Coach depuis {year}, spécialisé en santé et en corps. En ligne ou hors ligne, mais toujours personnel.",
     "p1": "Si tu veux avancer en santé et avec de la motivation, il faut d’abord voir ce dont tu as besoin. Alimentation, mouvement et tête fonctionnent mieux ensemble que s’entraîner plus fort seulement. Depuis 2015, je peaufine cette approche — sans hype, avec un rythme que tu tiens.",
-    "p2": "Le FitCheck, le suivi et le coaching peuvent se faire en ligne ou hors ligne, mais toujours de façon personnelle et sur rendez-vous."
+    "p2": "Le FitCheck, le suivi et le coaching peuvent se faire en ligne ou hors ligne, mais toujours de façon personnelle et sur rendez-vous.",
+    "whoTitle": "Qui est Levi Otte ?",
+    "whoBody": "Levi Otte est coach en alimentation, mouvement et mindset, et t’accompagne personnellement, en ligne ou en personne.",
+    "howTitle": "Comment se passe le coaching avec Levi ?"
   },
   "Result": {
     "eyebrow": "Mon propre résultat",
@@ -217,11 +228,15 @@
     "title": "Commence ici.",
     "body": "Tu n’as rien à prouver pour l’instant. Choisis ce qui te met le plus à l’aise.",
     "meta": "En ligne ou hors ligne, toujours personnel · depuis {year}",
-    "note": "Sans pression. Pas de promesses de kilos ni de revenus. Un premier pas, avec moi."
+    "note": "Sans pression. Pas de promesses de kilos ni de revenus. Un premier pas, avec moi.",
+    "qHowTitle": "Comment se passe un FitCheck gratuit ?",
+    "qHowBody": "Tu le demandes en ligne ; on le fait en ligne ou en personne avec toi, et tu reçois un plan sur mesure.",
+    "qFreeTitle": "Le FitCheck est-il vraiment gratuit ?",
+    "qFreeBody": "Oui. Le FitCheck est entièrement gratuit et sans engagement, sans newsletter ni obligation ensuite."
   },
   "FitCheck": {
     "eyebrow": "FitCheck gratuit",
-    "title": "Demande ton FitCheck gratuit.",
+    "title": "Comment demander ton FitCheck gratuit ?",
     "intro": "Laisse ton nom et ton numéro de GSM. Je t’appelle ou t’envoie un message pour fixer un moment.",
     "bullets": {
       "free": "Entièrement gratuit et sans engagement",
@@ -250,7 +265,11 @@
       "fields": "Vérifie les champs ci-dessous.",
       "notConfigured": "Ce formulaire ne peut pas transmettre de demande pour l’instant. Appelle-moi au {phone}.",
       "sendFailed": "L’envoi a échoué. Réessaie ou appelle-moi au {phone}."
-    }
+    },
+    "qOnlineTitle": "Le FitCheck peut-il se faire en ligne ?",
+    "qOnlineBody": "Oui. Le FitCheck peut se faire en ligne ou en personne, toujours de façon personnelle et sur rendez-vous.",
+    "qAfterTitle": "Que se passe-t-il après ta demande ?",
+    "qAfterBody": "Je t’appelle ou t’envoie un message au numéro que tu as laissé pour fixer un moment ensemble."
   },
   "Faq": {
     "eyebrow": "Questions",
@@ -289,7 +308,15 @@
   "Programs": {
     "eyebrow": "Objectifs",
     "title": "Que veux-tu atteindre ?",
-    "intro": "Six directions, un seul départ : le FitCheck gratuit. Les résultats varient d’une personne à l’autre."
+    "intro": "Six directions, un seul départ : le FitCheck gratuit. Les résultats varient d’une personne à l’autre.",
+    "questions": {
+      "vitaliteit": "Tu veux vivre plus sainement ?",
+      "gewichtsverlies": "Tu veux perdre du poids ?",
+      "spiermassa": "Comment prendre du muscle ?",
+      "blessurepreventie": "Comment prévenir les blessures ?",
+      "sportspecifiek": "De quoi ton sport a-t-il besoin ?",
+      "voedingspatroon": "Tu suis un régime alimentaire précis ?"
+    }
   },
   "Privacy": {
     "title": "Confidentialité",

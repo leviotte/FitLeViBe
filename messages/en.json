@@ -33,7 +33,15 @@
       "description": "That link does not exist (anymore) on Fit met Levi."
     },
     "ogAlt": "Fit met Levi · Levi Otte, coach online or offline, always personal",
-    "keywords": ["Fit met Levi", "Levi Otte", "online coach", "personal coach", "FitCheck", "FitLeViBe", "coaching Belgium"]
+    "keywords": [
+      "Fit met Levi",
+      "Levi Otte",
+      "online coach",
+      "personal coach",
+      "FitCheck",
+      "FitLeViBe",
+      "coaching Belgium"
+    ]
   },
   "Nav": {
     "programs": "Goals",
@@ -199,7 +207,10 @@
     "pageTitle": "Levi Otte",
     "pageLead": "Coach since {year}, specialised in health and the body. Online or offline, but always personal.",
     "p1": "If you want to keep going in a healthy, motivated way, it helps to know what you actually need. Food, movement, and mindset work better together than training harder on its own. I’ve been refining that approach since 2015 — not with hype, but with a rhythm you can keep.",
-    "p2": "The FitCheck, follow-up and coaching can happen online or offline, but always personally and by appointment."
+    "p2": "The FitCheck, follow-up and coaching can happen online or offline, but always personally and by appointment.",
+    "whoTitle": "Who is Levi Otte?",
+    "whoBody": "Levi Otte is a coach for nutrition, movement and mindset who guides you personally, online or in person.",
+    "howTitle": "How does coaching with Levi work?"
   },
   "Result": {
     "eyebrow": "My own result",
@@ -217,11 +228,15 @@
     "title": "Start here.",
     "body": "You don’t have to prove anything right now. Choose what feels quietest.",
     "meta": "Online or offline, always personal · since {year}",
-    "note": "No pressure. No promises about kilos or income. A first step, with me."
+    "note": "No pressure. No promises about kilos or income. A first step, with me.",
+    "qHowTitle": "How does a free FitCheck work?",
+    "qHowBody": "You request it online; we do it online or with you in person, and you get a plan tailored to you.",
+    "qFreeTitle": "Is the FitCheck really free?",
+    "qFreeBody": "Yes. The FitCheck is completely free and without obligation, with no newsletter and no commitment afterwards."
   },
   "FitCheck": {
     "eyebrow": "Free FitCheck",
-    "title": "Request your free FitCheck.",
+    "title": "How do you request your free FitCheck?",
     "intro": "Leave your name and mobile number. I’ll call or message you to set a time.",
     "bullets": {
       "free": "Completely free, no strings attached",
@@ -250,7 +265,11 @@
       "fields": "Please check the fields below.",
       "notConfigured": "This form can’t pass on requests right now. Call me on {phone}.",
       "sendFailed": "Sending failed. Try again or call me on {phone}."
-    }
+    },
+    "qOnlineTitle": "Can the FitCheck be done online?",
+    "qOnlineBody": "Yes. The FitCheck can happen online or with you in person, always personally and by appointment.",
+    "qAfterTitle": "What happens after you request it?",
+    "qAfterBody": "I’ll call or message you on the number you left to agree on a time together."
   },
   "Faq": {
     "eyebrow": "Questions",
@@ -289,7 +308,15 @@
   "Programs": {
     "eyebrow": "Goals",
     "title": "What do you want to achieve?",
-    "intro": "Six directions, one start: the free FitCheck. Results vary from person to person."
+    "intro": "Six directions, one start: the free FitCheck. Results vary from person to person.",
+    "questions": {
+      "vitaliteit": "Want to live healthier?",
+      "gewichtsverlies": "Want to lose weight?",
+      "spiermassa": "How do you build muscle?",
+      "blessurepreventie": "How do you prevent injuries?",
+      "sportspecifiek": "What does your sport need?",
+      "voedingspatroon": "Following a specific diet?"
+    }
   },
   "Privacy": {
     "title": "Privacy",

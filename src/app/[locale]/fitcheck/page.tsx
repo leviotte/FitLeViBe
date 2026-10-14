@@ -39,10 +39,19 @@ export default async function FitCheckPage({
   if (isAppLocale(locale)) setRequestLocale(locale);
   const query = await searchParams;
   const defaultGoal = parseGoal(query.doel);
+  const t = await getTranslations("FitCheck");
 
   return (
     <div className="pt-6">
-      <FitCheckSection defaultGoal={defaultGoal} />
+      <FitCheckSection defaultGoal={defaultGoal} headingLevel="h1" />
+      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-14 sm:grid-cols-2 sm:px-8">
+        {(["Online", "After"] as const).map((key) => (
+          <section key={key}>
+            <h2 className="font-display text-2xl text-indigo">{t(`q${key}Title`)}</h2>
+            <p className="mt-3 text-base leading-7 text-muted">{t(`q${key}Body`)}</p>
+          </section>
+        ))}
+      </div>
     </div>
   );
 }
