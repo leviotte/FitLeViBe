@@ -320,6 +320,11 @@
   },
   "Privacy": {
     "title": "Privacy",
+    "h1": "Who is responsible for your data?",
+    "h2": "What data do I collect through the FitCheck?",
+    "h3": "How long do I keep your request?",
+    "h4": "What happens to your request in Thumbsupp?",
+    "h5": "What are your rights and how do you contact me?",
     "p1": "Controller: {name} ({publicName}), {street}, {postal} {city}, {country}. Tel. {phone}.",
     "p2": "Through the FitCheck form I collect first and last name, mobile number, chosen goal, and optionally a message. Purpose: to contact you about lifestyle coaching. Legal basis: your request (pre-contractual steps / legitimate interest in answering).",
     "p3": "Data does not go to a public newsletter. FitCheck requests are emailed to {email} for as long as the conversation runs, then deleted or limited to what accounting or a dispute requires.",

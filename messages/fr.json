@@ -320,6 +320,11 @@
   },
   "Privacy": {
     "title": "Confidentialité",
+    "h1": "Qui est responsable de tes données ?",
+    "h2": "Quelles données je collecte via le FitCheck ?",
+    "h3": "Combien de temps je conserve ta demande ?",
+    "h4": "Que devient ta demande dans Thumbsupp ?",
+    "h5": "Quels sont tes droits et comment me contacter ?",
     "p1": "Responsable du traitement : {name} ({publicName}), {street}, {postal} {city}, {country}. Tél. {phone}.",
     "p2": "Via le formulaire FitCheck, je collecte le prénom et le nom, le numéro de mobile, l’objectif choisi et éventuellement un message. Finalité : te recontacter au sujet d’un coaching de mode de vie. Base juridique : ta demande (mesures précontractuelles / intérêt légitime de répondre).",
     "p3": "Les données ne partent pas vers une newsletter publique. Les demandes FitCheck sont envoyées par e-mail à {email}, le temps de l’échange, puis effacées ou limitées à ce que la comptabilité ou un litige exige.",

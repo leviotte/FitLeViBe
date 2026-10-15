@@ -320,6 +320,11 @@
   },
   "Privacy": {
     "title": "Privacy",
+    "h1": "Wie is verantwoordelijk voor je gegevens?",
+    "h2": "Welke gegevens verzamel ik via de FitCheck?",
+    "h3": "Hoe lang bewaar ik je aanvraag?",
+    "h4": "Wat gebeurt er met je aanvraag in Thumbsupp?",
+    "h5": "Welke rechten heb je en hoe neem je contact op?",
     "p1": "Verwerkingsverantwoordelijke: {name} ({publicName}), {street}, {postal} {city}, {country}. Tel. {phone}.",
     "p2": "Via het FitCheck-formulier verzamel ik voornaam en naam, gsm-nummer, gekozen doel en optioneel een bericht. Doel: contact opnemen over lifestyle coaching. Rechtsgrond: jouw verzoek (precontractueel / gerechtvaardigd belang om te antwoorden).",
     "p3": "Gegevens gaan niet naar een openbare nieuwsbrief. FitCheck-aanvragen worden per e-mail bezorgd op {email}, zolang het gesprek loopt, daarna gewist of beperkt tot wat boekhouding of geschil vereist.",
