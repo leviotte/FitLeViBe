@@ -12,3 +12,5 @@ overrides:
   'browserslist@<4.28.7': ^4.29.2
   'js-yaml@>=4.0.0 <4.3.2': ^4.3.2
   'source-map-js@<1.2.2': ^1.2.2
+  # Security floors (Thumbsupp freshness 2026-10-30): GHSA-mrhx-c7xc-m3w5 zod, GHSA-gg6h-894w-4m9c re2js.
+  'zod@<4.6.6': ^4.6.7
